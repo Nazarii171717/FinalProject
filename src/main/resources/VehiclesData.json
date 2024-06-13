@@ -1,7 +1,6 @@
 [
   {
     "id": "1",
-    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Toyota",
     "model": "Camry",
@@ -18,12 +17,10 @@
     "gearBox": "Automatic",
     "mileage": 10000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 300
+    "isReserved": false
   },
   {
     "id": "2",
-    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Hyundai",
     "model": "Santa Fe",
@@ -40,12 +37,10 @@
     "gearBox": "Automatic",
     "mileage": 5000,
     "numberOfSeats": 7,
-    "isReserved": false,
-    "pricePerDay": 200
+    "isReserved": false
   },
   {
     "id": "3",
-    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Honda",
     "model": "Civic",
@@ -62,13 +57,11 @@
     "gearBox": "Manual",
     "mileage": 15000,
     "numberOfSeats": 5,
-    "isReserved": true,
-    "pricePerDay": 290
+    "isReserved": true
   },
 
     {
       "id": "4",
-      "typeOfVehicle": "Car",
       "type": "Convertible",
       "brand": "BMW",
       "model": "Z4",
@@ -85,12 +78,10 @@
       "gearBox": "Automatic",
       "mileage": 3000,
       "numberOfSeats": 2,
-      "isReserved": false,
-      "pricePerDay": 400
+      "isReserved": false
     },
     {
       "id": "5",
-      "typeOfVehicle": "Car",
       "type": "Coupe",
       "brand": "Audi",
       "model": "A5",
@@ -107,12 +98,10 @@
       "gearBox": "Automatic",
       "mileage": 8000,
       "numberOfSeats": 4,
-      "isReserved": true,
-      "pricePerDay": 380
+      "isReserved": true
     },
     {
       "id": "6",
-      "typeOfVehicle": "Car",
       "type": "Sedan",
       "brand": "Mercedes-Benz",
       "model": "C-Class",
@@ -129,12 +118,10 @@
       "gearBox": "Automatic",
       "mileage": 12000,
       "numberOfSeats": 5,
-      "isReserved": false,
-      "pricePerDay": 450
+      "isReserved": false
     },
     {
       "id": "7",
-      "typeOfVehicle": "Car",
       "type": "SUV",
       "brand": "Ford",
       "model": "Explorer",
@@ -151,12 +138,10 @@
       "gearBox": "Automatic",
       "mileage": 20000,
       "numberOfSeats": 7,
-      "isReserved": true,
-      "pricePerDay": 240
+      "isReserved": true
     },
     {
       "id": "8",
-      "typeOfVehicle": "Car",
       "type": "Hatchback",
       "brand": "Volkswagen",
       "model": "Golf",
@@ -173,12 +158,10 @@
       "gearBox": "Manual",
       "mileage": 11000,
       "numberOfSeats": 5,
-      "isReserved": false,
-      "pricePerDay": 300
+      "isReserved": false
     },
     {
       "id": "9",
-      "typeOfVehicle": "Car",
       "type": "Minivan",
       "brand": "Chrysler",
       "model": "Pacifica",
@@ -195,12 +178,10 @@
       "gearBox": "Automatic",
       "mileage": 15000,
       "numberOfSeats": 7,
-      "isReserved": false,
-      "pricePerDay": 220
+      "isReserved": false
     },
     {
       "id": "10",
-      "typeOfVehicle": "Car",
       "type": "Pickup",
       "brand": "Chevrolet",
       "model": "Silverado",
@@ -217,13 +198,11 @@
       "gearBox": "Automatic",
       "mileage": 7000,
       "numberOfSeats": 5,
-      "isReserved": false,
-      "pricePerDay": 370
+      "isReserved": false
     },
 
     {
       "id": "11",
-      "typeOfVehicle": "Car",
       "type": "Sedan",
       "brand": "Tesla",
       "model": "Model S",
@@ -240,12 +219,10 @@
       "gearBox": "Automatic",
       "mileage": 3000,
       "numberOfSeats": 5,
-      "isReserved": false,
-      "pricePerDay": 500
+      "isReserved": false
     },
     {
       "id": "12",
-      "typeOfVehicle": "Car",
       "type": "SUV",
       "brand": "Kia",
       "model": "Sorento",
@@ -262,12 +239,10 @@
       "gearBox": "Automatic",
       "mileage": 8000,
       "numberOfSeats": 7,
-      "isReserved": true,
-      "pricePerDay": 380
+      "isReserved": true
     },
     {
       "id": "13",
-      "typeOfVehicle": "Car",
       "type": "Convertible",
       "brand": "Mazda",
       "model": "MX-5 Miata",
@@ -284,12 +259,10 @@
       "gearBox": "Manual",
       "mileage": 5000,
       "numberOfSeats": 2,
-      "isReserved": false,
-      "pricePerDay": 350
+      "isReserved": false
     },
     {
       "id": "14",
-      "typeOfVehicle": "Car",
       "type": "Hatchback",
       "brand": "Ford",
       "model": "Focus",
@@ -306,12 +279,10 @@
       "gearBox": "Manual",
       "mileage": 14000,
       "numberOfSeats": 5,
-      "isReserved": true,
-      "pricePerDay": 270
+      "isReserved": true
     },
     {
       "id": "15",
-      "typeOfVehicle": "Car",
       "type": "Coupe",
       "brand": "Lexus",
       "model": "RC 350",
@@ -328,12 +299,10 @@
       "gearBox": "Automatic",
       "mileage": 9000,
       "numberOfSeats": 4,
-      "isReserved": false,
-      "pricePerDay": 450
+      "isReserved": false
     },
     {
       "id": "16",
-      "typeOfVehicle": "Car",
       "type": "Minivan",
       "brand": "Toyota",
       "model": "Sienna",
@@ -350,12 +319,10 @@
       "gearBox": "Automatic",
       "mileage": 18000,
       "numberOfSeats": 7,
-      "isReserved": true,
-      "pricePerDay": 300
+      "isReserved": true
     },
     {
       "id": "17",
-      "typeOfVehicle": "Car",
       "type": "Pickup",
       "brand": "Ram",
       "model": "1500",
@@ -372,12 +339,10 @@
       "gearBox": "Automatic",
       "mileage": 6000,
       "numberOfSeats": 5,
-      "isReserved": false,
-      "pricePerDay": 200
+      "isReserved": false
     },
     {
       "id": "18",
-      "typeOfVehicle": "Car",
       "type": "Sedan",
       "brand": "Nissan",
       "model": "Altima",
@@ -394,12 +359,10 @@
       "gearBox": "Automatic",
       "mileage": 22000,
       "numberOfSeats": 5,
-      "isReserved": true,
-      "pricePerDay": 300
+      "isReserved": true
     },
     {
       "id": "19",
-      "typeOfVehicle": "Car",
       "type": "SUV",
       "brand": "Jeep",
       "model": "Grand Cherokee",
@@ -416,12 +379,10 @@
       "gearBox": "Automatic",
       "mileage": 17000,
       "numberOfSeats": 5,
-      "isReserved": false,
-      "pricePerDay": 380
+      "isReserved": false
     },
     {
       "id": "20",
-      "typeOfVehicle": "Car",
       "type": "Hatchback",
       "brand": "Subaru",
       "model": "Impreza",
@@ -438,12 +399,10 @@
       "gearBox": "Manual",
       "mileage": 13000,
       "numberOfSeats": 5,
-      "isReserved": false,
-      "pricePerDay": 360
+      "isReserved": false
     },
   {
     "id": "21",
-    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "BMW",
     "model": "M4",
@@ -460,12 +419,10 @@
     "gearBox": "Automatic",
     "mileage": 7000,
     "numberOfSeats": 4,
-    "isReserved": true,
-    "pricePerDay": 390
+    "isReserved": true
   },
   {
     "id": "22",
-    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "Porsche",
     "model": "911 Carrera",
@@ -482,12 +439,10 @@
     "gearBox": "Automatic",
     "mileage": 3000,
     "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 600
+    "isReserved": false
   },
   {
     "id": "23",
-    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Honda",
     "model": "Odyssey",
@@ -504,12 +459,10 @@
     "gearBox": "Automatic",
     "mileage": 15000,
     "numberOfSeats": 7,
-    "isReserved": true,
-    "pricePerDay": 300
+    "isReserved": true
   },
   {
     "id": "24",
-    "typeOfVehicle": "Car",
     "type": "Pickup",
     "brand": "Toyota",
     "model": "Tundra",
@@ -526,12 +479,10 @@
     "gearBox": "Automatic",
     "mileage": 8000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 200
+    "isReserved": false
   },
   {
     "id": "25",
-    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Audi",
     "model": "A4",
@@ -548,12 +499,10 @@
     "gearBox": "Automatic",
     "mileage": 20000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 380
+    "isReserved": false
   },
   {
     "id": "26",
-    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Chevrolet",
     "model": "Tahoe",
@@ -570,12 +519,10 @@
     "gearBox": "Automatic",
     "mileage": 10000,
     "numberOfSeats": 7,
-    "isReserved": true,
-    "pricePerDay": 399
+    "isReserved": true
   },
   {
     "id": "27",
-    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Volkswagen",
     "model": "Polo",
@@ -592,12 +539,10 @@
     "gearBox": "Manual",
     "mileage": 18000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 150
+    "isReserved": false
   },
   {
     "id": "28",
-    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "Mercedes-Benz",
     "model": "E-Class",
@@ -614,12 +559,10 @@
     "gearBox": "Automatic",
     "mileage": 4000,
     "numberOfSeats": 4,
-    "isReserved": true,
-    "pricePerDay": 650
+    "isReserved": true
   },
   {
     "id": "29",
-    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "Jaguar",
     "model": "F-Type",
@@ -636,12 +579,10 @@
     "gearBox": "Automatic",
     "mileage": 6000,
     "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 550
+    "isReserved": false
   },
   {
     "id": "30",
-    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Kia",
     "model": "Carnival",
@@ -658,12 +599,10 @@
     "gearBox": "Automatic",
     "mileage": 13000,
     "numberOfSeats": 8,
-    "isReserved": true,
-    "pricePerDay": 400
+    "isReserved": true
   },
   {
     "id": "31",
-    "typeOfVehicle": "Car",
     "type": "Pickup",
     "brand": "Ford",
     "model": "Ranger",
@@ -680,12 +619,10 @@
     "gearBox": "Automatic",
     "mileage": 5000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 300
+    "isReserved": false
   },
   {
     "id": "32",
-    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Hyundai",
     "model": "Elantra",
@@ -702,12 +639,10 @@
     "gearBox": "Automatic",
     "mileage": 20000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 310
+    "isReserved": false
   },
   {
     "id": "33",
-    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Nissan",
     "model": "Pathfinder",
@@ -724,12 +659,10 @@
     "gearBox": "Automatic",
     "mileage": 15000,
     "numberOfSeats": 7,
-    "isReserved": true,
-    "pricePerDay": 350
+    "isReserved": true
   },
   {
     "id": "34",
-    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Chevrolet",
     "model": "Bolt EV",
@@ -746,12 +679,10 @@
     "gearBox": "Automatic",
     "mileage": 8000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 290
+    "isReserved": false
   },
   {
     "id": "35",
-    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "Ford",
     "model": "Mustang",
@@ -768,12 +699,10 @@
     "gearBox": "Manual",
     "mileage": 3000,
     "numberOfSeats": 4,
-    "isReserved": true,
-    "pricePerDay": 400
+    "isReserved": true
   },
   {
     "id": "36",
-    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "Chevrolet",
     "model": "Camaro",
@@ -790,12 +719,10 @@
     "gearBox": "Automatic",
     "mileage": 7000,
     "numberOfSeats": 4,
-    "isReserved": false,
-    "pricePerDay": 490
+    "isReserved": false
   },
   {
     "id": "37",
-    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Mercedes-Benz",
     "model": "Metris",
@@ -812,12 +739,10 @@
     "gearBox": "Automatic",
     "mileage": 12000,
     "numberOfSeats": 8,
-    "isReserved": true,
-    "pricePerDay": 600
+    "isReserved": true
   },
   {
     "id": "38",
-    "typeOfVehicle": "Car",
     "type": "Pickup",
     "brand": "GMC",
     "model": "Sierra 1500",
@@ -834,12 +759,10 @@
     "gearBox": "Automatic",
     "mileage": 6000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 300
+    "isReserved": false
   },
   {
     "id": "39",
-    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Lexus",
     "model": "ES 350",
@@ -856,12 +779,10 @@
     "gearBox": "Automatic",
     "mileage": 8000,
     "numberOfSeats": 5,
-    "isReserved": true,
-    "pricePerDay": 420
+    "isReserved": true
   },
   {
     "id": "40",
-    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Toyota",
     "model": "Highlander",
@@ -878,12 +799,10 @@
     "gearBox": "Automatic",
     "mileage": 15000,
     "numberOfSeats": 7,
-    "isReserved": false,
-    "pricePerDay": 390
+    "isReserved": false
   },
   {
     "id": "41",
-    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Hyundai",
     "model": "i30",
@@ -900,12 +819,10 @@
     "gearBox": "Manual",
     "mileage": 17000,
     "numberOfSeats": 5,
-    "isReserved": true,
-    "pricePerDay": 333
+    "isReserved": true
   },
   {
     "id": "42",
-    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "Infiniti",
     "model": "Q60",
@@ -922,12 +839,10 @@
     "gearBox": "Automatic",
     "mileage": 4000,
     "numberOfSeats": 4,
-    "isReserved": false,
-    "pricePerDay": 270
+    "isReserved": false
   },
   {
     "id": "43",
-    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "BMW",
     "model": "4 Series",
@@ -944,12 +859,10 @@
     "gearBox": "Automatic",
     "mileage": 6000,
     "numberOfSeats": 4,
-    "isReserved": true,
-    "pricePerDay": 440
+    "isReserved": true
   },
   {
     "id": "44",
-    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Chrysler",
     "model": "Voyager",
@@ -966,11 +879,9 @@
     "gearBox": "Automatic",
     "mileage": 14000,
     "numberOfSeats": 7,
-    "isReserved": false,
-    "pricePerDay": 450
+    "isReserved": false
   },
   {
-    "typeOfVehicle": "Car",
     "id": "45",
     "type": "Pickup",
     "brand": "Toyota",
@@ -988,12 +899,10 @@
     "gearBox": "Automatic",
     "mileage": 5000,
     "numberOfSeats": 5,
-    "isReserved": true,
-    "pricePerDay": 300
+    "isReserved": true
   },
   {
     "id": "46",
-    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Mazda",
     "model": "6",
@@ -1010,12 +919,10 @@
     "gearBox": "Automatic",
     "mileage": 20000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 330
+    "isReserved": false
   },
   {
     "id": "47",
-    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Land Rover",
     "model": "Discovery",
@@ -1032,12 +939,10 @@
     "gearBox": "Automatic",
     "mileage": 12000,
     "numberOfSeats": 7,
-    "isReserved": true,
-    "pricePerDay": 420
+    "isReserved": true
   },
   {
     "id": "48",
-    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Renault",
     "model": "Clio",
@@ -1054,12 +959,10 @@
     "gearBox": "Manual",
     "mileage": 18000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 190
+    "isReserved": false
   },
   {
     "id": "49",
-    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "Alfa Romeo",
     "model": "4C",
@@ -1076,12 +979,10 @@
     "gearBox": "Automatic",
     "mileage": 5000,
     "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 380
+    "isReserved": true
   },
   {
     "id": "50",
-    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "Ferrari",
     "model": "Portofino",
@@ -1098,12 +999,10 @@
     "gearBox": "Automatic",
     "mileage": 3000,
     "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 900
+    "isReserved": false
   },
   {
     "id": "51",
-    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Ford",
     "model": "Transit",
@@ -1120,12 +1019,10 @@
     "gearBox": "Automatic",
     "mileage": 13000,
     "numberOfSeats": 15,
-    "isReserved": true,
-    "pricePerDay": 490
+    "isReserved": true
   },
   {
     "id": "52",
-    "typeOfVehicle": "Car",
     "type": "Pickup",
     "brand": "Ram",
     "model": "1500",
@@ -1142,12 +1039,10 @@
     "gearBox": "Automatic",
     "mileage": 8000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 300
+    "isReserved": false
   },
   {
     "id": "53",
-    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Genesis",
     "model": "G80",
@@ -1164,12 +1059,10 @@
     "gearBox": "Automatic",
     "mileage": 15000,
     "numberOfSeats": 5,
-    "isReserved": true,
-    "pricePerDay": 200
+    "isReserved": true
   },
   {
     "id": "54",
-    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Subaru",
     "model": "Forester",
@@ -1186,12 +1079,10 @@
     "gearBox": "Automatic",
     "mileage": 18000,
     "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 460
+    "isReserved": false
   },
   {
     "id": "55",
-    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Mazda",
     "model": "3",
@@ -1208,12 +1099,10 @@
     "gearBox": "Manual",
     "mileage": 20000,
     "numberOfSeats": 5,
-    "isReserved": true,
-    "pricePerDay": 290
+    "isReserved": true
   },
   {
     "id": "56",
-    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "Audi",
     "model": "TT",
@@ -1230,12 +1119,10 @@
     "gearBox": "Automatic",
     "mileage": 8000,
     "numberOfSeats": 4,
-    "isReserved": false,
-    "pricePerDay": 400
+    "isReserved": false
   },
   {
     "id": "57",
-    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "Aston Martin",
     "model": "DB11",
@@ -1252,12 +1139,10 @@
     "gearBox": "Automatic",
     "mileage": 4000,
     "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 890
+    "isReserved": true
   },
   {
     "id": "58",
-    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Volkswagen",
     "model": "Transporter",
@@ -1272,670 +1157,12 @@
     "engineType": "Diesel",
     "fuelType": "Diesel",
     "gearBox": "Manual",
-    "mileage": 40000,
-    "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 300
-  },
-  {
-    "id": "69",
-    "typeOfVehicle": "Car",
-    "type": "Camper",
-    "brand": "Roadtrek",
-    "model": "Zion",
-    "year": 2021,
-    "vin": "WDAPF4CC1K9712345",
-    "color": "Silver",
-    "maxSpeed": 160,
-    "maxLoad": 1200,
-    "engine": 3.6,
-    "fuelTankCapacity": 75,
-    "fuelConsumption": 10.0,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Automatic",
-    "mileage": 8000,
-    "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 150
-  },
-  {
-    "id": "70",
-    "typeOfVehicle": "Car",
-    "type": "Camper",
-    "brand": "Winnebago",
-    "model": "Revel",
-    "year": 2022,
-    "vin": "WD4FE7CD5M9734567",
-    "color": "White",
-    "maxSpeed": 170,
-    "maxLoad": 1300,
-    "engine": 3.0,
-    "fuelTankCapacity": 70,
-    "fuelConsumption": 9.5,
-    "engineType": "Diesel",
-    "fuelType": "Diesel",
-    "gearBox": "Automatic",
-    "mileage": 6000,
-    "numberOfSeats": 4,
-    "isReserved": true,
-    "pricePerDay": 180
-  },
-  {
-    "id": "71",
-    "typeOfVehicle": "Car",
-    "type": "Camper",
-    "brand": "Airstream",
-    "model": "Basecamp",
-    "year": 2021,
-    "vin": "1STF9CBB1M1234567",
-    "color": "Silver",
-    "maxSpeed": 165,
-    "maxLoad": 1100,
-    "engine": 2.8,
-    "fuelTankCapacity": 60,
-    "fuelConsumption": 8.5,
-    "engineType": "Diesel",
-    "fuelType": "Diesel",
-    "gearBox": "Automatic",
-    "mileage": 9000,
-    "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 160
-  },
-  {
-    "id": "72",
-    "typeOfVehicle": "Car",
-    "type": "Camper",
-    "brand": "Thor Motor Coach",
-    "model": "Synergy",
-    "year": 2020,
-    "vin": "1FDWE3FS1M1287654",
-    "color": "Grey",
-    "maxSpeed": 155,
-    "maxLoad": 1200,
-    "engine": 3.0,
-    "fuelTankCapacity": 65,
-    "fuelConsumption": 9.0,
-    "engineType": "Diesel",
-    "fuelType": "Diesel",
-    "gearBox": "Automatic",
-    "mileage": 11000,
-    "numberOfSeats": 3,
-    "isReserved": true,
-    "pricePerDay": 170
-  },
-  {
-    "id": "73",
-    "typeOfVehicle": "Car",
-    "type": "Camper",
-    "brand": "Forest River",
-    "model": "Sunseeker LE",
-    "year": 2021,
-    "vin": "1FDWE3FS3M1287654",
-    "color": "White",
-    "maxSpeed": 160,
-    "maxLoad": 1400,
-    "engine": 6.2,
-    "fuelTankCapacity": 80,
-    "fuelConsumption": 10.5,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Automatic",
-    "mileage": 7000,
-    "numberOfSeats": 5,
-    "isReserved": false,
-    "pricePerDay": 190
-  },
-  {
-    "id": "74",
-    "typeOfVehicle": "Car",
-    "type": "Camper",
-    "brand": "Coachmen",
-    "model": "Leprechaun",
-    "year": 2022,
-    "vin": "1FDXE4FS9MEB12345",
-    "color": "White",
-    "maxSpeed": 155,
-    "maxLoad": 1300,
-    "engine": 6.8,
-    "fuelTankCapacity": 90,
-    "fuelConsumption": 12.0,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Automatic",
-    "mileage": 8000,
-    "numberOfSeats": 4,
-    "isReserved": true,
-    "pricePerDay": 200
-  },
-  {
-    "id": "75",
-    "typeOfVehicle": "Car",
-    "type": "Camper",
-    "brand": "Pleasure-Way",
-    "model": "Ascent",
-    "year": 2020,
-    "vin": "3C6JR6DG1LG512345",
-    "color": "Silver",
-    "maxSpeed": 160,
-    "maxLoad": 1200,
-    "engine": 3.6,
-    "fuelTankCapacity": 70,
-    "fuelConsumption": 9.5,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Automatic",
-    "mileage": 10000,
-    "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 150
-  },
-  {
-    "id": "76",
-    "typeOfVehicle": "Car",
-    "type": "Camper",
-    "brand": "Leisure Travel Vans",
-    "model": "Unity",
-    "year": 2021,
-    "vin": "3C6JR6DG2MG512345",
-    "color": "White",
-    "maxSpeed": 165,
-    "maxLoad": 1100,
-    "engine": 2.8,
-    "fuelTankCapacity": 65,
-    "fuelConsumption": 8.5,
-    "engineType": "Diesel",
-    "fuelType": "Diesel",
-    "gearBox": "Automatic",
-    "mileage": 9000,
-    "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 160
-  },
-  {
-    "id": "77",
-    "typeOfVehicle": "Car",
-    "type": "Camper",
-    "brand": "Regency RV",
-    "model": "Xalta",
-    "year": 2020,
-    "vin": "3C6JR6DG3BG512345",
-    "color": "Silver",
-    "maxSpeed": 160,
-    "maxLoad": 1200,
-    "engine": 3.6,
-    "fuelTankCapacity": 70,
-    "fuelConsumption": 10.0,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Automatic",
-    "mileage": 11000,
-    "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 170
-  },
-  {
-    "id": "78",
-    "typeOfVehicle": "Car",
-    "type": "Camper",
-    "brand": "Tiffin Motorhomes",
-    "model": "Wayfarer",
-    "year": 2021,
-    "vin": "3C6JR6DG4LG512345",
-    "color": "White",
-    "maxSpeed": 165,
-    "maxLoad": 1300,
-    "engine": 2.8,
-    "fuelTankCapacity": 75,
-    "fuelConsumption": 9.5,
-    "engineType": "Diesel",
-    "fuelType": "Diesel",
-    "gearBox": "Automatic",
-    "mileage": 12000,
-    "numberOfSeats": 3,
-    "isReserved": true,
-    "pricePerDay": 180
-  },
-  {
-    "id": "79",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Scooter",
-    "brand": "Honda",
-    "model": "Activa 6G",
-    "year": 2021,
-    "vin": "MBZ6G1H20M3245678",
-    "color": "Blue",
-    "maxSpeed": 85,
-    "maxLoad": 150,
-    "engine": 0.11,
-    "fuelTankCapacity": 5.3,
-    "fuelConsumption": 55.0,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Automatic",
-    "mileage": 6000,
-    "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 30
-  },
-  {
-    "id": "80",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Touring",
-    "brand": "BMW",
-    "model": "R 1250 RT",
-    "year": 2022,
-    "vin": "WB10J230X3B123456",
-    "color": "Grey",
-    "maxSpeed": 200,
-    "maxLoad": 350,
-    "engine": 1.25,
-    "fuelTankCapacity": 25,
-    "fuelConsumption": 4.5,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 5000,
-    "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 120
-  },
-  {
-    "id": "81",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Sport Bike",
-    "brand": "Yamaha",
-    "model": "YZF-R1",
-    "year": 2021,
-    "vin": "JYARN46Y1MA123456",
-    "color": "Blue",
-    "maxSpeed": 300,
-    "maxLoad": 180,
-    "engine": 1.0,
-    "fuelTankCapacity": 17,
-    "fuelConsumption": 6.5,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 3000,
-    "numberOfSeats": 1,
-    "isReserved": false,
-    "pricePerDay": 150
-  },
-  {
-    "id": "82",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Cruiser",
-    "brand": "Harley-Davidson",
-    "model": "Sportster Iron 883",
-    "year": 2020,
-    "vin": "1HD1LEL32LC123456",
-    "color": "Black",
-    "maxSpeed": 180,
-    "maxLoad": 250,
-    "engine": 0.883,
-    "fuelTankCapacity": 12.5,
-    "fuelConsumption": 5.0,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 8000,
-    "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 100
-  },
-  {
-    "id": "83",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Sport Bike",
-    "brand": "KTM",
-    "model": "Adventure 790",
-    "year": 2021,
-    "vin": "VBKAR32B7MA123456",
-    "color": "Orange",
-    "maxSpeed": 220,
-    "maxLoad": 200,
-    "engine": 0.79,
-    "fuelTankCapacity": 20,
-    "fuelConsumption": 4.0,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 6000,
-    "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 110
-  },
-  {
-    "id": "84",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Sport Bike",
-    "brand": "Ducati",
-    "model": "Monster 821",
-    "year": 2022,
-    "vin": "ZDM1YBTS5NB123456",
-    "color": "Red",
-    "maxSpeed": 240,
-    "maxLoad": 180,
-    "engine": 0.821,
-    "fuelTankCapacity": 16,
-    "fuelConsumption": 5.5,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
     "mileage": 4000,
     "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 130
-  },
-  {
-    "id": "85",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Sport Bike",
-    "brand": "Honda",
-    "model": "CRF250L",
-    "year": 2021,
-    "vin": "MLHMD382XMA123456",
-    "color": "Red",
-    "maxSpeed": 140,
-    "maxLoad": 150,
-    "engine": 0.25,
-    "fuelTankCapacity": 7.8,
-    "fuelConsumption": 3.5,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 5000,
-    "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 90
-  },
-  {
-    "id": "86",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Touring",
-    "brand": "Kawasaki",
-    "model": "Ninja 1000SX",
-    "year": 2022,
-    "vin": "JKBZGNC19MA123456",
-    "color": "Green",
-    "maxSpeed": 280,
-    "maxLoad": 220,
-    "engine": 1.0,
-    "fuelTankCapacity": 19,
-    "fuelConsumption": 5.8,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 3000,
-    "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 140
-  },
-  {
-    "id": "87",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Sport Bike",
-    "brand": "Triumph",
-    "model": "Thruxton RS",
-    "year": 2021,
-    "vin": "SMTD61HG7MD123456",
-    "color": "Silver",
-    "maxSpeed": 220,
-    "maxLoad": 180,
-    "engine": 1.2,
-    "fuelTankCapacity": 14.5,
-    "fuelConsumption": 5.2,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 4000,
-    "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 125
-  },
-  {
-    "id": "88",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Cruiser",
-    "brand": "Indian",
-    "model": "Scout Bobber",
-    "year": 2022,
-    "vin": "56KMSA006AB123456",
-    "color": "Black",
-    "maxSpeed": 200,
-    "maxLoad": 200,
-    "engine": 1.1,
-    "fuelTankCapacity": 12,
-    "fuelConsumption": 4.8,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 5000,
-    "numberOfSeats": 1,
-    "isReserved": true,
-    "pricePerDay": 115
-  },
-  {
-    "id": "89",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Retro",
-    "brand": "Royal Enfield",
-    "model": "Bullet 350",
-    "year": 2021,
-    "vin": "ME3U1S5DE1M123456",
-    "color": "Black",
-    "maxSpeed": 110,
-    "maxLoad": 180,
-    "engine": 0.35,
-    "fuelTankCapacity": 13.5,
-    "fuelConsumption": 3.5,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 4000,
-    "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 80
-  },
-  {
-    "id": "90",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Street",
-    "brand": "Suzuki",
-    "model": "GSX-S750",
-    "year": 2022,
-    "vin": "JS1GR7HA3N2101234",
-    "color": "Blue",
-    "maxSpeed": 240,
-    "maxLoad": 200,
-    "engine": 0.75,
-    "fuelTankCapacity": 17,
-    "fuelConsumption": 4.8,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 3000,
-    "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 110
-  },
-  {
-    "id": "91",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Sport Bike",
-    "brand": "KTM",
-    "model": "690 SMC R",
-    "year": 2021,
-    "vin": "VBKEXR400MA123456",
-    "color": "Orange",
-    "maxSpeed": 180,
-    "maxLoad": 180,
-    "engine": 0.69,
-    "fuelTankCapacity": 13,
-    "fuelConsumption": 5.0,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 5000,
-    "numberOfSeats": 1,
-    "isReserved": false,
-    "pricePerDay": 80
-  },
-  {
-    "id": "92",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Chopper",
-    "brand": "Victory",
-    "model": "High-Ball",
-    "year": 2020,
-    "vin": "5VPWB36N4L1234567",
-    "color": "Black",
-    "maxSpeed": 200,
-    "maxLoad": 250,
-    "engine": 1.73,
-    "fuelTankCapacity": 17.8,
-    "fuelConsumption": 5.5,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 7000,
-    "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 100
-  },
-  {
-    "id": "93",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Sport Bike",
-    "brand": "Kawasaki",
-    "model": "KLX450R",
-    "year": 2021,
-    "vin": "JKALX4H1XMA123456",
-    "color": "Green",
-    "maxSpeed": 140,
-    "maxLoad": 150,
-    "engine": 0.45,
-    "fuelTankCapacity": 7.3,
-    "fuelConsumption": 3.0,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 4000,
-    "numberOfSeats": 1,
-    "isReserved": false,
-    "pricePerDay": 70
-  },
-  {
-    "id": "94",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Electric",
-    "brand": "Zero Motorcycles",
-    "model": "SR/F",
-    "year": 2022,
-    "vin": "538RTK2AA2B123456",
-    "color": "Silver",
-    "maxSpeed": 200,
-    "maxLoad": 180,
-    "engine": 0.0,
-    "fuelTankCapacity": 0,
-    "fuelConsumption": 0.0,
-    "engineType": "Electric",
-    "fuelType": "Electric",
-    "gearBox": "Automatic",
-    "mileage": 150,
-    "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 90
-  },
-  {
-    "id": "95",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Retro",
-    "brand": "Moto Guzzi",
-    "model": "V7 III Stone",
-    "year": 2021,
-    "vin": "ZGULCU027MM123456",
-    "color": "Black",
-    "maxSpeed": 170,
-    "maxLoad": 200,
-    "engine": 0.744,
-    "fuelTankCapacity": 21,
-    "fuelConsumption": 4.5,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 6000,
-    "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 75
-  },
-  {
-    "id": "96",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Street",
-    "brand": "Ducati",
-    "model": "Streetfighter V4",
-    "year": 2022,
-    "vin": "ZDM13BVW2NB123456",
-    "color": "Yellow",
-    "maxSpeed": 280,
-    "maxLoad": 200,
-    "engine": 1.1,
-    "fuelTankCapacity": 16,
-    "fuelConsumption": 6.0,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 4000,
-    "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 110
-  },
-  {
-    "id": "97",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Scooter",
-    "brand": "Vespa",
-    "model": "GTS 300",
-    "year": 2021,
-    "vin": "ZAPM459L7M5234567",
-    "color": "Blue",
-    "maxSpeed": 120,
-    "maxLoad": 150,
-    "engine": 0.278,
-    "fuelTankCapacity": 8.5,
-    "fuelConsumption": 3.0,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Automatic",
-    "mileage": 5000,
-    "numberOfSeats": 2,
-    "isReserved": false,
-    "pricePerDay": 60
-  },
-  {
-    "id": "98",
-    "typeOfVehicle": "Motorcycle",
-    "type": "Sport Bike",
-    "brand": "Norton",
-    "model": "Commando 961",
-    "year": 2021,
-    "vin": "SMTN1BH67M1234567",
-    "color": "Silver",
-    "maxSpeed": 210,
-    "maxLoad": 180,
-    "engine": 0.961,
-    "fuelTankCapacity": 17,
-    "fuelConsumption": 5.5,
-    "engineType": "Petrol",
-    "fuelType": "Unleaded",
-    "gearBox": "Manual",
-    "mileage": 3000,
-    "numberOfSeats": 2,
-    "isReserved": true,
-    "pricePerDay": 95
+    "isReserved": true
   }
+
+
+
 
 ]

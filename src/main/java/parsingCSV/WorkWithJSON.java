@@ -3,6 +3,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import customer.data.Customer;
 import customer.data.RentalHistory;
+import generalFunctionality.LocalDateTimeAdapter;
 import lombok.SneakyThrows;
 
 import java.io.FileReader;
@@ -15,7 +16,9 @@ import java.util.Random;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import renting.RentalFunctions;
 import renting.RentalInformation;
+import renting.RentingStatus;
 import vehicle.data.Vehicle;
 
 
@@ -37,15 +40,16 @@ public class WorkWithJSON {
             id.append(characters.charAt(rnd.nextInt(characters.length())));
         }
 
+        String idStr = id.toString();
 
-        String idf = allId.stream().filter(id1 -> id1.equals(id)).findFirst().orElse(null);
-        if (!idf.equals(null))
+        String idf = allId.stream().filter(id1 -> id1.equals(idStr)).findFirst().orElse(null);
+        if (idf != null)
         {
-            id = generateUniqueId();
+            id = new StringBuilder(generateUniqueId());
         }
+        allId.add(String.valueOf(id));
         return String.valueOf(id);
     }
-
 
     @SneakyThrows
     public Vehicle findVehicleById(String vehicleId)
@@ -77,8 +81,9 @@ public class WorkWithJSON {
     {
         Path path = Path.of(customersDataJSON);
 
-        GsonBuilder gsonBuilder = new GsonBuilder();
-        Gson gson = gsonBuilder.create();
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
+                .create();
 
         String jsonContent = Files.readString(path);
         JSONArray jsonArray = new JSONArray(jsonContent);
@@ -86,7 +91,7 @@ public class WorkWithJSON {
         ArrayList<Customer> customers = new ArrayList<>();
         for (Object jsonObject : jsonArray)
         {
-           Customer customer = gson.fromJson(String.valueOf(jsonObject), Customer.class);
+            Customer customer = gson.fromJson(String.valueOf(jsonObject), Customer.class);
             customers.add(customer);
         }
 
@@ -94,6 +99,7 @@ public class WorkWithJSON {
                 .filter(customer1 -> customer1.getId().equals(customerId))
                 .findFirst() // id is unique but it requires this function
                 .orElse(null);
+
         return customer;
     }
 
@@ -104,20 +110,24 @@ public class WorkWithJSON {
         Path path = Path.of(rentalInformationJSON);
 
         GsonBuilder gsonBuilder = new GsonBuilder();
-        Gson gson = gsonBuilder.create();
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
+                .create();
 
         String jsonContent = Files.readString(path);
         JSONArray jsonArray = new JSONArray(jsonContent);
 
-        ArrayList<RentalInformation> customers = new ArrayList<>();
+        ArrayList<RentalInformation> rI = new ArrayList<>();
         for (Object jsonObject : jsonArray)
         {
-            RentalInformation rentalInformation = gson.fromJson(String.valueOf(jsonObject), RentalInformation.class);
-            customers.add(rentalInformation);
+            RentalInformation rentalInformation = gson.fromJson(String.valueOf(jsonObject),
+                    RentalInformation.class);
+            rI.add(rentalInformation);
         }
 
-        RentalInformation rentalInformation = customers.stream()
-                .filter(rentalInformation1 -> rentalInformation1.getId().equals(rentalInformationId))
+
+        RentalInformation rentalInformation = rI.stream()
+                .filter(rI1 -> rI1.getId().equals(rentalInformationId))
                 .findFirst() // id is unique but it requires this function
                 .orElse(null);
         return rentalInformation;
@@ -133,16 +143,18 @@ public class WorkWithJSON {
     }*/
 
     @SneakyThrows
-    public void addRentalInformationRecord(String operationId, String vehicleId, String customerId,
-                                           int duration, LocalDateTime rentalDate, LocalDateTime returnDate)
+    public void addRentalInformationRecord(String vehicleId, String customerId,
+                                           int duration, LocalDateTime rentalDate,
+                                           LocalDateTime returnDate, RentingStatus rs)
     {
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("operationId", operationId);
+        jsonObject.put("id", generateUniqueId());
         jsonObject.put("vehicleId", vehicleId);
         jsonObject.put("customerId", customerId);
         jsonObject.put("duration", duration);
         jsonObject.put("rentalDate", rentalDate);
         jsonObject.put("returnDate", returnDate);
+        jsonObject.put("rentingStatus", rs);
 
         FileReader reader = new FileReader(rentalInformationJSON);
         int i;
@@ -164,7 +176,7 @@ public class WorkWithJSON {
 
     @SneakyThrows
     public void addCustomer(String name, String surname, int age,
-                            String phone, String email, String address, String id,
+                            String phone, String email, String address,
                             String password, ArrayList<RentalHistory> rentalHistories, double discount)
     {
         JSONObject jsonObject = new JSONObject();
@@ -174,7 +186,7 @@ public class WorkWithJSON {
         jsonObject.put("phone", phone);
         jsonObject.put("email", email);
         jsonObject.put("address", address);
-        jsonObject.put("id", id);
+        jsonObject.put("id", generateUniqueId());
         jsonObject.put("password", password);
         jsonObject.put("rentalHistories", rentalHistories);
         jsonObject.put("discount", discount);
@@ -192,6 +204,112 @@ public class WorkWithJSON {
         jsonArray.put(jsonObject);
 
         FileWriter writer = new FileWriter(customersDataJSON);
+        writer.write(jsonArray.toString());
+        writer.close();
+    }
+
+    @SneakyThrows
+    public void updateVehicleData(String vehicleId, boolean isReserved)
+    {
+        Vehicle vehicle = findVehicleById(vehicleId);
+        vehicle.setReserved(isReserved);
+
+        FileReader reader = new FileReader(vehiclesDataJSON);
+        int i;
+        StringBuilder jsonString = new StringBuilder();
+        while ((i = reader.read()) != -1) {
+            jsonString.append((char) i);
+        }
+        reader.close();
+
+        JSONArray jsonArray = new JSONArray(jsonString.toString());
+        int indexOfVehicle = findIndexOfJsonObject(jsonArray, vehicleId);
+
+        jsonArray.remove(indexOfVehicle);
+
+        Gson gson = new Gson();
+        String vehicleAsJsonObject = gson.toJson(vehicle);
+
+        JSONObject jsonVehicle = new JSONObject(vehicleAsJsonObject);
+        jsonArray.put(jsonVehicle);
+
+        FileWriter writer = new FileWriter(vehiclesDataJSON);
+        writer.write(jsonArray.toString());
+        writer.close();
+    }
+
+    public int findIndexOfJsonObject(JSONArray jsonArray, String uniqueId) {
+        for (int i = 0; i < jsonArray.length(); i++) {
+            JSONObject jsonObject = jsonArray.getJSONObject(i);
+            if (jsonObject.has("id") && jsonObject.getString("id").equals(uniqueId)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    @SneakyThrows
+    public void updateCustomerData(String customerId, RentalInformation rI)
+    {
+        Customer customer = findCustomerById(customerId);
+        ArrayList<RentalInformation> list = customer.getRentalHistories();
+        list.add(rI);
+
+        FileReader reader = new FileReader(customersDataJSON);
+        int i;
+        StringBuilder jsonString = new StringBuilder();
+        while ((i = reader.read()) != -1) {
+            jsonString.append((char) i);
+        }
+        reader.close();
+
+        JSONArray jsonArray = new JSONArray(jsonString.toString());
+        int indexOfCustomer = findIndexOfJsonObject(jsonArray, customerId);
+
+        jsonArray.remove(indexOfCustomer);
+
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
+                .create();
+        String customerAsJsonObject = gson.toJson(customer);
+
+        JSONObject jsonCustomer = new JSONObject(customerAsJsonObject);
+        jsonArray.put(jsonCustomer);
+
+        FileWriter writer = new FileWriter(customersDataJSON);
+        writer.write(jsonArray.toString());
+        writer.close();
+    }
+
+
+    @SneakyThrows
+    public void updateRentalInformation(String rentalInformationId)
+    {
+        RentalInformation rentalInformation = findRentalInformationById(rentalInformationId);
+        rentalInformation.setRentingStatus(RentingStatus.FINISHED);
+
+        FileReader reader = new FileReader(rentalInformationJSON);
+        int i;
+        StringBuilder jsonString = new StringBuilder();
+        while ((i = reader.read()) != -1) {
+            jsonString.append((char) i);
+        }
+        reader.close();
+
+        JSONArray jsonArray = new JSONArray(jsonString.toString());
+        int indexOfRentalInformation = findIndexOfJsonObject(jsonArray, rentalInformationId);
+
+        jsonArray.remove(indexOfRentalInformation);
+
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
+                .create();
+        String rentalInformationAsJsonObject = gson.toJson(rentalInformation);
+
+        JSONObject jsonCustomer = new JSONObject(rentalInformationAsJsonObject);
+        jsonArray.put(jsonCustomer);
+
+        FileWriter writer = new FileWriter(rentalInformationJSON);
         writer.write(jsonArray.toString());
         writer.close();
     }

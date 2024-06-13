@@ -1,16 +1,22 @@
 package renting;
 
 import customer.data.Customer;
+import lombok.*;
 import vehicle.data.Vehicle;
 
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NonNull
+@ToString
 public class RentalInformation {
-    private String operationId;
-    private Vehicle vehicle;
-    private Customer customer;
+    private String id;
+    private String vehicleId;
+    private String customerId;
     private int duration; //in days
-    private LocalDateTime rentalDate;
-    private LocalDateTime returnDate;
-
+    public LocalDateTime rentalDate;
+    public LocalDateTime returnDate;
+    public  RentingStatus rentingStatus;
 }
