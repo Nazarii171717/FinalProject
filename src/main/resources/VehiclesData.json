@@ -1574,7 +1574,7 @@
   {
     "id": "83",
     "typeOfVehicle": "Motorcycle",
-    "type": "Adventure",
+    "type": "Sport Bike",
     "brand": "KTM",
     "model": "Adventure 790",
     "year": 2021,
@@ -1595,7 +1595,7 @@
   {
     "id": "84",
     "typeOfVehicle": "Motorcycle",
-    "type": "Naked Bike",
+    "type": "Sport Bike",
     "brand": "Ducati",
     "model": "Monster 821",
     "year": 2022,
@@ -1616,7 +1616,7 @@
   {
     "id": "85",
     "typeOfVehicle": "Motorcycle",
-    "type": "Dual-Sport",
+    "type": "Sport Bike",
     "brand": "Honda",
     "model": "CRF250L",
     "year": 2021,
@@ -1637,7 +1637,7 @@
   {
     "id": "86",
     "typeOfVehicle": "Motorcycle",
-    "type": "Sport Touring",
+    "type": "Touring",
     "brand": "Kawasaki",
     "model": "Ninja 1000SX",
     "year": 2022,
@@ -1658,7 +1658,7 @@
   {
     "id": "87",
     "typeOfVehicle": "Motorcycle",
-    "type": "Cafe Racer",
+    "type": "Sport Bike",
     "brand": "Triumph",
     "model": "Thruxton RS",
     "year": 2021,
@@ -1679,7 +1679,7 @@
   {
     "id": "88",
     "typeOfVehicle": "Motorcycle",
-    "type": "Bobber",
+    "type": "Cruiser",
     "brand": "Indian",
     "model": "Scout Bobber",
     "year": 2022,
@@ -1700,7 +1700,7 @@
   {
     "id": "89",
     "typeOfVehicle": "Motorcycle",
-    "type": "Classic",
+    "type": "Retro",
     "brand": "Royal Enfield",
     "model": "Bullet 350",
     "year": 2021,
@@ -1742,7 +1742,7 @@
   {
     "id": "91",
     "typeOfVehicle": "Motorcycle",
-    "type": "Supermoto",
+    "type": "Sport Bike",
     "brand": "KTM",
     "model": "690 SMC R",
     "year": 2021,
@@ -1784,7 +1784,7 @@
   {
     "id": "93",
     "typeOfVehicle": "Motorcycle",
-    "type": "Dirt Bike",
+    "type": "Sport Bike",
     "brand": "Kawasaki",
     "model": "KLX450R",
     "year": 2021,
@@ -1847,12 +1847,12 @@
   {
     "id": "96",
     "typeOfVehicle": "Motorcycle",
-    "type": "Streetfighter",
+    "type": "Street",
     "brand": "Ducati",
     "model": "Streetfighter V4",
     "year": 2022,
     "vin": "ZDM13BVW2NB123456",
-    "color": "Red",
+    "color": "Yellow",
     "maxSpeed": 280,
     "maxLoad": 200,
     "engine": 1.1,
@@ -1889,7 +1889,7 @@
   {
     "id": "98",
     "typeOfVehicle": "Motorcycle",
-    "type": "Cafe Racer",
+    "type": "Sport Bike",
     "brand": "Norton",
     "model": "Commando 961",
     "year": 2021,
