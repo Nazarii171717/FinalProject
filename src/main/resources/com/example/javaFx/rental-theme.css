@@ -1,0 +1,18 @@
+.label{
+    -fx-text-fill: white;
+}
+.root{
+    -fx-background-color: #7289da;
+}
+.button{
+    -fx-background-color: #99aab5;
+    -fx-text-fill: white;
+}
+.text-field{
+    -fx-background-color: #99aab5;
+    -fx-prompt-text-fill: white;
+    -fx-text-fill: white;
+}
+.check-box{
+    -fx-text-fill: white;
+}
