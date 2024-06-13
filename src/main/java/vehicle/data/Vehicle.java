@@ -10,6 +10,7 @@ import lombok.*;
 public class Vehicle
 {
     private String id;
+    private String typeOfVehicle;
     private String type;
     private String brand;
     private String model;

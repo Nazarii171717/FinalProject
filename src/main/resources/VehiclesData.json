@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Toyota",
     "model": "Camry",
@@ -22,6 +23,7 @@
   },
   {
     "id": "2",
+    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Hyundai",
     "model": "Santa Fe",
@@ -43,6 +45,7 @@
   },
   {
     "id": "3",
+    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Honda",
     "model": "Civic",
@@ -65,6 +68,7 @@
 
     {
       "id": "4",
+      "typeOfVehicle": "Car",
       "type": "Convertible",
       "brand": "BMW",
       "model": "Z4",
@@ -86,6 +90,7 @@
     },
     {
       "id": "5",
+      "typeOfVehicle": "Car",
       "type": "Coupe",
       "brand": "Audi",
       "model": "A5",
@@ -107,6 +112,7 @@
     },
     {
       "id": "6",
+      "typeOfVehicle": "Car",
       "type": "Sedan",
       "brand": "Mercedes-Benz",
       "model": "C-Class",
@@ -128,6 +134,7 @@
     },
     {
       "id": "7",
+      "typeOfVehicle": "Car",
       "type": "SUV",
       "brand": "Ford",
       "model": "Explorer",
@@ -149,6 +156,7 @@
     },
     {
       "id": "8",
+      "typeOfVehicle": "Car",
       "type": "Hatchback",
       "brand": "Volkswagen",
       "model": "Golf",
@@ -170,6 +178,7 @@
     },
     {
       "id": "9",
+      "typeOfVehicle": "Car",
       "type": "Minivan",
       "brand": "Chrysler",
       "model": "Pacifica",
@@ -191,6 +200,7 @@
     },
     {
       "id": "10",
+      "typeOfVehicle": "Car",
       "type": "Pickup",
       "brand": "Chevrolet",
       "model": "Silverado",
@@ -213,6 +223,7 @@
 
     {
       "id": "11",
+      "typeOfVehicle": "Car",
       "type": "Sedan",
       "brand": "Tesla",
       "model": "Model S",
@@ -234,6 +245,7 @@
     },
     {
       "id": "12",
+      "typeOfVehicle": "Car",
       "type": "SUV",
       "brand": "Kia",
       "model": "Sorento",
@@ -255,6 +267,7 @@
     },
     {
       "id": "13",
+      "typeOfVehicle": "Car",
       "type": "Convertible",
       "brand": "Mazda",
       "model": "MX-5 Miata",
@@ -276,6 +289,7 @@
     },
     {
       "id": "14",
+      "typeOfVehicle": "Car",
       "type": "Hatchback",
       "brand": "Ford",
       "model": "Focus",
@@ -297,6 +311,7 @@
     },
     {
       "id": "15",
+      "typeOfVehicle": "Car",
       "type": "Coupe",
       "brand": "Lexus",
       "model": "RC 350",
@@ -318,6 +333,7 @@
     },
     {
       "id": "16",
+      "typeOfVehicle": "Car",
       "type": "Minivan",
       "brand": "Toyota",
       "model": "Sienna",
@@ -339,6 +355,7 @@
     },
     {
       "id": "17",
+      "typeOfVehicle": "Car",
       "type": "Pickup",
       "brand": "Ram",
       "model": "1500",
@@ -360,6 +377,7 @@
     },
     {
       "id": "18",
+      "typeOfVehicle": "Car",
       "type": "Sedan",
       "brand": "Nissan",
       "model": "Altima",
@@ -381,6 +399,7 @@
     },
     {
       "id": "19",
+      "typeOfVehicle": "Car",
       "type": "SUV",
       "brand": "Jeep",
       "model": "Grand Cherokee",
@@ -402,6 +421,7 @@
     },
     {
       "id": "20",
+      "typeOfVehicle": "Car",
       "type": "Hatchback",
       "brand": "Subaru",
       "model": "Impreza",
@@ -423,6 +443,7 @@
     },
   {
     "id": "21",
+    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "BMW",
     "model": "M4",
@@ -444,6 +465,7 @@
   },
   {
     "id": "22",
+    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "Porsche",
     "model": "911 Carrera",
@@ -465,6 +487,7 @@
   },
   {
     "id": "23",
+    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Honda",
     "model": "Odyssey",
@@ -486,6 +509,7 @@
   },
   {
     "id": "24",
+    "typeOfVehicle": "Car",
     "type": "Pickup",
     "brand": "Toyota",
     "model": "Tundra",
@@ -507,6 +531,7 @@
   },
   {
     "id": "25",
+    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Audi",
     "model": "A4",
@@ -528,6 +553,7 @@
   },
   {
     "id": "26",
+    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Chevrolet",
     "model": "Tahoe",
@@ -549,6 +575,7 @@
   },
   {
     "id": "27",
+    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Volkswagen",
     "model": "Polo",
@@ -570,6 +597,7 @@
   },
   {
     "id": "28",
+    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "Mercedes-Benz",
     "model": "E-Class",
@@ -591,6 +619,7 @@
   },
   {
     "id": "29",
+    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "Jaguar",
     "model": "F-Type",
@@ -612,6 +641,7 @@
   },
   {
     "id": "30",
+    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Kia",
     "model": "Carnival",
@@ -633,6 +663,7 @@
   },
   {
     "id": "31",
+    "typeOfVehicle": "Car",
     "type": "Pickup",
     "brand": "Ford",
     "model": "Ranger",
@@ -654,6 +685,7 @@
   },
   {
     "id": "32",
+    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Hyundai",
     "model": "Elantra",
@@ -675,6 +707,7 @@
   },
   {
     "id": "33",
+    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Nissan",
     "model": "Pathfinder",
@@ -696,6 +729,7 @@
   },
   {
     "id": "34",
+    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Chevrolet",
     "model": "Bolt EV",
@@ -717,6 +751,7 @@
   },
   {
     "id": "35",
+    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "Ford",
     "model": "Mustang",
@@ -738,6 +773,7 @@
   },
   {
     "id": "36",
+    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "Chevrolet",
     "model": "Camaro",
@@ -759,6 +795,7 @@
   },
   {
     "id": "37",
+    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Mercedes-Benz",
     "model": "Metris",
@@ -780,6 +817,7 @@
   },
   {
     "id": "38",
+    "typeOfVehicle": "Car",
     "type": "Pickup",
     "brand": "GMC",
     "model": "Sierra 1500",
@@ -801,6 +839,7 @@
   },
   {
     "id": "39",
+    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Lexus",
     "model": "ES 350",
@@ -822,6 +861,7 @@
   },
   {
     "id": "40",
+    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Toyota",
     "model": "Highlander",
@@ -843,6 +883,7 @@
   },
   {
     "id": "41",
+    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Hyundai",
     "model": "i30",
@@ -864,6 +905,7 @@
   },
   {
     "id": "42",
+    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "Infiniti",
     "model": "Q60",
@@ -885,6 +927,7 @@
   },
   {
     "id": "43",
+    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "BMW",
     "model": "4 Series",
@@ -906,6 +949,7 @@
   },
   {
     "id": "44",
+    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Chrysler",
     "model": "Voyager",
@@ -926,6 +970,7 @@
     "pricePerDay": 450
   },
   {
+    "typeOfVehicle": "Car",
     "id": "45",
     "type": "Pickup",
     "brand": "Toyota",
@@ -948,6 +993,7 @@
   },
   {
     "id": "46",
+    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Mazda",
     "model": "6",
@@ -969,6 +1015,7 @@
   },
   {
     "id": "47",
+    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Land Rover",
     "model": "Discovery",
@@ -990,6 +1037,7 @@
   },
   {
     "id": "48",
+    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Renault",
     "model": "Clio",
@@ -1011,6 +1059,7 @@
   },
   {
     "id": "49",
+    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "Alfa Romeo",
     "model": "4C",
@@ -1032,6 +1081,7 @@
   },
   {
     "id": "50",
+    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "Ferrari",
     "model": "Portofino",
@@ -1053,6 +1103,7 @@
   },
   {
     "id": "51",
+    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Ford",
     "model": "Transit",
@@ -1074,6 +1125,7 @@
   },
   {
     "id": "52",
+    "typeOfVehicle": "Car",
     "type": "Pickup",
     "brand": "Ram",
     "model": "1500",
@@ -1095,6 +1147,7 @@
   },
   {
     "id": "53",
+    "typeOfVehicle": "Car",
     "type": "Sedan",
     "brand": "Genesis",
     "model": "G80",
@@ -1116,6 +1169,7 @@
   },
   {
     "id": "54",
+    "typeOfVehicle": "Car",
     "type": "SUV",
     "brand": "Subaru",
     "model": "Forester",
@@ -1137,6 +1191,7 @@
   },
   {
     "id": "55",
+    "typeOfVehicle": "Car",
     "type": "Hatchback",
     "brand": "Mazda",
     "model": "3",
@@ -1158,6 +1213,7 @@
   },
   {
     "id": "56",
+    "typeOfVehicle": "Car",
     "type": "Coupe",
     "brand": "Audi",
     "model": "TT",
@@ -1179,6 +1235,7 @@
   },
   {
     "id": "57",
+    "typeOfVehicle": "Car",
     "type": "Convertible",
     "brand": "Aston Martin",
     "model": "DB11",
@@ -1200,6 +1257,7 @@
   },
   {
     "id": "58",
+    "typeOfVehicle": "Car",
     "type": "Minivan",
     "brand": "Volkswagen",
     "model": "Transporter",
@@ -1221,6 +1279,7 @@
   },
   {
     "id": "69",
+    "typeOfVehicle": "Car",
     "type": "Camper",
     "brand": "Roadtrek",
     "model": "Zion",
@@ -1241,6 +1300,7 @@
   },
   {
     "id": "70",
+    "typeOfVehicle": "Car",
     "type": "Camper",
     "brand": "Winnebago",
     "model": "Revel",
@@ -1261,6 +1321,7 @@
   },
   {
     "id": "71",
+    "typeOfVehicle": "Car",
     "type": "Camper",
     "brand": "Airstream",
     "model": "Basecamp",
@@ -1281,6 +1342,7 @@
   },
   {
     "id": "72",
+    "typeOfVehicle": "Car",
     "type": "Camper",
     "brand": "Thor Motor Coach",
     "model": "Synergy",
@@ -1301,6 +1363,7 @@
   },
   {
     "id": "73",
+    "typeOfVehicle": "Car",
     "type": "Camper",
     "brand": "Forest River",
     "model": "Sunseeker LE",
@@ -1321,6 +1384,7 @@
   },
   {
     "id": "74",
+    "typeOfVehicle": "Car",
     "type": "Camper",
     "brand": "Coachmen",
     "model": "Leprechaun",
@@ -1341,6 +1405,7 @@
   },
   {
     "id": "75",
+    "typeOfVehicle": "Car",
     "type": "Camper",
     "brand": "Pleasure-Way",
     "model": "Ascent",
@@ -1361,6 +1426,7 @@
   },
   {
     "id": "76",
+    "typeOfVehicle": "Car",
     "type": "Camper",
     "brand": "Leisure Travel Vans",
     "model": "Unity",
@@ -1381,6 +1447,7 @@
   },
   {
     "id": "77",
+    "typeOfVehicle": "Car",
     "type": "Camper",
     "brand": "Regency RV",
     "model": "Xalta",
@@ -1401,6 +1468,7 @@
   },
   {
     "id": "78",
+    "typeOfVehicle": "Car",
     "type": "Camper",
     "brand": "Tiffin Motorhomes",
     "model": "Wayfarer",
