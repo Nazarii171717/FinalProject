@@ -17,7 +17,8 @@
     "gearBox": "Automatic",
     "mileage": 10000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 300
   },
   {
     "id": "2",
@@ -37,7 +38,8 @@
     "gearBox": "Automatic",
     "mileage": 5000,
     "numberOfSeats": 7,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 200
   },
   {
     "id": "3",
@@ -57,7 +59,8 @@
     "gearBox": "Manual",
     "mileage": 15000,
     "numberOfSeats": 5,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 290
   },
 
     {
@@ -78,7 +81,8 @@
       "gearBox": "Automatic",
       "mileage": 3000,
       "numberOfSeats": 2,
-      "isReserved": false
+      "isReserved": false,
+      "pricePerDay": 400
     },
     {
       "id": "5",
@@ -98,7 +102,8 @@
       "gearBox": "Automatic",
       "mileage": 8000,
       "numberOfSeats": 4,
-      "isReserved": true
+      "isReserved": true,
+      "pricePerDay": 380
     },
     {
       "id": "6",
@@ -118,7 +123,8 @@
       "gearBox": "Automatic",
       "mileage": 12000,
       "numberOfSeats": 5,
-      "isReserved": false
+      "isReserved": false,
+      "pricePerDay": 450
     },
     {
       "id": "7",
@@ -138,7 +144,8 @@
       "gearBox": "Automatic",
       "mileage": 20000,
       "numberOfSeats": 7,
-      "isReserved": true
+      "isReserved": true,
+      "pricePerDay": 240
     },
     {
       "id": "8",
@@ -158,7 +165,8 @@
       "gearBox": "Manual",
       "mileage": 11000,
       "numberOfSeats": 5,
-      "isReserved": false
+      "isReserved": false,
+      "pricePerDay": 300
     },
     {
       "id": "9",
@@ -178,7 +186,8 @@
       "gearBox": "Automatic",
       "mileage": 15000,
       "numberOfSeats": 7,
-      "isReserved": false
+      "isReserved": false,
+      "pricePerDay": 220
     },
     {
       "id": "10",
@@ -198,7 +207,8 @@
       "gearBox": "Automatic",
       "mileage": 7000,
       "numberOfSeats": 5,
-      "isReserved": false
+      "isReserved": false,
+      "pricePerDay": 370
     },
 
     {
@@ -219,7 +229,8 @@
       "gearBox": "Automatic",
       "mileage": 3000,
       "numberOfSeats": 5,
-      "isReserved": false
+      "isReserved": false,
+      "pricePerDay": 500
     },
     {
       "id": "12",
@@ -239,7 +250,8 @@
       "gearBox": "Automatic",
       "mileage": 8000,
       "numberOfSeats": 7,
-      "isReserved": true
+      "isReserved": true,
+      "pricePerDay": 380
     },
     {
       "id": "13",
@@ -259,7 +271,8 @@
       "gearBox": "Manual",
       "mileage": 5000,
       "numberOfSeats": 2,
-      "isReserved": false
+      "isReserved": false,
+      "pricePerDay": 350
     },
     {
       "id": "14",
@@ -279,7 +292,8 @@
       "gearBox": "Manual",
       "mileage": 14000,
       "numberOfSeats": 5,
-      "isReserved": true
+      "isReserved": true,
+      "pricePerDay": 270
     },
     {
       "id": "15",
@@ -299,7 +313,8 @@
       "gearBox": "Automatic",
       "mileage": 9000,
       "numberOfSeats": 4,
-      "isReserved": false
+      "isReserved": false,
+      "pricePerDay": 450
     },
     {
       "id": "16",
@@ -319,7 +334,8 @@
       "gearBox": "Automatic",
       "mileage": 18000,
       "numberOfSeats": 7,
-      "isReserved": true
+      "isReserved": true,
+      "pricePerDay": 300
     },
     {
       "id": "17",
@@ -339,7 +355,8 @@
       "gearBox": "Automatic",
       "mileage": 6000,
       "numberOfSeats": 5,
-      "isReserved": false
+      "isReserved": false,
+      "pricePerDay": 200
     },
     {
       "id": "18",
@@ -359,7 +376,8 @@
       "gearBox": "Automatic",
       "mileage": 22000,
       "numberOfSeats": 5,
-      "isReserved": true
+      "isReserved": true,
+      "pricePerDay": 300
     },
     {
       "id": "19",
@@ -379,7 +397,8 @@
       "gearBox": "Automatic",
       "mileage": 17000,
       "numberOfSeats": 5,
-      "isReserved": false
+      "isReserved": false,
+      "pricePerDay": 380
     },
     {
       "id": "20",
@@ -399,7 +418,8 @@
       "gearBox": "Manual",
       "mileage": 13000,
       "numberOfSeats": 5,
-      "isReserved": false
+      "isReserved": false,
+      "pricePerDay": 360
     },
   {
     "id": "21",
@@ -419,7 +439,8 @@
     "gearBox": "Automatic",
     "mileage": 7000,
     "numberOfSeats": 4,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 390
   },
   {
     "id": "22",
@@ -439,7 +460,8 @@
     "gearBox": "Automatic",
     "mileage": 3000,
     "numberOfSeats": 2,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 600
   },
   {
     "id": "23",
@@ -459,7 +481,8 @@
     "gearBox": "Automatic",
     "mileage": 15000,
     "numberOfSeats": 7,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 300
   },
   {
     "id": "24",
@@ -479,7 +502,8 @@
     "gearBox": "Automatic",
     "mileage": 8000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 200
   },
   {
     "id": "25",
@@ -499,7 +523,8 @@
     "gearBox": "Automatic",
     "mileage": 20000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 380
   },
   {
     "id": "26",
@@ -519,7 +544,8 @@
     "gearBox": "Automatic",
     "mileage": 10000,
     "numberOfSeats": 7,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 399
   },
   {
     "id": "27",
@@ -539,7 +565,8 @@
     "gearBox": "Manual",
     "mileage": 18000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 150
   },
   {
     "id": "28",
@@ -559,7 +586,8 @@
     "gearBox": "Automatic",
     "mileage": 4000,
     "numberOfSeats": 4,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 650
   },
   {
     "id": "29",
@@ -579,7 +607,8 @@
     "gearBox": "Automatic",
     "mileage": 6000,
     "numberOfSeats": 2,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 550
   },
   {
     "id": "30",
@@ -599,7 +628,8 @@
     "gearBox": "Automatic",
     "mileage": 13000,
     "numberOfSeats": 8,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 400
   },
   {
     "id": "31",
@@ -619,7 +649,8 @@
     "gearBox": "Automatic",
     "mileage": 5000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 300
   },
   {
     "id": "32",
@@ -639,7 +670,8 @@
     "gearBox": "Automatic",
     "mileage": 20000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 310
   },
   {
     "id": "33",
@@ -659,7 +691,8 @@
     "gearBox": "Automatic",
     "mileage": 15000,
     "numberOfSeats": 7,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 350
   },
   {
     "id": "34",
@@ -679,7 +712,8 @@
     "gearBox": "Automatic",
     "mileage": 8000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 290
   },
   {
     "id": "35",
@@ -699,7 +733,8 @@
     "gearBox": "Manual",
     "mileage": 3000,
     "numberOfSeats": 4,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 400
   },
   {
     "id": "36",
@@ -719,7 +754,8 @@
     "gearBox": "Automatic",
     "mileage": 7000,
     "numberOfSeats": 4,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 490
   },
   {
     "id": "37",
@@ -739,7 +775,8 @@
     "gearBox": "Automatic",
     "mileage": 12000,
     "numberOfSeats": 8,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 600
   },
   {
     "id": "38",
@@ -759,7 +796,8 @@
     "gearBox": "Automatic",
     "mileage": 6000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 300
   },
   {
     "id": "39",
@@ -779,7 +817,8 @@
     "gearBox": "Automatic",
     "mileage": 8000,
     "numberOfSeats": 5,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 420
   },
   {
     "id": "40",
@@ -799,7 +838,8 @@
     "gearBox": "Automatic",
     "mileage": 15000,
     "numberOfSeats": 7,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 390
   },
   {
     "id": "41",
@@ -819,7 +859,8 @@
     "gearBox": "Manual",
     "mileage": 17000,
     "numberOfSeats": 5,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 333
   },
   {
     "id": "42",
@@ -839,7 +880,8 @@
     "gearBox": "Automatic",
     "mileage": 4000,
     "numberOfSeats": 4,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 270
   },
   {
     "id": "43",
@@ -859,7 +901,8 @@
     "gearBox": "Automatic",
     "mileage": 6000,
     "numberOfSeats": 4,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 440
   },
   {
     "id": "44",
@@ -879,7 +922,8 @@
     "gearBox": "Automatic",
     "mileage": 14000,
     "numberOfSeats": 7,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 450
   },
   {
     "id": "45",
@@ -899,7 +943,8 @@
     "gearBox": "Automatic",
     "mileage": 5000,
     "numberOfSeats": 5,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 300
   },
   {
     "id": "46",
@@ -919,7 +964,8 @@
     "gearBox": "Automatic",
     "mileage": 20000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 330
   },
   {
     "id": "47",
@@ -939,7 +985,8 @@
     "gearBox": "Automatic",
     "mileage": 12000,
     "numberOfSeats": 7,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 420
   },
   {
     "id": "48",
@@ -959,7 +1006,8 @@
     "gearBox": "Manual",
     "mileage": 18000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 190
   },
   {
     "id": "49",
@@ -979,7 +1027,8 @@
     "gearBox": "Automatic",
     "mileage": 5000,
     "numberOfSeats": 2,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 380
   },
   {
     "id": "50",
@@ -999,7 +1048,8 @@
     "gearBox": "Automatic",
     "mileage": 3000,
     "numberOfSeats": 2,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 900
   },
   {
     "id": "51",
@@ -1019,7 +1069,8 @@
     "gearBox": "Automatic",
     "mileage": 13000,
     "numberOfSeats": 15,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 490
   },
   {
     "id": "52",
@@ -1039,7 +1090,8 @@
     "gearBox": "Automatic",
     "mileage": 8000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 300
   },
   {
     "id": "53",
@@ -1059,7 +1111,8 @@
     "gearBox": "Automatic",
     "mileage": 15000,
     "numberOfSeats": 5,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 200
   },
   {
     "id": "54",
@@ -1079,7 +1132,8 @@
     "gearBox": "Automatic",
     "mileage": 18000,
     "numberOfSeats": 5,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 460
   },
   {
     "id": "55",
@@ -1099,7 +1153,8 @@
     "gearBox": "Manual",
     "mileage": 20000,
     "numberOfSeats": 5,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 290
   },
   {
     "id": "56",
@@ -1119,7 +1174,8 @@
     "gearBox": "Automatic",
     "mileage": 8000,
     "numberOfSeats": 4,
-    "isReserved": false
+    "isReserved": false,
+    "pricePerDay": 400
   },
   {
     "id": "57",
@@ -1139,7 +1195,8 @@
     "gearBox": "Automatic",
     "mileage": 4000,
     "numberOfSeats": 2,
-    "isReserved": true
+    "isReserved": true,
+    "pricePerDay": 890
   },
   {
     "id": "58",
@@ -1157,12 +1214,210 @@
     "engineType": "Diesel",
     "fuelType": "Diesel",
     "gearBox": "Manual",
-    "mileage": 4000,
+    "mileage": 40000,
+    "numberOfSeats": 5,
+    "isReserved": false,
+    "pricePerDay": 300
+  },
+  {
+    "id": "69",
+    "type": "Camper",
+    "brand": "Roadtrek",
+    "model": "Zion",
+    "year": 2021,
+    "vin": "WDAPF4CC1K9712345",
+    "color": "Silver",
+    "maxSpeed": 160,
+    "maxLoad": 1200,
+    "engine": 3.6,
+    "fuelTankCapacity": 75,
+    "fuelConsumption": 10.0,
+    "engineType": "Petrol",
+    "fuelType": "Unleaded",
+    "gearBox": "Automatic",
+    "mileage": 8000,
+    "numberOfSeats": 2,
+    "isReserved": false
+  },
+  {
+    "id": "70",
+    "type": "Camper",
+    "brand": "Winnebago",
+    "model": "Revel",
+    "year": 2022,
+    "vin": "WD4FE7CD5M9734567",
+    "color": "White",
+    "maxSpeed": 170,
+    "maxLoad": 1300,
+    "engine": 3.0,
+    "fuelTankCapacity": 70,
+    "fuelConsumption": 9.5,
+    "engineType": "Diesel",
+    "fuelType": "Diesel",
+    "gearBox": "Automatic",
+    "mileage": 6000,
+    "numberOfSeats": 4,
+    "isReserved": true
+  },
+  {
+    "id": "71",
+    "type": "Camper",
+    "brand": "Airstream",
+    "model": "Basecamp",
+    "year": 2021,
+    "vin": "1STF9CBB1M1234567",
+    "color": "Silver",
+    "maxSpeed": 165,
+    "maxLoad": 1100,
+    "engine": 2.8,
+    "fuelTankCapacity": 60,
+    "fuelConsumption": 8.5,
+    "engineType": "Diesel",
+    "fuelType": "Diesel",
+    "gearBox": "Automatic",
+    "mileage": 9000,
+    "numberOfSeats": 2,
+    "isReserved": false
+  },
+  {
+    "id": "72",
+    "type": "Camper",
+    "brand": "Thor Motor Coach",
+    "model": "Synergy",
+    "year": 2020,
+    "vin": "1FDWE3FS1M1287654",
+    "color": "Grey",
+    "maxSpeed": 155,
+    "maxLoad": 1200,
+    "engine": 3.0,
+    "fuelTankCapacity": 65,
+    "fuelConsumption": 9.0,
+    "engineType": "Diesel",
+    "fuelType": "Diesel",
+    "gearBox": "Automatic",
+    "mileage": 11000,
+    "numberOfSeats": 3,
+    "isReserved": true
+  },
+  {
+    "id": "73",
+    "type": "Camper",
+    "brand": "Forest River",
+    "model": "Sunseeker LE",
+    "year": 2021,
+    "vin": "1FDWE3FS3M1287654",
+    "color": "White",
+    "maxSpeed": 160,
+    "maxLoad": 1400,
+    "engine": 6.2,
+    "fuelTankCapacity": 80,
+    "fuelConsumption": 10.5,
+    "engineType": "Petrol",
+    "fuelType": "Unleaded",
+    "gearBox": "Automatic",
+    "mileage": 7000,
+    "numberOfSeats": 5,
+    "isReserved": false
+  },
+  {
+    "id": "74",
+    "type": "Camper",
+    "brand": "Coachmen",
+    "model": "Leprechaun",
+    "year": 2022,
+    "vin": "1FDXE4FS9MEB12345",
+    "color": "White",
+    "maxSpeed": 155,
+    "maxLoad": 1300,
+    "engine": 6.8,
+    "fuelTankCapacity": 90,
+    "fuelConsumption": 12.0,
+    "engineType": "Petrol",
+    "fuelType": "Unleaded",
+    "gearBox": "Automatic",
+    "mileage": 8000,
+    "numberOfSeats": 4,
+    "isReserved": true
+  },
+  {
+    "id": "75",
+    "type": "Camper",
+    "brand": "Pleasure-Way",
+    "model": "Ascent",
+    "year": 2020,
+    "vin": "3C6JR6DG1LG512345",
+    "color": "Silver",
+    "maxSpeed": 160,
+    "maxLoad": 1200,
+    "engine": 3.6,
+    "fuelTankCapacity": 70,
+    "fuelConsumption": 9.5,
+    "engineType": "Petrol",
+    "fuelType": "Unleaded",
+    "gearBox": "Automatic",
+    "mileage": 10000,
+    "numberOfSeats": 2,
+    "isReserved": false
+  },
+  {
+    "id": "76",
+    "type": "Camper",
+    "brand": "Leisure Travel Vans",
+    "model": "Unity",
+    "year": 2021,
+    "vin": "3C6JR6DG2MG512345",
+    "color": "White",
+    "maxSpeed": 165,
+    "maxLoad": 1100,
+    "engine": 2.8,
+    "fuelTankCapacity": 65,
+    "fuelConsumption": 8.5,
+    "engineType": "Diesel",
+    "fuelType": "Diesel",
+    "gearBox": "Automatic",
+    "mileage": 9000,
     "numberOfSeats": 2,
     "isReserved": true
+  },
+  {
+    "id": "77",
+    "type": "Camper",
+    "brand": "Regency RV",
+    "model": "Xalta",
+    "year": 2020,
+    "vin": "3C6JR6DG3BG512345",
+    "color": "Silver",
+    "maxSpeed": 160,
+    "maxLoad": 1200,
+    "engine": 3.6,
+    "fuelTankCapacity": 70,
+    "fuelConsumption": 10.0,
+    "engineType": "Petrol",
+    "fuelType": "Unleaded",
+    "gearBox": "Automatic",
+    "mileage": 11000,
+    "numberOfSeats": 2,
+    "isReserved": false
+  },
+  {
+    "id": "78",
+    "type": "Camper",
+    "brand": "Tiffin Motorhomes",
+    "model": "Wayfarer",
+    "year": 2021,
+    "vin": "3C6JR6DG4LG512345",
+    "color": "White",
+    "maxSpeed": 165,
+    "maxLoad": 1300,
+    "engine": 2.8,
+    "fuelTankCapacity": 75,
+    "fuelConsumption": 9.5,
+    "engineType": "Diesel",
+    "fuelType": "Diesel",
+    "gearBox": "Automatic",
+    "mileage": 12000,
+    "numberOfSeats": 3,
+    "isReserved": true
   }
-
-
-
 
 ]
