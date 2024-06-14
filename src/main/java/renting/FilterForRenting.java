@@ -29,10 +29,9 @@ public class FilterForRenting {
             Vehicle vehicle = gson.fromJson(String.valueOf(jsonObject), Vehicle.class);
             vehicles.add(vehicle);
         }
-
         vehicles.removeIf(Vehicle::isReserved);
 
-        vehicles.removeIf(vehicle -> vehicle.getVehicleTypes() != VehicleTypes.CAR);
+        /*vehicles.removeIf(vehicle -> vehicle.getVehicleTypes() != VehicleTypes.CAR);*/
         return vehicles;
 
     }

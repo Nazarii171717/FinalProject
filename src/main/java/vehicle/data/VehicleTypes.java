@@ -2,6 +2,15 @@ package vehicle.data;
 
 //we can delete it
 public enum VehicleTypes {
-    CAR,
     MOTORCYCLE,
+    CAMPER,
+    SUV,
+    HATCHBACK,
+    SEDAN,
+    COUPE,
+    MINIVAN,
+    PICKUP,
+    CONVERTIBLE,
+
+
 }
