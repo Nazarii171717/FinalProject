@@ -36,8 +36,9 @@ public class RentalIntroController {
     @FXML
     void signInButtonClicked(ActionEvent event) {
         if (!validateData(loginTextField.getText(), passwdTextField.getText())) {
-            displayError("Invalid login or password!");
+            return;
         }
+
         else {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("rental-main.fxml"));
             Parent root = null;
@@ -77,16 +78,18 @@ public class RentalIntroController {
     }
 
     private boolean validateData(String login, String password) {
-        WorkWithJSON workWithJSON = new WorkWithJSON();
-        Customer customer = workWithJSON.findCustomerById(login);
-
         if (login.isEmpty() || password.isEmpty()) {
+            displayError(new EmptyTextFieldException().getMessage("One or more fields are empty"));
             return false;
         }
-        else if(!customer.getId().matches(login) && !customer.getPassword().matches(password)){
-            return false;
+        else {
+            Customer customer = getCustomer(login);
+            if(!customer.getId().matches(login) || !customer.getPassword().matches(password)){
+                displayError(new NotMatchingDataException().getMessage("Invalid login or password!"));
+                return false;
+            }
+            return true;
         }
-        return true;
     }
     private void displayError(String errorMessage) {
         try {
@@ -105,6 +108,13 @@ public class RentalIntroController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    private Customer getCustomer(String login){
+        WorkWithJSON workWithJSON = new WorkWithJSON();
+        if(workWithJSON.findCustomerById(login)==null){
+            displayError(new NotMatchingDataException().getMessage("Invalid login or password!")+" Customer not found!");
+        }
+        return workWithJSON.findCustomerById(login);
     }
 
 }

@@ -2,6 +2,9 @@ package com.example.javaFx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
@@ -11,11 +14,17 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class RentalMainController {
 
     @FXML
     private MenuItem accountMenuItem;
+
+    @FXML
+    private Label idUserLabel;
 
     @FXML
     private CheckBox checkBoxAutomatic;
@@ -215,6 +224,7 @@ public class RentalMainController {
     @FXML
     void accountClicked(ActionEvent event) {
 
+
     }
 
     @FXML
@@ -229,12 +239,43 @@ public class RentalMainController {
 
     @FXML
     void searchCarButtonClicked(ActionEvent event) {
+       //TODO: implement switch to rental-list.fxml after clicking searchCarButton and applying filters
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("rental-list.fxml"));
+        Parent root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        RentalVehicleListViewController controller = loader.getController();
+        Stage stage = new Stage();
+        stage.setTitle("Results");
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.show();
 
     }
 
     @FXML
     void searchMotocycleButtonClicked(ActionEvent event) {
-
+        //TODO: implement switch to rental-list.fxml after clicking searchCarButton and applying filters
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("rental-list.fxml"));
+        Parent root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        RentalVehicleListViewController controller = loader.getController();
+        Stage stage = new Stage();
+        stage.setTitle("Results");
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.show();
+        //TODO: Set the list of vehicles depending on their types and availability
     }
 
+    public void setIdUserLabel(String idUser) {
+        idUserLabel.setText(idUser);
+    }
 }

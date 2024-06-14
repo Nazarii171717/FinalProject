@@ -176,7 +176,7 @@ public class WorkWithJSON {
 
     @SneakyThrows
     public void addCustomer(String name, String surname, int age,
-                            String phone, String email, String address,
+                            String phone, String email, String address, String id,
                             String password, ArrayList<RentalHistory> rentalHistories, double discount)
     {
         JSONObject jsonObject = new JSONObject();
@@ -186,7 +186,7 @@ public class WorkWithJSON {
         jsonObject.put("phone", phone);
         jsonObject.put("email", email);
         jsonObject.put("address", address);
-        jsonObject.put("id", generateUniqueId());
+        jsonObject.put("id", id);
         jsonObject.put("password", password);
         jsonObject.put("rentalHistories", rentalHistories);
         jsonObject.put("discount", discount);

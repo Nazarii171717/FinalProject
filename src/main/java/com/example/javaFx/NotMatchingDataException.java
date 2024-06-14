@@ -6,4 +6,7 @@ public class NotMatchingDataException extends Exception{
     }
     public NotMatchingDataException() {
     }
+    public String getMessage(String s) {
+        return s;
+    }
 }

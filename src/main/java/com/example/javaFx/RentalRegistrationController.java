@@ -67,12 +67,17 @@ public class RentalRegistrationController {
         String phoneNumber = phoneNumberField.getText();
 
         if (!validateAge(age)) {
-            displayError("Age is invalid");
-        } else if (!validateData(name, surname, address, email, phoneNumber, login, password)) {
-            displayError("One or more fields are empty");
-        } else {
+            displayError(new InvalidAgeException().getMessage("Invalid age"));
+        }
+        else if (!validateData(name, surname, address, email, phoneNumber, login, password)) {
+            displayError(new EmptyTextFieldException().getMessage("All fields must be filled"));
+        }
+        else if (password.contains(" ")) {
+            displayError(new InvalidPasswordFormatException().getMessage("Password cannot contain spaces"));
+        }
+        else {
             WorkWithJSON workWithJSON = new WorkWithJSON();
-            workWithJSON.addCustomer(name, surname, Integer.parseInt(age), phoneNumber, email, address, login, password, null, 0.0);
+            workWithJSON.addCustomer(name, surname, Integer.parseInt(age), phoneNumber, email, address, login, password,null, 0.04);
             Stage currentStage = (Stage) continueButton.getScene().getWindow();
             currentStage.close();
             Stage stage = new Stage();

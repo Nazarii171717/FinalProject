@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaFx.RentalVehicleListViewController">
+   <children>
+      <ListView fx:id="carListView" layoutX="14.0" layoutY="53.0" prefHeight="456.0" prefWidth="327.0" />
+      <Label fx:id="resultsLabel" layoutX="22.0" layoutY="14.0" text="Results">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="vehicleIntroLabel" layoutX="381.0" layoutY="28.0" prefHeight="17.0" prefWidth="293.0" text="Vehicle Information:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="reserveButton" layoutX="571.0" layoutY="447.0" mnemonicParsing="false" onAction="#reserveButtonClicked" text="Reserve" />
+      <Label fx:id="vehicleDescLabel" alignment="TOP_LEFT" layoutX="373.0" layoutY="76.0" prefHeight="296.0" prefWidth="264.0" wrapText="true" />
+      <Label fx:id="priceLabel" layoutX="381.0" layoutY="387.0" prefHeight="22.0" prefWidth="242.0" text="Price per day: " textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="fromDatePicker" layoutX="377.0" layoutY="430.0" onAction="#fromDateSelected" promptText="From" />
+      <DatePicker fx:id="toDatePicker" layoutX="377.0" layoutY="460.0" onAction="#toDateSelected" promptText="To" />
+   </children>
+</AnchorPane>
