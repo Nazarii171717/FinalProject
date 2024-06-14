@@ -26,7 +26,7 @@ public class Vehicle
     private double engine;
     private double fuelTankCapacity;
     private double fuelConsumption;
-    private String engineType;
+
     private FuelType fuelType; //enum
     private GearBox gearBox; //enum
     private double mileage;
