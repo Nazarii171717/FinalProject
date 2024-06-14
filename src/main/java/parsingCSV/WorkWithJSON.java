@@ -252,6 +252,7 @@ public class WorkWithJSON {
     public void updateCustomerData(String customerId, RentalInformation rI)
     {
         Customer customer = findCustomerById(customerId);
+        customer.setDiscount(customer.getDiscount() + 0.01);
         ArrayList<RentalInformation> list = customer.getRentalHistories();
         list.add(rI);
 

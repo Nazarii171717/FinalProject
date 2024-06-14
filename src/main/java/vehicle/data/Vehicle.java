@@ -7,6 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NonNull
 @ToString
+
 public class Vehicle
 {
     private String id;
@@ -29,4 +30,8 @@ public class Vehicle
     private int numberOfSeats;
     private boolean isReserved;
     private double pricePerDay;
+
+
+
+    private VehicleTypes vehicleTypes;
 }

@@ -1,11 +1,12 @@
 package generalFunctionality;
 
+import customer.data.CustomerDataFunctions;
 import customer.data.RentalHistory;
 import parsingCSV.WorkWithJSON;
 import renting.RentalFunctions;
 
 import java.util.ArrayList;
-
+// TODO this class will be removed
 public class Functionality {
     public static void main(String[] args) {
 
@@ -28,9 +29,9 @@ public class Functionality {
         //
         //System.out.println(workWithJSON.findVehicleById("40"));
         //System.out.println(workWithJSON.findCustomerById("4"));
-        RentalFunctions rentalFunctions = new RentalFunctions();
+        //RentalFunctions rentalFunctions = new RentalFunctions();
         //rentalFunctions.rentVehicle("44", "4", 1);
-        rentalFunctions.returnVehicle("rkp03");
+        //rentalFunctions.returnVehicle("rkp03");
         //rentalFunctions.rentVehicle("44", "4", 1);
         //System.out.println(workWithJSON.findRentalInformationById("DZTRk"));
 
@@ -38,7 +39,10 @@ public class Functionality {
        // rentalFunctions.returnVehicle("GywX5");
 
 
-
+        System.out.println(workWithJSON.findCustomerById("JohnSmith"));
+        CustomerDataFunctions cdf = new CustomerDataFunctions();
+        cdf.changePassword("nnn", "JohnSmith");
+        System.out.println(workWithJSON.findCustomerById("JohnSmith"));
 
     }
 
