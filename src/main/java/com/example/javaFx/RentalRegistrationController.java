@@ -1,5 +1,6 @@
 package com.example.javaFx;
 
+import customer.data.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import parsingCSV.WorkWithJSON;
 
 import java.io.IOException;
 
@@ -64,14 +66,27 @@ public class RentalRegistrationController {
         String email = emailField.getText();
         String phoneNumber = phoneNumberField.getText();
 
-
-
         if (!validateAge(age)) {
             displayError("Age is invalid");
         } else if (!validateData(name, surname, address, email, phoneNumber, login, password)) {
             displayError("One or more fields are empty");
         } else {
-            //TODO: If data is correct, proceed with further processing
+            WorkWithJSON workWithJSON = new WorkWithJSON();
+            workWithJSON.addCustomer(name, surname, Integer.parseInt(age), phoneNumber, email, address, login, password, null, 0.0);
+            Stage currentStage = (Stage) continueButton.getScene().getWindow();
+            currentStage.close();
+            Stage stage = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader(RentalApplication.class.getResource("rental-login.fxml"));
+            Parent root = null;
+            try {
+                root = fxmlLoader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage.setTitle("Rental Application");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.show();
         }
 
 
