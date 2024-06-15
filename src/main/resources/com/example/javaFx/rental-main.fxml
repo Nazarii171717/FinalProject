@@ -1,114 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <TitledPane fx:id="brands" text="Brands" animated="false">
-         <content>
-            <VBox>
-               <children>
-                  <TitledPane fx:id="audiTitledPane" animated="false">
-                     <graphic>
-                        <HBox>
-                           <CheckBox fx:id="audiCheckBox" />
-                           <Label text="Audi" />
-                        </HBox>
-                     </graphic>
-                     <content>
-                        <VBox fx:id="audiVBox">
-                           <children>
-                              <CheckBox fx:id="audiCheckBoxA1" text="A1" />
-                              <CheckBox fx:id="audiCheckBoxA3" text="A3" />
-                              <CheckBox fx:id="audiCheckBoxA4" text="A4" />
-                              <CheckBox fx:id="audiCheckBoxA5" text="A5" />
-                              <CheckBox fx:id="audiCheckBoxA6" text="A6" />
-                              <CheckBox fx:id="audiCheckBoxA7" text="A7" />
-                              <CheckBox fx:id="audiCheckBoxA8" text="A8" />
-                              <CheckBox fx:id="audiCheckBoxQ2" text="Q2" />
-                              <CheckBox fx:id="audiCheckBoxQ3" text="Q3" />
-                              <CheckBox fx:id="audiCheckBoxQ5" text="Q5" />
-                              <CheckBox fx:id="audiCheckBoxQ7" text="Q7" />
-                              <CheckBox fx:id="audiCheckBoxQ8" text="Q8" />
-                              <CheckBox fx:id="audiCheckBoxR8" text="R8" />
-                              <CheckBox fx:id="audiCheckBoxTT" text="TT" />
-                           </children>
-                        </VBox>
-                     </content>
-                  </TitledPane>
-                 <TitledPane fx:id="bmwTitledPane" animated="false">
-                    <graphic>
-                        <HBox>
-                           <CheckBox fx:id="bmwCheckBox" />
-                           <Label text="BMW" />
-                        </HBox>
-                    </graphic>
-
-                     <content>
-                        <VBox fx:id="bmwVBox">
-                           <children>
-                              <CheckBox fx:id="bmwCheckBox1" text="1" />
-                              <CheckBox fx:id="bmwCheckBox2" text="2" />
-                              <CheckBox fx:id="bmwCheckBox3" text="3" />
-                              <CheckBox fx:id="bmwCheckBox4" text="4" />
-                              <CheckBox fx:id="bmwCheckBox5" text="5" />
-                              <CheckBox fx:id="bmwCheckBox6" text="6" />
-                              <CheckBox fx:id="bmwCheckBox7" text="7" />
-                              <CheckBox fx:id="bmwCheckBox8" text="8" />
-                              <CheckBox fx:id="bmwCheckBoxX1" text="X1" />
-                              <CheckBox fx:id="bmwCheckBoxX2" text="X2" />
-                              <CheckBox fx:id="bmwCheckBoxX3" text="X3" />
-                              <CheckBox fx:id="bmwCheckBoxX4" text="X4" />
-                              <CheckBox fx:id="bmwCheckBoxX5" text="X5" />
-                              <CheckBox fx:id="bmwCheckBoxX6" text="X6" />
-                              <CheckBox fx:id="bmwCheckBoxX7" text="X7" />
-                              <CheckBox fx:id="bmwCheckBoxZ4" text="Z4" />
-                              <CheckBox fx:id="bmwCheckBoxI3" text="I3" />
-                              <CheckBox fx:id="bmwCheckBoxI8" text="I8" />
-                           </children>
-                        </VBox>
-                     </content>
-                  </TitledPane>
-                  <TitledPane fx:id="mercedesTitledPane" animated="false">
-                     <graphic>
-                        <HBox>
-                           <CheckBox fx:id="mercedesCheckBox" />
-                           <Label text="Mercedes" />
-                        </HBox>
-                        </graphic>
-                     <content>
-                        <VBox fx:id="mercedesVBox">
-                           <children>
-                              <CheckBox fx:id="mercedesCheckBoxA" text="A" />
-                              <CheckBox fx:id="mercedesCheckBoxB" text="B" />
-                              <CheckBox fx:id="mercedesCheckBoxC" text="C" />
-                              <CheckBox fx:id="mercedesCheckBoxE" text="E" />
-                              <CheckBox fx:id="mercedesCheckBoxS" text="S" />
-                              <CheckBox fx:id="mercedesCheckBoxG" text="G" />
-                              <CheckBox fx:id="mercedesCheckBoxGLA" text="GLA" />
-                              <CheckBox fx:id="mercedesCheckBoxGLB" text="GLB" />
-                              <CheckBox fx:id="mercedesCheckBoxGLC" text="GLC" />
-                              <CheckBox fx:id="mercedesCheckBoxGLE" text="GLE" />
-                              <CheckBox fx:id="mercedesCheckBoxGLS" text="GLS" />
-                              <CheckBox fx:id="mercedesCheckBoxSLC" text="SLC" />
-                              <CheckBox fx:id="mercedesCheckBoxSL" text="SL" />
-                              <CheckBox fx:id="mercedesCheckBoxSLK" text="SLK" />
-                              <CheckBox fx:id="mercedesCheckBoxV" text="V" />
-                              <CheckBox fx:id="mercedesCheckBoxX" text="X" />
-                           </children>
-                        </VBox>
-                     </content>
-                    </TitledPane>
-
-
-               </children>
-            </VBox>
-         </content>
-      </TitledPane>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <TabPane layoutX="-1.0" layoutY="31.0" prefHeight="587.0" prefWidth="980.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="rentTab" text="Rent a car">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="549.0" prefWidth="980.0">
+                     <children>
+                        <SplitPane dividerPositions="0.29797979797979796" layoutX="2.0" layoutY="-3.0" prefHeight="555.0" prefWidth="978.0">
+                          <items>
+                            <AnchorPane fx:id="filterPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="292.0">
+                                 <children>
+                                      <TitledPane fx:id="filters" animated="false" layoutX="3.0" layoutY="90.0" prefHeight="373.0" prefWidth="279.0" text="Filters">
+                                          <graphic>
+                                              <CheckBox fx:id="filtersCheckBox" onAction="#filtersSelected" />
+                                          </graphic>
+                                          <content>
+                                              <VBox prefHeight="285.0" prefWidth="277.0">
+                                                  <children>
+                                                      <TitledPane fx:id="brands" animated="false" expanded="false" text="Brand">
+                                                          <graphic>
+                                                              <CheckBox fx:id="brandsCheckBox" onAction="#brandsSelected" />
+                                                          </graphic>
+                                                          <content>
+                                                              <ScrollPane>
+                                                                  <content>
+                                                                      <VBox prefHeight="520.0" prefWidth="173.0">
+                                                                          <children>
+                                                                              <CheckBox fx:id="audiCheckBox" onAction="#audiSelected" text="Audi" />
+                                                                              <CheckBox fx:id="bmwCheckBox" onAction="#bmwSelected" text="BMW" />
+                                                                              <CheckBox fx:id="mercedesCheckBox" onAction="#mercedesSelected" text="Mercedes Benz" />
+                                                                              <CheckBox fx:id="volkswagenCheckBox" onAction="#volkswagenSelected" text="Volkswagen" />
+                                                                              <CheckBox fx:id="porscheCheckBox" onAction="#porscheSelected" text="Porsche" />
+                                                                              <CheckBox fx:id="opelCheckBox" onAction="#opelSelected" text="Opel" />
+                                                                              <CheckBox fx:id="fordCheckBox" onAction="#fordSelected" text="Ford" />
+                                                                              <CheckBox fx:id="chevroletCheckBox" onAction="#chevroletSelected" text="Chevrolet" />
+                                                                              <CheckBox fx:id="toyotaCheckBox" onAction="#toyotaSelected" text="Toyota" />
+                                                                              <CheckBox fx:id="hondaCheckBox" onAction="#hondaSelected" text="Honda" />
+                                                                              <CheckBox fx:id="nissanCheckBox" onAction="#nissanSelected" text="Nissan" />
+                                                                              <CheckBox fx:id="hyundaiCheckBox" onAction="#hyundaiSelected" text="Hyundai" />
+                                                                              <CheckBox fx:id="kiaCheckBox" onAction="#kiaSelected" text="Kia" />
+                                                                              <CheckBox fx:id="peugeotCheckBox" onAction="#peugeotSelected" text="Peugeot" />
+                                                                              <CheckBox fx:id="renaultCheckBox" onAction="#renaultSelected" text="Renault" />
+                                                                              <CheckBox fx:id="citroenCheckBox" onAction="#citroenSelected" text="Citroen" />
+                                                                              <CheckBox fx:id="fiatCheckBox" onAction="#fiatSelected" text="Fiat" />
+                                                                              <CheckBox fx:id="alfaRomeoCheckBox" onAction="#alfaRomeoSelected" text="Alfa Romeo" />
+                                                                              <CheckBox fx:id="ferrariCheckBox" onAction="#ferrariSelected" text="Ferrari" />
+                                                                              <CheckBox fx:id="lamborghiniCheckBox" onAction="#lamborghiniSelected" text="Lamborghini" />
+                                                                              <CheckBox fx:id="maseratiCheckBox" onAction="#maseratiSelected" text="Maserati" />
+                                                                              <CheckBox fx:id="astonMartinCheckBox" onAction="#astonMartinSelected" text="Aston Martin" />
+                                                                              <CheckBox fx:id="bentleyCheckBox" onAction="#bentleySelected" text="Bentley" />
+                                                                              <CheckBox fx:id="rollsRoyceCheckBox" onAction="#rollsRoyceSelected" text="Rolls Royce" />
+                                                                              <CheckBox fx:id="jaguarCheckBox" onAction="#jaguarSelected" text="Jaguar" />
+                                                                              <CheckBox fx:id="landRoverCheckBox" onAction="#landRoverSelected" text="Land Rover" />
+                                                                              <CheckBox fx:id="teslaCheckBox" onAction="#teslaSelected" text="Tesla" />
+                                                                              <CheckBox fx:id="volvoCheckBox" onAction="#volvoSelected" text="Volvo" />
+                                                                              <CheckBox fx:id="subaruCheckBox" onAction="#subaruSelected" text="Subaru" />
+                                                                              <CheckBox fx:id="mazdaCheckBox" onAction="#mazdaSelected" text="Mazda" />
+                                                                              <CheckBox fx:id="suzukiCheckBox" onAction="#suzukiSelected" text="Suzuki" />
+                                                                              <CheckBox fx:id="dodgeCheckBox" onAction="#dodgeSelected" text="Dodge" />
+                                                                              <CheckBox fx:id="jeepCheckBox" onAction="#jeepSelected" text="Jeep" />
+                                                                              <CheckBox fx:id="cadillacCheckBox" onAction="#cadillacSelected" text="Cadillac" />
+                                                                              <CheckBox fx:id="harleyDavidsonCheckBox" onAction="#harleyDavidsonSelected" text="Harley Davidson" />
+                                                                              <CheckBox fx:id="ducatiCheckBox" onAction="#ducatiSelected" text="Ducati" />
+                                                                              <CheckBox fx:id="yamahaCheckBox" onAction="#yamahaSelected" text="Yamaha" />
+                                                                              <CheckBox fx:id="kawasakiCheckBox" onAction="#kawasakiSelected" text="Kawasaki" />
+                                                                              <CheckBox fx:id="suzukiMotorcyclesCheckBox" onAction="#suzukiMotorcyclesSelected" text="Suzuki Motorcycles" />
+                                                                              <CheckBox fx:id="winnebagoCheckBox" onAction="#winnebagoSelected" text="Winnebago" />
+                                                                              <CheckBox fx:id="chryslerCheckBox" onAction="#chryslerSelected" text="Chrysler" />
+                                                                          </children>
+                                                                      </VBox>
+                                                                  </content>
+                                                              </ScrollPane>
+                                                          </content>
+                                                      </TitledPane>
+                                                      <TitledPane fx:id="typesVehicles" animated="false" expanded="false" text="Type of Vehicle">
+                                                          <graphic>
+                                                              <CheckBox fx:id="typesVehiclesCheckBox" onAction="#typesVehiclesSelected" />
+                                                          </graphic>
+                                                          <content>
+                                                              <ScrollPane>
+                                                                  <content>
+                                                                      <VBox prefWidth="173.0">
+                                                                          <children>
+                                                                              <CheckBox fx:id="motorcycleCheckBox" onAction="#motorcycleSelected" text="Motorcycle" />
+                                                                              <CheckBox fx:id="camperCheckBox" onAction="#camperSelected" text="Camper" />
+                                                                              <CheckBox fx:id="suvCheckBox" onAction="#suvSelected" text="SUV" />
+                                                                              <CheckBox fx:id="hatchbackCheckBox" onAction="#hatchbackSelected" text="Hatchback" />
+                                                                              <CheckBox fx:id="sedanCheckBox" onAction="#sedanSelected" text="Sedan" />
+                                                                              <CheckBox fx:id="coupeCheckBox" onAction="#coupeSelected" text="Coupe" />
+                                                                              <CheckBox fx:id="minivanCheckBox" onAction="#minivanSelected" text="Minivan" />
+                                                                              <CheckBox fx:id="pickupCheckBox" onAction="#pickupSelected" text="Pickup" />
+                                                                              <CheckBox fx:id="convertibleCheckBox" onAction="#convertibleSelected" text="Convertible" />
+                                                                          </children>
+                                                                      </VBox>
+                                                                  </content>
+                                                              </ScrollPane>
+                                                          </content>
+                                                      </TitledPane>
+                                                      <TitledPane fx:id="colors" animated="false" expanded="false" text="Color">
+                                                          <graphic>
+                                                              <CheckBox fx:id="colorsCheckBox" onAction="#colorsSelected" />
+                                                          </graphic>
+                                                          <content>
+                                                              <ScrollPane>
+                                                                  <content>
+                                                                      <VBox prefWidth="173.0">
+                                                                          <children>
+                                                                              <CheckBox fx:id="blackCheckBox" onAction="#blackSelected" text="Black" />
+                                                                              <CheckBox fx:id="whiteCheckBox" onAction="#whiteSelected" text="White" />
+                                                                              <CheckBox fx:id="grayCheckBox" onAction="#graySelected" text="Gray" />
+                                                                              <CheckBox fx:id="silverCheckBox" onAction="#silverSelected" text="Silver" />
+                                                                              <CheckBox fx:id="redCheckBox" onAction="#redSelected" text="Red" />
+                                                                              <CheckBox fx:id="blueCheckBox" onAction="#blueSelected" text="Blue" />
+                                                                              <CheckBox fx:id="greenCheckBox" onAction="#greenSelected" text="Green" />
+                                                                              <CheckBox fx:id="yellowCheckBox" onAction="#yellowSelected" text="Yellow" />
+                                                                              <CheckBox fx:id="orangeCheckBox" onAction="#orangeSelected" text="Orange" />
+                                                                              <CheckBox fx:id="purpleCheckBox" onAction="#purpleSelected" text="Purple" />
+                                                                          </children>
+                                                                      </VBox>
+                                                                  </content>
+                                                              </ScrollPane>
+                                                          </content>
+                                                      </TitledPane>
+                                                      <TitledPane fx:id="fuel" animated="false" expanded="false" text="Fuel">
+                                                          <graphic>
+                                                              <CheckBox fx:id="fuelCheckBox" onAction="#fuelSelected" />
+                                                          </graphic>
+                                                          <content>
+                                                              <ScrollPane>
+                                                                  <content>
+                                                                      <VBox prefWidth="173.0">
+                                                                          <children>
+                                                                              <CheckBox fx:id="dieselCheckBox" onAction="#dieselSelected" text="Diesel" />
+                                                                              <CheckBox fx:id="petrolCheckBox" onAction="#petrolSelected" text="Petrol" />
+                                                                              <CheckBox fx:id="electricCheckBox" onAction="#electricSelected" text="Electric" />
+                                                                              <CheckBox fx:id="hybridCheckBox" onAction="#hybridSelected" text="Hybrid" />
+                                                                          </children>
+                                                                      </VBox>
+                                                                  </content>
+                                                              </ScrollPane>
+                                                          </content>
+                                                      </TitledPane>
+                                                      <TitledPane fx:id="transmission" animated="false" expanded="false" text="Transmission">
+                                                          <graphic>
+                                                              <CheckBox fx:id="transmissionCheckBox" onAction="#transmissionSelected" />
+                                                          </graphic>
+                                                          <content>
+                                                              <ScrollPane>
+                                                                  <content>
+                                                                      <VBox prefWidth="173.0">
+                                                                          <children>
+                                                                              <CheckBox fx:id="manualCheckBox" onAction="#manualSelected" text="Manual" />
+                                                                              <CheckBox fx:id="automaticCheckBox" onAction="#automaticSelected" text="Automatic" />
+                                                                          </children>
+                                                                      </VBox>
+                                                                  </content>
+                                                              </ScrollPane>
+                                                          </content>
+                                                      </TitledPane>
+                                                      <TitledPane fx:id="year" animated="false" expanded="false" text="Year of Production">
+                                                          <graphic>
+                                                              <CheckBox fx:id="yearCheckBox" onAction="#yearSelected" />
+                                                          </graphic>
+                                                          <content>
+                                                              <ScrollPane>
+                                                                  <content>
+                                                                      <VBox prefWidth="173.0">
+                                                                          <children>
+                                                                              <CheckBox fx:id="year2019CheckBox" onAction="#year2019Selected" text="2019" />
+                                                                              <CheckBox fx:id="year2020CheckBox" onAction="#year2020Selected" text="2020" />
+                                                                              <CheckBox fx:id="year2021CheckBox" onAction="#year2021Selected" text="2021" />
+                                                                              <CheckBox fx:id="year2022CheckBox" onAction="#year2022Selected" text="2022" />
+                                                                              <CheckBox fx:id="year2023CheckBox" onAction="#year2023Selected" text="2023" />
+                                                                              <CheckBox fx:id="year2024CheckBox" onAction="#year2024Selected" text="2024" />
+                                                                          </children>
+                                                                      </VBox>
+                                                                  </content>
+                                                              </ScrollPane>
+                                                          </content>
+                                                      </TitledPane>
+                                                      <TitledPane fx:id="pricePerDay" animated="false" expanded="false" text="Price per day">
+                                                          <graphic>
+                                                              <CheckBox fx:id="pricePerDayCheckBox" onAction="#pricePerDaySelected" />
+                                                          </graphic>
+                                                          <content>
+                                                              <ScrollPane>
+                                                                  <content>
+                                                                      <VBox prefWidth="173.0">
+                                                                          <children>
+                                                                              <CheckBox fx:id="price0CheckBox" onAction="#price0Selected" text="50 EUR" />
+                                                                              <CheckBox fx:id="price100CheckBox" onAction="#price100Selected" text="100 EUR" />
+                                                                              <CheckBox fx:id="price150CheckBox" onAction="#price150Selected" text="150 EUR" />
+                                                                              <CheckBox fx:id="price200CheckBox" onAction="#price200Selected" text="200 EUR" />
+                                                                              <CheckBox fx:id="price250CheckBox" onAction="#price250Selected" text="250 EUR" />
+                                                                              <CheckBox fx:id="price300CheckBox" onAction="#price300Selected" text="300 EUR" />
+                                                                              <CheckBox fx:id="price350CheckBox" onAction="#price350Selected" text="350 EUR" />
+                                                                              <CheckBox fx:id="price400CheckBox" onAction="#price400Selected" text="400 EUR" />
+                                                                          </children>
+                                                                      </VBox>
+                                                                  </content>
+                                                              </ScrollPane>
+                                                          </content>
+                                                      </TitledPane>
+                                                  </children>
+                                              </VBox>
+                                          </content>
+                                      </TitledPane>
+                                    <Button fx:id="searchButton" layoutX="167.0" layoutY="479.0" mnemonicParsing="false" onAction="#searchButtonClicked" prefHeight="52.0" prefWidth="101.0" text="Search" />
+                                    <Label fx:id="usernameLabel" alignment="CENTER" layoutX="23.0" layoutY="13.0" prefHeight="30.0" prefWidth="242.0" text="USERNAME">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="carSearchInfoLabel" layoutX="9.0" layoutY="59.0" prefHeight="17.0" prefWidth="196.0" text="Search for your car">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane fx:id="resultPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <SplitPane layoutX="-3.0" layoutY="2.0" prefHeight="553.0" prefWidth="685.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <ListView fx:id="resultsList" layoutY="46.0" onMouseClicked="#ItemClicked" prefHeight="504.0" prefWidth="449.0" />
+                                                <Label layoutX="7.0" layoutY="12.0" prefHeight="24.0" prefWidth="72.0" text="Results:">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button fx:id="rentButton" layoutX="626.0" layoutY="489.0" mnemonicParsing="false" onAction="#rentButtonClicked" text="Rent" />
+                                                <Label fx:id="brandModelLabel" alignment="TOP_LEFT" layoutX="471.0" layoutY="29.0" prefHeight="33.0" prefWidth="187.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="descLabel" alignment="TOP_LEFT" layoutX="477.0" layoutY="98.0" prefHeight="282.0" prefWidth="187.0" />
+                                                <Label fx:id="priceLabel" layoutX="469.0" layoutY="430.0" prefHeight="21.0" prefWidth="198.0" textFill="#a40404" />
+                                                <DatePicker fx:id="dateFromPicker" layoutX="469.0" layoutY="475.0" onAction="#dateFromSelected" prefHeight="26.0" prefWidth="146.0" promptText="From" />
+                                                <DatePicker fx:id="dateToPicker" layoutX="469.0" layoutY="511.0" onAction="#dateToSelected" prefHeight="26.0" prefWidth="146.0" promptText="To" />
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="historyTab" text="History">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab fx:id="accountTab" text="Account">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+    </children>
 </AnchorPane>
