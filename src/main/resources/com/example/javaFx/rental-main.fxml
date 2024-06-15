@@ -1,154 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TabPane layoutX="-2.0" layoutY="27.0" prefHeight="443.0" prefWidth="625.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab text="Car">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="405.0" prefWidth="625.0">
-                     <children>
-                        <CheckBox layoutX="30.0" layoutY="40.0" mnemonicParsing="false" text="SUV" />
-                        <CheckBox layoutX="30.0" layoutY="65.0" mnemonicParsing="false" text="Sedan" />
-                        <CheckBox layoutX="30.0" layoutY="90.0" mnemonicParsing="false" text="Hatchback" />
-                        <CheckBox layoutX="30.0" layoutY="115.0" mnemonicParsing="false" text="Convertible" />
-                        <CheckBox layoutX="30.0" layoutY="140.0" mnemonicParsing="false" text="Coupe" />
-                        <CheckBox layoutX="30.0" layoutY="165.0" mnemonicParsing="false" text="Minivan" />
-                        <CheckBox layoutX="30.0" layoutY="190.0" mnemonicParsing="false" text="Pickup" />
-                        <TextField layoutX="30.0" layoutY="276.0" promptText="Brand " />
-                        <Label layoutX="30.0" layoutY="252.0" prefHeight="20.0" prefWidth="103.0" text="Vehicle Brand">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="30.0" layoutY="14.0" prefHeight="20.0" prefWidth="165.0" text="Types of Vehicle">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="30.0" layoutY="320.0" prefHeight="20.0" prefWidth="103.0" text="Year">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <TextField layoutX="30.0" layoutY="343.0" prefHeight="26.0" prefWidth="66.0" promptText="From" />
-                        <TextField layoutX="108.0" layoutY="342.0" prefHeight="26.0" prefWidth="66.0" promptText="To" />
-                        <Label layoutX="262.0" layoutY="14.0" prefHeight="20.0" prefWidth="103.0" text="Colors">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <CheckBox layoutX="262.0" layoutY="40.0" mnemonicParsing="false" text="Black" />
-                        <CheckBox layoutX="262.0" layoutY="65.0" mnemonicParsing="false" text="White" />
-                        <CheckBox layoutX="262.0" layoutY="90.0" mnemonicParsing="false" text="Red" />
-                        <CheckBox layoutX="262.0" layoutY="115.0" mnemonicParsing="false" text="Blue" />
-                        <CheckBox layoutX="262.0" layoutY="140.0" mnemonicParsing="false" text="Grey" />
-                        <CheckBox layoutX="262.0" layoutY="165.0" mnemonicParsing="false" text="Silver" />
-                        <CheckBox layoutX="262.0" layoutY="190.0" mnemonicParsing="false" text="Green" />
-                        <CheckBox layoutX="262.0" layoutY="215.0" mnemonicParsing="false" text="Yellow" />
-                        <CheckBox layoutX="262.0" layoutY="240.0" mnemonicParsing="false" text="Orange" />
-                        <Label layoutX="262.0" layoutY="265.0" prefHeight="20.0" prefWidth="103.0" text="Engine Type">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <CheckBox layoutX="262.0" layoutY="290.0" mnemonicParsing="false" text="Petrol" />
-                        <CheckBox layoutX="262.0" layoutY="315.0" mnemonicParsing="false" text="Diesel" />
-                        <CheckBox layoutX="262.0" layoutY="340.0" mnemonicParsing="false" text="Electric" />
-                        <Label layoutX="479.0" layoutY="14.0" prefHeight="20.0" prefWidth="103.0" text="Transmission">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <CheckBox layoutX="479.0" layoutY="40.0" mnemonicParsing="false" text="Manual" />
-                        <CheckBox layoutX="479.0" layoutY="65.0" mnemonicParsing="false" text="Automatic" />
-                        <Button layoutX="493.0" layoutY="325.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="94.0" text="Search" />
-                        <CheckBox layoutX="30.0" layoutY="215.0" mnemonicParsing="false" text="Camper" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-            <Tab text="Motorcycle">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="405.0" prefWidth="625.0">
-                        <children>
-                            <CheckBox layoutX="52.0" layoutY="43.0" mnemonicParsing="false" text="Scooter" />
-                            <CheckBox layoutX="52.0" layoutY="68.0" mnemonicParsing="false" text="Touring" />
-                            <CheckBox layoutX="52.0" layoutY="93.0" mnemonicParsing="false" text="Sport Bike" />
-                            <CheckBox layoutX="52.0" layoutY="118.0" mnemonicParsing="false" text="Cruiser" />
-                            <CheckBox layoutX="52.0" layoutY="143.0" mnemonicParsing="false" text="Street" />
-                            <CheckBox layoutX="52.0" layoutY="168.0" mnemonicParsing="false" text="Chopper" />
-                            <CheckBox layoutX="52.0" layoutY="193.0" mnemonicParsing="false" text="Retro" />
-                            <CheckBox layoutX="52.0" layoutY="218.0" mnemonicParsing="false" text="Electric" />
-                            <TextField layoutX="52.0" layoutY="279.0" promptText="Brand " />
-                            <Label layoutX="52.0" layoutY="255.0" prefHeight="20.0" prefWidth="103.0" text="Vehicle Brand">
-                                <font>
-                                    <Font name="System Bold" size="16.0" />
-                                </font>
-                            </Label>
-                            <Label layoutX="52.0" layoutY="17.0" prefHeight="20.0" prefWidth="165.0" text="Types of Vehicle">
-                                <font>
-                                    <Font name="System Bold" size="16.0" />
-                                </font>
-                            </Label>
-                            <Label layoutX="52.0" layoutY="323.0" prefHeight="20.0" prefWidth="103.0" text="Year">
-                                <font>
-                                    <Font name="System Bold" size="16.0" />
-                                </font>
-                            </Label>
-                            <TextField layoutX="52.0" layoutY="346.0" prefHeight="26.0" prefWidth="66.0" promptText="From" />
-                            <TextField layoutX="130.0" layoutY="345.0" prefHeight="26.0" prefWidth="66.0" promptText="To" />
-                            <Label layoutX="449.0" layoutY="18.0" prefHeight="20.0" prefWidth="103.0" text="Colors">
-                                <font>
-                                    <Font name="System Bold" size="16.0" />
-                                </font>
-                            </Label>
-                            <CheckBox layoutX="449.0" layoutY="44.0" mnemonicParsing="false" text="Black" />
-                            <CheckBox layoutX="449.0" layoutY="69.0" mnemonicParsing="false" text="White" />
-                            <CheckBox layoutX="449.0" layoutY="94.0" mnemonicParsing="false" text="Red" />
-                            <CheckBox layoutX="449.0" layoutY="119.0" mnemonicParsing="false" text="Blue" />
-                            <CheckBox layoutX="449.0" layoutY="144.0" mnemonicParsing="false" text="Grey" />
-                            <CheckBox layoutX="449.0" layoutY="169.0" mnemonicParsing="false" text="Silver" />
-                            <CheckBox layoutX="449.0" layoutY="194.0" mnemonicParsing="false" text="Green" />
-                            <CheckBox layoutX="449.0" layoutY="219.0" mnemonicParsing="false" text="Yellow" />
-                            <CheckBox layoutX="449.0" layoutY="244.0" mnemonicParsing="false" text="Orange" />
-                        <Button layoutX="473.0" layoutY="327.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="94.0" text="Search" />
-                        </children>
-                    </AnchorPane>
-                </content>
-            </Tab>
-        </tabs>
-      </TabPane>
-      <MenuBar layoutX="-1.0" layoutY="1.0" prefHeight="28.0" prefWidth="624.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+      <TitledPane fx:id="brands" text="Brands" animated="false">
+         <content>
+            <VBox>
+               <children>
+                  <TitledPane fx:id="audiTitledPane" animated="false">
+                     <graphic>
+                        <HBox>
+                           <CheckBox fx:id="audiCheckBox" />
+                           <Label text="Audi" />
+                        </HBox>
+                     </graphic>
+                     <content>
+                        <VBox fx:id="audiVBox">
+                           <children>
+                              <CheckBox fx:id="audiCheckBoxA1" text="A1" />
+                              <CheckBox fx:id="audiCheckBoxA3" text="A3" />
+                              <CheckBox fx:id="audiCheckBoxA4" text="A4" />
+                              <CheckBox fx:id="audiCheckBoxA5" text="A5" />
+                              <CheckBox fx:id="audiCheckBoxA6" text="A6" />
+                              <CheckBox fx:id="audiCheckBoxA7" text="A7" />
+                              <CheckBox fx:id="audiCheckBoxA8" text="A8" />
+                              <CheckBox fx:id="audiCheckBoxQ2" text="Q2" />
+                              <CheckBox fx:id="audiCheckBoxQ3" text="Q3" />
+                              <CheckBox fx:id="audiCheckBoxQ5" text="Q5" />
+                              <CheckBox fx:id="audiCheckBoxQ7" text="Q7" />
+                              <CheckBox fx:id="audiCheckBoxQ8" text="Q8" />
+                              <CheckBox fx:id="audiCheckBoxR8" text="R8" />
+                              <CheckBox fx:id="audiCheckBoxTT" text="TT" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                 <TitledPane fx:id="bmwTitledPane" animated="false">
+                    <graphic>
+                        <HBox>
+                           <CheckBox fx:id="bmwCheckBox" />
+                           <Label text="BMW" />
+                        </HBox>
+                    </graphic>
+
+                     <content>
+                        <VBox fx:id="bmwVBox">
+                           <children>
+                              <CheckBox fx:id="bmwCheckBox1" text="1" />
+                              <CheckBox fx:id="bmwCheckBox2" text="2" />
+                              <CheckBox fx:id="bmwCheckBox3" text="3" />
+                              <CheckBox fx:id="bmwCheckBox4" text="4" />
+                              <CheckBox fx:id="bmwCheckBox5" text="5" />
+                              <CheckBox fx:id="bmwCheckBox6" text="6" />
+                              <CheckBox fx:id="bmwCheckBox7" text="7" />
+                              <CheckBox fx:id="bmwCheckBox8" text="8" />
+                              <CheckBox fx:id="bmwCheckBoxX1" text="X1" />
+                              <CheckBox fx:id="bmwCheckBoxX2" text="X2" />
+                              <CheckBox fx:id="bmwCheckBoxX3" text="X3" />
+                              <CheckBox fx:id="bmwCheckBoxX4" text="X4" />
+                              <CheckBox fx:id="bmwCheckBoxX5" text="X5" />
+                              <CheckBox fx:id="bmwCheckBoxX6" text="X6" />
+                              <CheckBox fx:id="bmwCheckBoxX7" text="X7" />
+                              <CheckBox fx:id="bmwCheckBoxZ4" text="Z4" />
+                              <CheckBox fx:id="bmwCheckBoxI3" text="I3" />
+                              <CheckBox fx:id="bmwCheckBoxI8" text="I8" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="mercedesTitledPane" animated="false">
+                     <graphic>
+                        <HBox>
+                           <CheckBox fx:id="mercedesCheckBox" />
+                           <Label text="Mercedes" />
+                        </HBox>
+                        </graphic>
+                     <content>
+                        <VBox fx:id="mercedesVBox">
+                           <children>
+                              <CheckBox fx:id="mercedesCheckBoxA" text="A" />
+                              <CheckBox fx:id="mercedesCheckBoxB" text="B" />
+                              <CheckBox fx:id="mercedesCheckBoxC" text="C" />
+                              <CheckBox fx:id="mercedesCheckBoxE" text="E" />
+                              <CheckBox fx:id="mercedesCheckBoxS" text="S" />
+                              <CheckBox fx:id="mercedesCheckBoxG" text="G" />
+                              <CheckBox fx:id="mercedesCheckBoxGLA" text="GLA" />
+                              <CheckBox fx:id="mercedesCheckBoxGLB" text="GLB" />
+                              <CheckBox fx:id="mercedesCheckBoxGLC" text="GLC" />
+                              <CheckBox fx:id="mercedesCheckBoxGLE" text="GLE" />
+                              <CheckBox fx:id="mercedesCheckBoxGLS" text="GLS" />
+                              <CheckBox fx:id="mercedesCheckBoxSLC" text="SLC" />
+                              <CheckBox fx:id="mercedesCheckBoxSL" text="SL" />
+                              <CheckBox fx:id="mercedesCheckBoxSLK" text="SLK" />
+                              <CheckBox fx:id="mercedesCheckBoxV" text="V" />
+                              <CheckBox fx:id="mercedesCheckBoxX" text="X" />
+                           </children>
+                        </VBox>
+                     </content>
+                    </TitledPane>
+
+
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
    </children>
 </AnchorPane>

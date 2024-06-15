@@ -6,4 +6,7 @@ public class InvalidAgeException extends Exception{
     }
     public InvalidAgeException() {
     }
+    public String getMessage(String s) {
+        return s;
+    }
 }
