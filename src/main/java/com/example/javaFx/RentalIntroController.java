@@ -1,4 +1,5 @@
 package com.example.javaFx;
+import customer.data.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import parsingCSV.WorkWithJSON;
 
 import java.io.IOException;
 
@@ -34,10 +36,25 @@ public class RentalIntroController {
     @FXML
     void signInButtonClicked(ActionEvent event) {
         if (!validateData(loginTextField.getText(), passwdTextField.getText())) {
-            displayError("Login or password cannot be empty");
+            return;
         }
+
         else {
-            //TODO: if data is correct, open main window
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("rental-main.fxml"));
+            Parent root = null;
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            RentalMainController controller = loader.getController();
+            Stage stage = new Stage();
+            stage.setTitle("Rental Application");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.show();
+            Stage currentStage = (Stage) signInButton.getScene().getWindow();
+            currentStage.close();
         }
     }
 
@@ -62,9 +79,17 @@ public class RentalIntroController {
 
     private boolean validateData(String login, String password) {
         if (login.isEmpty() || password.isEmpty()) {
+            displayError(new EmptyTextFieldException().getMessage("One or more fields are empty"));
             return false;
         }
-        return true;
+        else {
+            Customer customer = getCustomer(login);
+            if(!customer.getId().matches(login) || !customer.getPassword().matches(password)){
+                displayError(new NotMatchingDataException().getMessage("Invalid login or password!"));
+                return false;
+            }
+            return true;
+        }
     }
     private void displayError(String errorMessage) {
         try {
@@ -83,6 +108,13 @@ public class RentalIntroController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    private Customer getCustomer(String login){
+        WorkWithJSON workWithJSON = new WorkWithJSON();
+        if(workWithJSON.findCustomerById(login)==null){
+            displayError(new NotMatchingDataException().getMessage("Invalid login or password!")+" Customer not found!");
+        }
+        return workWithJSON.findCustomerById(login);
     }
 
 }
