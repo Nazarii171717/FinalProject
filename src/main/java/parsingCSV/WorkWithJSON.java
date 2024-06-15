@@ -134,21 +134,14 @@ public class WorkWithJSON {
     }
 
 
-
-   /* public void addVehicle(String id, String type, String brand, String model,
-     int year, String vin, String color, double maxSpeed, double maxLoad, double engine,
-     double fuelTankCapacity, double fuelConsumption, String engineType, String fuelType,
-     String gearBox, double mileage, int numberOfSeats, boolean isReserved)
-    {
-    }*/
-
     @SneakyThrows
-    public void addRentalInformationRecord(String vehicleId, String customerId,
+    public String addRentalInformationRecord(String vehicleId, String customerId,
                                            int duration, LocalDateTime rentalDate,
                                            LocalDateTime returnDate, RentingStatus rs)
     {
+        String id = generateUniqueId();
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("id", generateUniqueId());
+        jsonObject.put("id", id);
         jsonObject.put("vehicleId", vehicleId);
         jsonObject.put("customerId", customerId);
         jsonObject.put("duration", duration);
@@ -171,6 +164,7 @@ public class WorkWithJSON {
         FileWriter writer = new FileWriter(rentalInformationJSON);
         writer.write(jsonArray.toString());
         writer.close();
+        return id;
     }
 
 
@@ -208,7 +202,18 @@ public class WorkWithJSON {
         writer.close();
     }
 
+    public int findIndexOfJsonObject(JSONArray jsonArray, String uniqueId) {
+        for (int i = 0; i < jsonArray.length(); i++) {
+            JSONObject jsonObject = jsonArray.getJSONObject(i);
+            if (jsonObject.has("id") && jsonObject.getString("id").equals(uniqueId)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     @SneakyThrows
+    // TODO don't use it directly
     public void updateVehicleData(String vehicleId, boolean isReserved)
     {
         Vehicle vehicle = findVehicleById(vehicleId);
@@ -238,22 +243,16 @@ public class WorkWithJSON {
         writer.close();
     }
 
-    public int findIndexOfJsonObject(JSONArray jsonArray, String uniqueId) {
-        for (int i = 0; i < jsonArray.length(); i++) {
-            JSONObject jsonObject = jsonArray.getJSONObject(i);
-            if (jsonObject.has("id") && jsonObject.getString("id").equals(uniqueId)) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
     @SneakyThrows
+    // TODO don't use it directly
     public void updateCustomerData(String customerId, RentalInformation rI)
     {
         Customer customer = findCustomerById(customerId);
-        customer.setDiscount(customer.getDiscount() + 0.01);
         ArrayList<RentalInformation> list = customer.getRentalHistories();
+        if (!list.removeIf(rentalInformation -> rentalInformation.getId().equals(rI.getId())))
+        {
+            customer.setDiscount(customer.getDiscount() + 0.01);
+        }
         list.add(rI);
 
         FileReader reader = new FileReader(customersDataJSON);
@@ -284,10 +283,11 @@ public class WorkWithJSON {
 
 
     @SneakyThrows
-    public void updateRentalInformation(String rentalInformationId)
+    // TODO don't use it directly
+    public void updateRentalInformation(String rentalInformationId, RentingStatus status)
     {
         RentalInformation rentalInformation = findRentalInformationById(rentalInformationId);
-        rentalInformation.setRentingStatus(RentingStatus.FINISHED);
+        rentalInformation.setRentingStatus(status);
 
         FileReader reader = new FileReader(rentalInformationJSON);
         int i;
