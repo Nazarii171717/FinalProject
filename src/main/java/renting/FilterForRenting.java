@@ -91,5 +91,11 @@ public class FilterForRenting {
         vehicles.removeIf(vehicle -> vehicle.getPricePerDay() != pricePerDay);
         return vehicles;
     }
+    public ArrayList<Vehicle> displayForSpecificVehicleType(VehicleTypes vehicleTypes)
+    {
+        ArrayList<Vehicle> vehicles = getListWithVehicles();
+        vehicles.removeIf(vehicle -> vehicle.getVehicleTypes() != vehicleTypes);
+        return vehicles;
+    }
 
 }

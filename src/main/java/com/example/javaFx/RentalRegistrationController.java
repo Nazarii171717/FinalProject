@@ -1,6 +1,7 @@
 package com.example.javaFx;
 
 import customer.data.Customer;
+import customer.data.RentalHistory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -77,7 +78,7 @@ public class RentalRegistrationController {
         }
         else {
             WorkWithJSON workWithJSON = new WorkWithJSON();
-            workWithJSON.addCustomer(name, surname, Integer.parseInt(age), phoneNumber, email, address, login, password,null, 0.04);
+            workWithJSON.addCustomer(name, surname,Integer.parseInt(age), phoneNumber, email, address, login, password, null, 0);
             Stage currentStage = (Stage) continueButton.getScene().getWindow();
             currentStage.close();
             Stage stage = new Stage();

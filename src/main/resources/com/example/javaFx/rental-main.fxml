@@ -42,47 +42,47 @@
                                                                   <content>
                                                                       <VBox prefHeight="520.0" prefWidth="173.0">
                                                                           <children>
-                                                                              <CheckBox fx:id="audiCheckBox" onAction="#audiSelected" text="Audi" />
-                                                                              <CheckBox fx:id="bmwCheckBox" onAction="#bmwSelected" text="BMW" />
-                                                                              <CheckBox fx:id="mercedesCheckBox" onAction="#mercedesSelected" text="Mercedes Benz" />
-                                                                              <CheckBox fx:id="volkswagenCheckBox" onAction="#volkswagenSelected" text="Volkswagen" />
-                                                                              <CheckBox fx:id="porscheCheckBox" onAction="#porscheSelected" text="Porsche" />
-                                                                              <CheckBox fx:id="opelCheckBox" onAction="#opelSelected" text="Opel" />
-                                                                              <CheckBox fx:id="fordCheckBox" onAction="#fordSelected" text="Ford" />
-                                                                              <CheckBox fx:id="chevroletCheckBox" onAction="#chevroletSelected" text="Chevrolet" />
-                                                                              <CheckBox fx:id="toyotaCheckBox" onAction="#toyotaSelected" text="Toyota" />
-                                                                              <CheckBox fx:id="hondaCheckBox" onAction="#hondaSelected" text="Honda" />
-                                                                              <CheckBox fx:id="nissanCheckBox" onAction="#nissanSelected" text="Nissan" />
-                                                                              <CheckBox fx:id="hyundaiCheckBox" onAction="#hyundaiSelected" text="Hyundai" />
-                                                                              <CheckBox fx:id="kiaCheckBox" onAction="#kiaSelected" text="Kia" />
-                                                                              <CheckBox fx:id="peugeotCheckBox" onAction="#peugeotSelected" text="Peugeot" />
-                                                                              <CheckBox fx:id="renaultCheckBox" onAction="#renaultSelected" text="Renault" />
-                                                                              <CheckBox fx:id="citroenCheckBox" onAction="#citroenSelected" text="Citroen" />
-                                                                              <CheckBox fx:id="fiatCheckBox" onAction="#fiatSelected" text="Fiat" />
-                                                                              <CheckBox fx:id="alfaRomeoCheckBox" onAction="#alfaRomeoSelected" text="Alfa Romeo" />
-                                                                              <CheckBox fx:id="ferrariCheckBox" onAction="#ferrariSelected" text="Ferrari" />
-                                                                              <CheckBox fx:id="lamborghiniCheckBox" onAction="#lamborghiniSelected" text="Lamborghini" />
-                                                                              <CheckBox fx:id="maseratiCheckBox" onAction="#maseratiSelected" text="Maserati" />
-                                                                              <CheckBox fx:id="astonMartinCheckBox" onAction="#astonMartinSelected" text="Aston Martin" />
-                                                                              <CheckBox fx:id="bentleyCheckBox" onAction="#bentleySelected" text="Bentley" />
-                                                                              <CheckBox fx:id="rollsRoyceCheckBox" onAction="#rollsRoyceSelected" text="Rolls Royce" />
-                                                                              <CheckBox fx:id="jaguarCheckBox" onAction="#jaguarSelected" text="Jaguar" />
-                                                                              <CheckBox fx:id="landRoverCheckBox" onAction="#landRoverSelected" text="Land Rover" />
-                                                                              <CheckBox fx:id="teslaCheckBox" onAction="#teslaSelected" text="Tesla" />
-                                                                              <CheckBox fx:id="volvoCheckBox" onAction="#volvoSelected" text="Volvo" />
-                                                                              <CheckBox fx:id="subaruCheckBox" onAction="#subaruSelected" text="Subaru" />
-                                                                              <CheckBox fx:id="mazdaCheckBox" onAction="#mazdaSelected" text="Mazda" />
-                                                                              <CheckBox fx:id="suzukiCheckBox" onAction="#suzukiSelected" text="Suzuki" />
-                                                                              <CheckBox fx:id="dodgeCheckBox" onAction="#dodgeSelected" text="Dodge" />
-                                                                              <CheckBox fx:id="jeepCheckBox" onAction="#jeepSelected" text="Jeep" />
-                                                                              <CheckBox fx:id="cadillacCheckBox" onAction="#cadillacSelected" text="Cadillac" />
-                                                                              <CheckBox fx:id="harleyDavidsonCheckBox" onAction="#harleyDavidsonSelected" text="Harley Davidson" />
-                                                                              <CheckBox fx:id="ducatiCheckBox" onAction="#ducatiSelected" text="Ducati" />
-                                                                              <CheckBox fx:id="yamahaCheckBox" onAction="#yamahaSelected" text="Yamaha" />
-                                                                              <CheckBox fx:id="kawasakiCheckBox" onAction="#kawasakiSelected" text="Kawasaki" />
-                                                                              <CheckBox fx:id="suzukiMotorcyclesCheckBox" onAction="#suzukiMotorcyclesSelected" text="Suzuki Motorcycles" />
-                                                                              <CheckBox fx:id="winnebagoCheckBox" onAction="#winnebagoSelected" text="Winnebago" />
-                                                                              <CheckBox fx:id="chryslerCheckBox" onAction="#chryslerSelected" text="Chrysler" />
+                                                                              <CheckBox fx:id="audiCheckBox" text="Audi" />
+                                                                              <CheckBox fx:id="bmwCheckBox" text="BMW" />
+                                                                              <CheckBox fx:id="mercedesCheckBox" text="Mercedes Benz" />
+                                                                              <CheckBox fx:id="volkswagenCheckBox"  text="Volkswagen" />
+                                                                              <CheckBox fx:id="porscheCheckBox" text="Porsche" />
+                                                                              <CheckBox fx:id="opelCheckBox" text="Opel" />
+                                                                              <CheckBox fx:id="fordCheckBox"  text="Ford" />
+                                                                              <CheckBox fx:id="chevroletCheckBox" text="Chevrolet" />
+                                                                              <CheckBox fx:id="toyotaCheckBox"  text="Toyota" />
+                                                                              <CheckBox fx:id="hondaCheckBox" text="Honda" />
+                                                                              <CheckBox fx:id="nissanCheckBox" text="Nissan" />
+                                                                              <CheckBox fx:id="hyundaiCheckBox" text="Hyundai" />
+                                                                              <CheckBox fx:id="kiaCheckBox"  text="Kia" />
+                                                                              <CheckBox fx:id="peugeotCheckBox"  text="Peugeot" />
+                                                                              <CheckBox fx:id="renaultCheckBox" text="Renault" />
+                                                                              <CheckBox fx:id="citroenCheckBox"  text="Citroen" />
+                                                                              <CheckBox fx:id="fiatCheckBox"  text="Fiat" />
+                                                                              <CheckBox fx:id="alfaRomeoCheckBox" text="Alfa Romeo" />
+                                                                              <CheckBox fx:id="ferrariCheckBox"  text="Ferrari" />
+                                                                              <CheckBox fx:id="lamborghiniCheckBox" text="Lamborghini" />
+                                                                              <CheckBox fx:id="maseratiCheckBox"  text="Maserati" />
+                                                                              <CheckBox fx:id="astonMartinCheckBox" text="Aston Martin" />
+                                                                              <CheckBox fx:id="bentleyCheckBox"  text="Bentley" />
+                                                                              <CheckBox fx:id="rollsRoyceCheckBox" text="Rolls Royce" />
+                                                                              <CheckBox fx:id="jaguarCheckBox" text="Jaguar" />
+                                                                              <CheckBox fx:id="landRoverCheckBox"  text="Land Rover" />
+                                                                              <CheckBox fx:id="teslaCheckBox"  text="Tesla" />
+                                                                              <CheckBox fx:id="volvoCheckBox" text="Volvo" />
+                                                                              <CheckBox fx:id="subaruCheckBox"  text="Subaru" />
+                                                                              <CheckBox fx:id="mazdaCheckBox"  text="Mazda" />
+                                                                              <CheckBox fx:id="suzukiCheckBox"  text="Suzuki" />
+                                                                              <CheckBox fx:id="dodgeCheckBox" text="Dodge" />
+                                                                             <CheckBox fx:id="jeepCheckBox" text="Jeep" />
+                                                                              <CheckBox fx:id="cadillacCheckBox" text="Cadillac" />
+                                                                              <CheckBox fx:id="harleyDavidsonCheckBox" text="Harley Davidson" />
+                                                                              <CheckBox fx:id="ducatiCheckBox" text="Ducati" />
+                                                                              <CheckBox fx:id="yamahaCheckBox" text="Yamaha" />
+                                                                              <CheckBox fx:id="kawasakiCheckBox" text="Kawasaki" />
+                                                                              <CheckBox fx:id="suzukiMotorcyclesCheckBox" text="Suzuki Motorcycles" />
+                                                                              <CheckBox fx:id="winnebagoCheckBox" text="Winnebago" />
+                                                                              <CheckBox fx:id="chryslerCheckBox"  text="Chrysler" />
                                                                           </children>
                                                                       </VBox>
                                                                   </content>
@@ -98,15 +98,15 @@
                                                                   <content>
                                                                       <VBox prefWidth="173.0">
                                                                           <children>
-                                                                              <CheckBox fx:id="motorcycleCheckBox" onAction="#motorcycleSelected" text="Motorcycle" />
-                                                                              <CheckBox fx:id="camperCheckBox" onAction="#camperSelected" text="Camper" />
-                                                                              <CheckBox fx:id="suvCheckBox" onAction="#suvSelected" text="SUV" />
-                                                                              <CheckBox fx:id="hatchbackCheckBox" onAction="#hatchbackSelected" text="Hatchback" />
-                                                                              <CheckBox fx:id="sedanCheckBox" onAction="#sedanSelected" text="Sedan" />
-                                                                              <CheckBox fx:id="coupeCheckBox" onAction="#coupeSelected" text="Coupe" />
-                                                                              <CheckBox fx:id="minivanCheckBox" onAction="#minivanSelected" text="Minivan" />
-                                                                              <CheckBox fx:id="pickupCheckBox" onAction="#pickupSelected" text="Pickup" />
-                                                                              <CheckBox fx:id="convertibleCheckBox" onAction="#convertibleSelected" text="Convertible" />
+                                                                              <CheckBox fx:id="motorcycleCheckBox" text="Motorcycle" />
+                                                                              <CheckBox fx:id="camperCheckBox" text="Camper" />
+                                                                              <CheckBox fx:id="suvCheckBox" text="SUV" />
+                                                                              <CheckBox fx:id="hatchbackCheckBox"  text="Hatchback" />
+                                                                              <CheckBox fx:id="sedanCheckBox" text="Sedan" />
+                                                                              <CheckBox fx:id="coupeCheckBox" text="Coupe" />
+                                                                              <CheckBox fx:id="minivanCheckBox" text="Minivan" />
+                                                                              <CheckBox fx:id="pickupCheckBox"  text="Pickup" />
+                                                                              <CheckBox fx:id="convertibleCheckBox"  text="Convertible" />
                                                                           </children>
                                                                       </VBox>
                                                                   </content>
@@ -122,16 +122,16 @@
                                                                   <content>
                                                                       <VBox prefWidth="173.0">
                                                                           <children>
-                                                                              <CheckBox fx:id="blackCheckBox" onAction="#blackSelected" text="Black" />
-                                                                              <CheckBox fx:id="whiteCheckBox" onAction="#whiteSelected" text="White" />
-                                                                              <CheckBox fx:id="grayCheckBox" onAction="#graySelected" text="Gray" />
-                                                                              <CheckBox fx:id="silverCheckBox" onAction="#silverSelected" text="Silver" />
-                                                                              <CheckBox fx:id="redCheckBox" onAction="#redSelected" text="Red" />
-                                                                              <CheckBox fx:id="blueCheckBox" onAction="#blueSelected" text="Blue" />
-                                                                              <CheckBox fx:id="greenCheckBox" onAction="#greenSelected" text="Green" />
-                                                                              <CheckBox fx:id="yellowCheckBox" onAction="#yellowSelected" text="Yellow" />
-                                                                              <CheckBox fx:id="orangeCheckBox" onAction="#orangeSelected" text="Orange" />
-                                                                              <CheckBox fx:id="purpleCheckBox" onAction="#purpleSelected" text="Purple" />
+                                                                              <CheckBox fx:id="blackCheckBox"  text="Black" />
+                                                                              <CheckBox fx:id="whiteCheckBox" text="White" />
+                                                                              <CheckBox fx:id="grayCheckBox"  text="Gray" />
+                                                                              <CheckBox fx:id="silverCheckBox"  text="Silver" />
+                                                                              <CheckBox fx:id="redCheckBox"  text="Red" />
+                                                                              <CheckBox fx:id="blueCheckBox" text="Blue" />
+                                                                              <CheckBox fx:id="greenCheckBox" text="Green" />
+                                                                              <CheckBox fx:id="yellowCheckBox"  text="Yellow" />
+                                                                              <CheckBox fx:id="orangeCheckBox" text="Orange" />
+                                                                              <CheckBox fx:id="purpleCheckBox"  text="Purple" />
                                                                           </children>
                                                                       </VBox>
                                                                   </content>
@@ -147,10 +147,10 @@
                                                                   <content>
                                                                       <VBox prefWidth="173.0">
                                                                           <children>
-                                                                              <CheckBox fx:id="dieselCheckBox" onAction="#dieselSelected" text="Diesel" />
-                                                                              <CheckBox fx:id="petrolCheckBox" onAction="#petrolSelected" text="Petrol" />
-                                                                              <CheckBox fx:id="electricCheckBox" onAction="#electricSelected" text="Electric" />
-                                                                              <CheckBox fx:id="hybridCheckBox" onAction="#hybridSelected" text="Hybrid" />
+                                                                              <CheckBox fx:id="dieselCheckBox"  text="Diesel" />
+                                                                              <CheckBox fx:id="petrolCheckBox"  text="Petrol" />
+                                                                              <CheckBox fx:id="electricCheckBox"  text="Electric" />
+                                                                              <CheckBox fx:id="hybridCheckBox"  text="Hybrid" />
                                                                           </children>
                                                                       </VBox>
                                                                   </content>
@@ -166,8 +166,8 @@
                                                                   <content>
                                                                       <VBox prefWidth="173.0">
                                                                           <children>
-                                                                              <CheckBox fx:id="manualCheckBox" onAction="#manualSelected" text="Manual" />
-                                                                              <CheckBox fx:id="automaticCheckBox" onAction="#automaticSelected" text="Automatic" />
+                                                                              <CheckBox fx:id="manualCheckBox"  text="Manual" />
+                                                                              <CheckBox fx:id="automaticCheckBox" text="Automatic" />
                                                                           </children>
                                                                       </VBox>
                                                                   </content>
@@ -183,12 +183,12 @@
                                                                   <content>
                                                                       <VBox prefWidth="173.0">
                                                                           <children>
-                                                                              <CheckBox fx:id="year2019CheckBox" onAction="#year2019Selected" text="2019" />
-                                                                              <CheckBox fx:id="year2020CheckBox" onAction="#year2020Selected" text="2020" />
-                                                                              <CheckBox fx:id="year2021CheckBox" onAction="#year2021Selected" text="2021" />
-                                                                              <CheckBox fx:id="year2022CheckBox" onAction="#year2022Selected" text="2022" />
-                                                                              <CheckBox fx:id="year2023CheckBox" onAction="#year2023Selected" text="2023" />
-                                                                              <CheckBox fx:id="year2024CheckBox" onAction="#year2024Selected" text="2024" />
+                                                                              <CheckBox fx:id="year2019CheckBox"  text="2019" />
+                                                                              <CheckBox fx:id="year2020CheckBox"  text="2020" />
+                                                                              <CheckBox fx:id="year2021CheckBox" text="2021" />
+                                                                              <CheckBox fx:id="year2022CheckBox"  text="2022" />
+                                                                              <CheckBox fx:id="year2023CheckBox" text="2023" />
+                                                                              <CheckBox fx:id="year2024CheckBox" text="2024" />
                                                                           </children>
                                                                       </VBox>
                                                                   </content>
@@ -204,14 +204,14 @@
                                                                   <content>
                                                                       <VBox prefWidth="173.0">
                                                                           <children>
-                                                                              <CheckBox fx:id="price0CheckBox" onAction="#price0Selected" text="50 EUR" />
-                                                                              <CheckBox fx:id="price100CheckBox" onAction="#price100Selected" text="100 EUR" />
-                                                                              <CheckBox fx:id="price150CheckBox" onAction="#price150Selected" text="150 EUR" />
-                                                                              <CheckBox fx:id="price200CheckBox" onAction="#price200Selected" text="200 EUR" />
-                                                                              <CheckBox fx:id="price250CheckBox" onAction="#price250Selected" text="250 EUR" />
-                                                                              <CheckBox fx:id="price300CheckBox" onAction="#price300Selected" text="300 EUR" />
-                                                                              <CheckBox fx:id="price350CheckBox" onAction="#price350Selected" text="350 EUR" />
-                                                                              <CheckBox fx:id="price400CheckBox" onAction="#price400Selected" text="400 EUR" />
+                                                                              <CheckBox fx:id="price0CheckBox" text="50 EUR" />
+                                                                              <CheckBox fx:id="price100CheckBox" text="100 EUR" />
+                                                                              <CheckBox fx:id="price150CheckBox" text="150 EUR" />
+                                                                              <CheckBox fx:id="price200CheckBox" text="200 EUR" />
+                                                                              <CheckBox fx:id="price250CheckBox" text="250 EUR" />
+                                                                              <CheckBox fx:id="price300CheckBox" text="300 EUR" />
+                                                                              <CheckBox fx:id="price350CheckBox" text="350 EUR" />
+                                                                              <CheckBox fx:id="price400CheckBox" text="400 EUR" />
                                                                           </children>
                                                                       </VBox>
                                                                   </content>

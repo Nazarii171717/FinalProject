@@ -11,8 +11,15 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TitledPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import renting.FilterForRenting;
+import vehicle.data.*;
+
+import java.util.ArrayList;
 
 public class RentalMainController {
+
+
+    private FilterForRenting filterForRenting;
 
     @FXML
     private Tab accountTab;
@@ -261,7 +268,7 @@ public class RentalMainController {
     private AnchorPane resultPane;
 
     @FXML
-    private ListView<?> resultsList;
+    private ListView<Vehicle> resultsList;
 
     @FXML
     private CheckBox rollsRoyceCheckBox;
@@ -352,452 +359,489 @@ public class RentalMainController {
 
     @FXML
     void ItemClicked(MouseEvent event) {
-
-    }
-
-    @FXML
-    void alfaRomeoSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void astonMartinSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void audiSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void automaticSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void bentleySelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void blackSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void blueSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void bmwSelected(ActionEvent event) {
+        Vehicle vehicle = resultsList.getSelectionModel().getSelectedItem();
+        displayVehicleDetails(vehicle);
 
     }
 
     @FXML
     void brandsSelected(ActionEvent event) {
-
+        boolean isSelected = brandsCheckBox.isSelected();
+        alfaRomeoCheckBox.setSelected(isSelected);
+        astonMartinCheckBox.setSelected(isSelected);
+        audiCheckBox.setSelected(isSelected);
+        bentleyCheckBox.setSelected(isSelected);
+        bmwCheckBox.setSelected(isSelected);
+        cadillacCheckBox.setSelected(isSelected);
+        chevroletCheckBox.setSelected(isSelected);
+        chryslerCheckBox.setSelected(isSelected);
+        citroenCheckBox.setSelected(isSelected);
+        dodgeCheckBox.setSelected(isSelected);
+        ducatiCheckBox.setSelected(isSelected);
+        ferrariCheckBox.setSelected(isSelected);
+        fiatCheckBox.setSelected(isSelected);
+        fordCheckBox.setSelected(isSelected);
+        harleyDavidsonCheckBox.setSelected(isSelected);
+        hondaCheckBox.setSelected(isSelected);
+        hyundaiCheckBox.setSelected(isSelected);
+        jaguarCheckBox.setSelected(isSelected);
+        jeepCheckBox.setSelected(isSelected);
+        kawasakiCheckBox.setSelected(isSelected);
+        kiaCheckBox.setSelected(isSelected);
+        lamborghiniCheckBox.setSelected(isSelected);
+        landRoverCheckBox.setSelected(isSelected);
+        maseratiCheckBox.setSelected(isSelected);
+        mazdaCheckBox.setSelected(isSelected);
+        mercedesCheckBox.setSelected(isSelected);
+        nissanCheckBox.setSelected(isSelected);
+        opelCheckBox.setSelected(isSelected);
+        peugeotCheckBox.setSelected(isSelected);
+        porscheCheckBox.setSelected(isSelected);
+        renaultCheckBox.setSelected(isSelected);
+        rollsRoyceCheckBox.setSelected(isSelected);
+        subaruCheckBox.setSelected(isSelected);
+        suzukiCheckBox.setSelected(isSelected);
+        suzukiMotorcyclesCheckBox.setSelected(isSelected);
+        teslaCheckBox.setSelected(isSelected);
+        toyotaCheckBox.setSelected(isSelected);
+        volkswagenCheckBox.setSelected(isSelected);
+        volvoCheckBox.setSelected(isSelected);
+        winnebagoCheckBox.setSelected(isSelected);
+        yamahaCheckBox.setSelected(isSelected);
+        teslaCheckBox.setSelected(isSelected);
     }
 
-    @FXML
-    void cadillacSelected(ActionEvent event) {
 
-    }
-
-    @FXML
-    void camperSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void chevroletSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void chryslerSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void citroenSelected(ActionEvent event) {
-
-    }
 
     @FXML
     void colorsSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void convertibleSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void coupeSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void dateFromSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void dateToSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void dieselSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void dodgeSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void ducatiSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void electricSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void ferrariSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void fiatSelected(ActionEvent event) {
-
+        boolean isSelected = colorsCheckBox.isSelected();
+        blackCheckBox.setSelected(isSelected);
+        blueCheckBox.setSelected(isSelected);
+        grayCheckBox.setSelected(isSelected);
+        greenCheckBox.setSelected(isSelected);
+        orangeCheckBox.setSelected(isSelected);
+        purpleCheckBox.setSelected(isSelected);
+        redCheckBox.setSelected(isSelected);
+        silverCheckBox.setSelected(isSelected);
+        whiteCheckBox.setSelected(isSelected);
+        yellowCheckBox.setSelected(isSelected);
     }
 
     @FXML
     void filtersSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void fordSelected(ActionEvent event) {
+        boolean isSelected = filtersCheckBox.isSelected();
+        automaticCheckBox.setSelected(isSelected);
+        manualCheckBox.setSelected(isSelected);
+        transmissionCheckBox.setSelected(isSelected);
+        typesVehiclesCheckBox.setSelected(isSelected);
+        fuelCheckBox.setSelected(isSelected);
+        pricePerDayCheckBox.setSelected(isSelected);
+        yearCheckBox.setSelected(isSelected);
+        colorsCheckBox.setSelected(isSelected);
+        brandsCheckBox.setSelected(isSelected);
 
     }
 
     @FXML
     void fuelSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void graySelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void greenSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void harleyDavidsonSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void hatchbackSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void hondaSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void hybridSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void hyundaiSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void jaguarSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void jeepSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void kawasakiSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void kiaSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void lamborghiniSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void landRoverSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void manualSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void maseratiSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void mazdaSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void mercedesSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void minivanSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void motorcycleSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void nissanSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void opelSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void orangeSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void petrolSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void peugeotSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void pickupSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void porscheSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void price0Selected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void price100Selected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void price150Selected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void price200Selected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void price250Selected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void price300Selected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void price350Selected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void price400Selected(ActionEvent event) {
+        boolean isSelected = fuelCheckBox.isSelected();
+        petrolCheckBox.setSelected(isSelected);
+        dieselCheckBox.setSelected(isSelected);
+        electricCheckBox.setSelected(isSelected);
+        hybridCheckBox.setSelected(isSelected);
 
     }
 
     @FXML
     void pricePerDaySelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void purpleSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void redSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void renaultSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void rentButtonClicked(ActionEvent event) {
-
-    }
-
-    @FXML
-    void rollsRoyceSelected(ActionEvent event) {
+        boolean isSelected = pricePerDayCheckBox.isSelected();
+        price0CheckBox.setSelected(isSelected);
+        price100CheckBox.setSelected(isSelected);
+        price150CheckBox.setSelected(isSelected);
+        price200CheckBox.setSelected(isSelected);
+        price250CheckBox.setSelected(isSelected);
+        price300CheckBox.setSelected(isSelected);
+        price350CheckBox.setSelected(isSelected);
+        price400CheckBox.setSelected(isSelected);
 
     }
 
     @FXML
     void searchButtonClicked(ActionEvent event) {
+        if (filterForRenting == null) {
+            filterForRenting = new FilterForRenting();
+        }
+        ArrayList<Vehicle> vehicles = filterForRenting.displayAllAvailableVehicles();
+        ArrayList<Vehicle> filteredVehicles = new ArrayList<>(vehicles);
+        filteredVehicles = applyBrandFilters(filteredVehicles);
 
+        filteredVehicles = applyColorFilters(filteredVehicles);
+
+        filteredVehicles = applyTypeFilters(filteredVehicles);
+
+        filteredVehicles = applyYearFilters(filteredVehicles);
+
+        filteredVehicles = applyFuelFilters(filteredVehicles);
+
+        filteredVehicles = applyTransmissionFilters(filteredVehicles);
+
+        filteredVehicles = applyPricePerDayFilters(filteredVehicles);
+
+        displayResults(filteredVehicles);
     }
 
-    @FXML
-    void sedanSelected(ActionEvent event) {
-
+    private ArrayList<Vehicle> applyBrandFilters(ArrayList<Vehicle> vehicles) {
+        ArrayList<Brand> selectedBrands = getSelectedBrands();
+        if (!selectedBrands.isEmpty()) {
+            vehicles.removeIf(vehicle -> !selectedBrands.contains(vehicle.getBrand()));
+        }
+        return vehicles;
     }
 
-    @FXML
-    void silverSelected(ActionEvent event) {
-
+    private ArrayList<Brand> getSelectedBrands() {
+        ArrayList<Brand> selectedBrands = new ArrayList<>();
+        if (audiCheckBox.isSelected()) {
+            selectedBrands.add(Brand.AUDI);
+        }
+        if (bmwCheckBox.isSelected()) {
+            selectedBrands.add(Brand.BMW);
+        }
+        if(mercedesCheckBox.isSelected()){
+            selectedBrands.add(Brand.MERCEDES_BENZ);
+        }
+        if(volkswagenCheckBox.isSelected()){
+            selectedBrands.add(Brand.VOLKSWAGEN);
+        }
+        if(porscheCheckBox.isSelected()){
+            selectedBrands.add(Brand.PORSCHE);
+        }
+        if(opelCheckBox.isSelected()){
+            selectedBrands.add(Brand.OPEL);
+        }
+        if(fordCheckBox.isSelected()){
+            selectedBrands.add(Brand.FORD);
+        }
+        if(chevroletCheckBox.isSelected()){
+            selectedBrands.add(Brand.CHEVROLET);
+        }
+        if(toyotaCheckBox.isSelected()){
+            selectedBrands.add(Brand.TOYOTA);
+        }
+        if(hondaCheckBox.isSelected()){
+            selectedBrands.add(Brand.HONDA);
+        }
+        if(nissanCheckBox.isSelected()){
+            selectedBrands.add(Brand.NISSAN);
+        }
+        if(hyundaiCheckBox.isSelected()){
+            selectedBrands.add(Brand.HYUNDAI);
+        }
+        if(kiaCheckBox.isSelected()){
+            selectedBrands.add(Brand.KIA);
+        }
+        if(peugeotCheckBox.isSelected()){
+            selectedBrands.add(Brand.PEUGEOT);
+        }
+        if(renaultCheckBox.isSelected()){
+            selectedBrands.add(Brand.RENAULT);
+        }
+        if(citroenCheckBox.isSelected()){
+            selectedBrands.add(Brand.CITROEN);
+        }
+        if(fiatCheckBox.isSelected()){
+            selectedBrands.add(Brand.FIAT);
+        }
+        if(alfaRomeoCheckBox.isSelected()){
+            selectedBrands.add(Brand.ALFA_ROMEO);
+        }
+        if(ferrariCheckBox.isSelected()){
+            selectedBrands.add(Brand.FERRARI);
+        }
+        if(lamborghiniCheckBox.isSelected()){
+            selectedBrands.add(Brand.LAMBORGHINI);
+        }
+        if(maseratiCheckBox.isSelected()){
+            selectedBrands.add(Brand.MASERATI);
+        }
+        if(astonMartinCheckBox.isSelected()){
+            selectedBrands.add(Brand.ASTON_MARTIN);
+        }
+        if(bentleyCheckBox.isSelected()){
+            selectedBrands.add(Brand.BENTLEY);
+        }
+        if(rollsRoyceCheckBox.isSelected()){
+            selectedBrands.add(Brand.ROLLS_ROYCE);
+        }
+        if(jaguarCheckBox.isSelected()){
+            selectedBrands.add(Brand.JAGUAR);
+        }
+        if(landRoverCheckBox.isSelected()){
+            selectedBrands.add(Brand.LAND_ROVER);
+        }
+        if(teslaCheckBox.isSelected()){
+            selectedBrands.add(Brand.TESLA);
+        }
+        if(volvoCheckBox.isSelected()){
+            selectedBrands.add(Brand.VOLVO);
+        }
+        if(subaruCheckBox.isSelected()){
+            selectedBrands.add(Brand.SUBARU);
+        }
+        if(mazdaCheckBox.isSelected()){
+            selectedBrands.add(Brand.MAZDA);
+        }
+        if(suzukiCheckBox.isSelected()){
+            selectedBrands.add(Brand.SUZUKI);
+        }
+        if(dodgeCheckBox.isSelected()){
+            selectedBrands.add(Brand.DODGE);
+        }
+        if(jeepCheckBox.isSelected()){
+            selectedBrands.add(Brand.JEEP);
+        }
+        if(cadillacCheckBox.isSelected()){
+            selectedBrands.add(Brand.CADILLAC);
+        }
+        if(harleyDavidsonCheckBox.isSelected()){
+            selectedBrands.add(Brand.HARLEY_DAVIDSON);
+        }
+        if(ducatiCheckBox.isSelected()){
+            selectedBrands.add(Brand.DUCATI);
+        }
+        if(yamahaCheckBox.isSelected()){
+            selectedBrands.add(Brand.YAMAHA);
+        }
+        if(kawasakiCheckBox.isSelected()){
+            selectedBrands.add(Brand.KAWASAKI);
+        }
+        if(suzukiMotorcyclesCheckBox.isSelected()){
+            selectedBrands.add(Brand.SUZUKI_MOTORCYCLES);
+        }
+        if(winnebagoCheckBox.isSelected()){
+            selectedBrands.add(Brand.WINNEBAGO);
+        }
+        if(chryslerCheckBox.isSelected()){
+            selectedBrands.add(Brand.CHRYSLER);
+        }
+        return selectedBrands;
     }
 
-    @FXML
-    void subaruSelected(ActionEvent event) {
-
+    private ArrayList<Vehicle> applyColorFilters(ArrayList<Vehicle> vehicles) {
+        ArrayList<Color> selectedColors = getSelectedColors();
+        if (!selectedColors.isEmpty()) {
+            vehicles.removeIf(vehicle -> !selectedColors.contains(vehicle.getColor()));
+        }
+        return vehicles;
     }
 
-    @FXML
-    void suvSelected(ActionEvent event) {
+    private ArrayList<Color> getSelectedColors() {
+        ArrayList<Color> selectedColors = new ArrayList<>();
 
+
+        if (blackCheckBox.isSelected()) {
+            selectedColors.add(Color.BLACK);
+        }
+        if (blueCheckBox.isSelected()) {
+            selectedColors.add(Color.BLUE);
+        }
+        if (grayCheckBox.isSelected()) {
+            selectedColors.add(Color.GRAY);
+        }
+        if (greenCheckBox.isSelected()) {
+            selectedColors.add(Color.GREEN);
+        }
+        if (orangeCheckBox.isSelected()) {
+            selectedColors.add(Color.ORANGE);
+        }
+        if (purpleCheckBox.isSelected()) {
+            selectedColors.add(Color.PURPLE);
+        }
+        if (redCheckBox.isSelected()) {
+            selectedColors.add(Color.RED);
+        }
+        if (whiteCheckBox.isSelected()) {
+            selectedColors.add(Color.WHITE);
+        }
+        if (yellowCheckBox.isSelected()) {
+            selectedColors.add(Color.YELLOW);
+        }
+
+        return selectedColors;
     }
 
-    @FXML
-    void suzukiMotorcyclesSelected(ActionEvent event) {
-
+    private ArrayList<Vehicle> applyTypeFilters(ArrayList<Vehicle> vehicles) {
+        ArrayList<VehicleTypes> selectedTypes = getSelectedTypes();
+        if (!selectedTypes.isEmpty()) {
+            vehicles.removeIf(vehicle -> !selectedTypes.contains(vehicle.getVehicleTypes()));
+        }
+        return vehicles;
     }
 
-    @FXML
-    void suzukiSelected(ActionEvent event) {
+    private ArrayList<VehicleTypes> getSelectedTypes() {
+        ArrayList<VehicleTypes> selectedTypes = new ArrayList<>();
+        if (camperCheckBox.isSelected()) {
+            selectedTypes.add(VehicleTypes.CAMPER);
+        }
+        if (convertibleCheckBox.isSelected()) {
+            selectedTypes.add(VehicleTypes.CONVERTIBLE);
+        }
+        if (coupeCheckBox.isSelected()) {
+            selectedTypes.add(VehicleTypes.COUPE);
+        }
+        if (hatchbackCheckBox.isSelected()) {
+            selectedTypes.add(VehicleTypes.HATCHBACK);
+        }
+        if (minivanCheckBox.isSelected()) {
+            selectedTypes.add(VehicleTypes.MINIVAN);
+        }
+        if (motorcycleCheckBox.isSelected()) {
+            selectedTypes.add(VehicleTypes.MOTORCYCLE);
+        }
+        if (pickupCheckBox.isSelected()) {
+            selectedTypes.add(VehicleTypes.PICKUP);
+        }
+        if (sedanCheckBox.isSelected()) {
+            selectedTypes.add(VehicleTypes.SEDAN);
+        }
+        if (suvCheckBox.isSelected()) {
+            selectedTypes.add(VehicleTypes.SUV);
+        }
 
+        return selectedTypes;
     }
 
-    @FXML
-    void teslaSelected(ActionEvent event) {
-
+    private ArrayList<Vehicle> applyYearFilters(ArrayList<Vehicle> vehicles) {
+        ArrayList<Year> selectedYears = getSelectedYears();
+        if (!selectedYears.isEmpty()) {
+            vehicles.removeIf(vehicle -> !selectedYears.contains(vehicle.getYear()));
+        }
+        return vehicles;
     }
 
-    @FXML
-    void toyotaSelected(ActionEvent event) {
-
+    private ArrayList<Year> getSelectedYears() {
+        ArrayList<Year> selectedYears = new ArrayList<>();
+        if (year2019CheckBox.isSelected()) {
+            selectedYears.add(Year.Y2019);
+        }
+        if (year2020CheckBox.isSelected()) {
+            selectedYears.add(Year.Y2020);
+        }
+        if (year2021CheckBox.isSelected()) {
+            selectedYears.add(Year.Y2021);
+        }
+        if (year2022CheckBox.isSelected()) {
+            selectedYears.add(Year.Y2022);
+        }
+        if (year2023CheckBox.isSelected()) {
+            selectedYears.add(Year.Y2023);
+        }
+        if (year2024CheckBox.isSelected()) {
+            selectedYears.add(Year.Y2024);
+        }
+        return selectedYears;
+    }
+    private ArrayList<Vehicle> applyFuelFilters(ArrayList<Vehicle> vehicles) {
+        ArrayList<FuelType> selectedFuels = getSelectedFuels();
+        if (!selectedFuels.isEmpty()) {
+            vehicles.removeIf(vehicle -> !selectedFuels.contains(vehicle.getFuelType()));
+        }
+        return vehicles;
+    }
+    private ArrayList<FuelType> getSelectedFuels() {
+        ArrayList<FuelType> selectedFuels = new ArrayList<>();
+        if (petrolCheckBox.isSelected()) {
+            selectedFuels.add(FuelType.PETROL);
+        }
+        if (dieselCheckBox.isSelected()) {
+            selectedFuels.add(FuelType.DIESEL);
+        }
+        if (electricCheckBox.isSelected()) {
+            selectedFuels.add(FuelType.ELECTRIC);
+        }
+        if (hybridCheckBox.isSelected()) {
+            selectedFuels.add(FuelType.HYBRID);
+        }
+        return selectedFuels;
+    }
+    private ArrayList<Vehicle> applyTransmissionFilters(ArrayList<Vehicle> vehicles) {
+        ArrayList<GearBox> selectedTransmissions = getSelectedTransmissions();
+        if (!selectedTransmissions.isEmpty()) {
+            vehicles.removeIf(vehicle -> !selectedTransmissions.contains(vehicle.getGearBox()));
+        }
+        return vehicles;
+    }
+    private ArrayList<GearBox> getSelectedTransmissions() {
+        ArrayList<GearBox> selectedTransmissions = new ArrayList<>();
+        if (automaticCheckBox.isSelected()) {
+            selectedTransmissions.add(GearBox.AUTOMATIC);
+        }
+        if (manualCheckBox.isSelected()) {
+            selectedTransmissions.add(GearBox.MANUAL);
+        }
+        return selectedTransmissions;
+    }
+    private ArrayList<Vehicle> applyPricePerDayFilters(ArrayList<Vehicle> vehicles) {
+        ArrayList<PricePerDay> selectedPrices = getSelectedPrices();
+        if (!selectedPrices.isEmpty()) {
+            vehicles.removeIf(vehicle -> !selectedPrices.contains(vehicle.getPricePerDay()));
+        }
+        return vehicles;
+    }
+    private ArrayList<PricePerDay> getSelectedPrices() {
+        ArrayList<PricePerDay> selectedPrices = new ArrayList<>();
+        if (price0CheckBox.isSelected()) {
+            selectedPrices.add(PricePerDay.P50);
+        }
+        if (price100CheckBox.isSelected()) {
+            selectedPrices.add(PricePerDay.P100);
+        }
+        if (price150CheckBox.isSelected()) {
+            selectedPrices.add(PricePerDay.P150);
+        }
+        if (price200CheckBox.isSelected()) {
+            selectedPrices.add(PricePerDay.P200);
+        }
+        if (price250CheckBox.isSelected()) {
+            selectedPrices.add(PricePerDay.P250);
+        }
+        if (price300CheckBox.isSelected()) {
+            selectedPrices.add(PricePerDay.P300);
+        }
+        if (price350CheckBox.isSelected()) {
+            selectedPrices.add(PricePerDay.P350);
+        }
+        if (price400CheckBox.isSelected()) {
+            selectedPrices.add(PricePerDay.P400);
+        }
+        return selectedPrices;
     }
 
     @FXML
     void transmissionSelected(ActionEvent event) {
+        boolean isSelected = transmissionCheckBox.isSelected();
+        automaticCheckBox.setSelected(isSelected);
+        manualCheckBox.setSelected(isSelected);
 
     }
 
     @FXML
     void typesVehiclesSelected(ActionEvent event) {
+        boolean isSelected = typesVehiclesCheckBox.isSelected();
+        camperCheckBox.setSelected(isSelected);
+        convertibleCheckBox.setSelected(isSelected);
+        coupeCheckBox.setSelected(isSelected);
+        hatchbackCheckBox.setSelected(isSelected);
+        minivanCheckBox.setSelected(isSelected);
+        motorcycleCheckBox.setSelected(isSelected);
+        pickupCheckBox.setSelected(isSelected);
+        sedanCheckBox.setSelected(isSelected);
+        suvCheckBox.setSelected(isSelected);
 
     }
 
-    @FXML
-    void volkswagenSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void volvoSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void whiteSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void winnebagoSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void yamahaSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void year2019Selected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void year2020Selected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void year2021Selected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void year2022Selected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void year2023Selected(ActionEvent event) {
-
+    public void setUsernameLabel(String usernameLabel) {
+        this.usernameLabel.setText(usernameLabel);
     }
 
     @FXML
@@ -807,12 +851,38 @@ public class RentalMainController {
 
     @FXML
     void yearSelected(ActionEvent event) {
+        boolean isSelected = yearCheckBox.isSelected();
+        year2019CheckBox.setSelected(isSelected);
+        year2020CheckBox.setSelected(isSelected);
+        year2021CheckBox.setSelected(isSelected);
+        year2022CheckBox.setSelected(isSelected);
+        year2023CheckBox.setSelected(isSelected);
+        year2024CheckBox.setSelected(isSelected);
 
     }
 
-    @FXML
-    void yellowSelected(ActionEvent event) {
 
+    private void displayResults(ArrayList<Vehicle> vehicles) {
+        resultsList.getItems().clear();
+        resultsList.getItems().addAll(vehicles);
     }
 
+    private void displayVehicleDetails(Vehicle vehicle) {
+        brandModelLabel.setText(vehicle.getBrand() + " " + vehicle.getModel());
+        descLabel.setText(description(vehicle));
+        priceLabel.setText("Price per day: " + vehicle.getPricePerDay());
+    }
+
+    public void rentButtonClicked(ActionEvent actionEvent) {
+    }
+
+    public void dateFromSelected(ActionEvent actionEvent) {
+    }
+
+    public void dateToSelected(ActionEvent actionEvent) {
+    }
+    private String description(Vehicle vehicle) {
+        String description = "Brand: " + vehicle.getBrand() + "\n" + "Model: "+ vehicle.getModel() + "\n"+"Year: " + vehicle.getYear() + "\n" +"Color: " + vehicle.getColor() + " " + vehicle.getFuelType() + " " + vehicle.getGearBox() + " " + vehicle.getVehicleTypes() + " " + vehicle.getPricePerDay();
+        return description;
+    }
 }

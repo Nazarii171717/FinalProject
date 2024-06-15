@@ -48,6 +48,7 @@ public class RentalIntroController {
                 throw new RuntimeException(e);
             }
             RentalMainController controller = loader.getController();
+            controller.setUsernameLabel(loginTextField.getText());
             Stage stage = new Stage();
             stage.setTitle("Rental Application");
             stage.setScene(new Scene(root));
