@@ -77,7 +77,7 @@
     "mileage": 8000.0,
     "numberOfSeats": 4,
     "isReserved": false,
-    "pricePerDay": "P450"
+    "pricePerDay": "P400"
   },
   {
     "id": "5",
@@ -337,7 +337,7 @@
     "mileage": 4000.0,
     "numberOfSeats": 2,
     "isReserved": false,
-    "pricePerDay": "P220"
+    "pricePerDay": "P200"
   },
   {
     "id": "18",
@@ -357,7 +357,7 @@
     "mileage": 2000.0,
     "numberOfSeats": 2,
     "isReserved": false,
-    "pricePerDay": "P800"
+    "pricePerDay": "P400"
   },
   {
     "id": "19",
@@ -377,7 +377,7 @@
     "mileage": 5000.0,
     "numberOfSeats": 5,
     "isReserved": false,
-    "pricePerDay": "P450"
+    "pricePerDay": "P400"
   },
   {
     "id": "20",
@@ -577,7 +577,7 @@
     "mileage": 2500.0,
     "numberOfSeats": 2,
     "isReserved": false,
-    "pricePerDay": "P700"
+    "pricePerDay": "P350"
   },
   {
     "id": "30",
@@ -698,7 +698,7 @@
     "mileage": 2800.0,
     "numberOfSeats": 2,
     "isReserved": false,
-    "pricePerDay": "P700"
+    "pricePerDay": "P400"
   },
   {
     "id": "37",
@@ -838,7 +838,7 @@
     "mileage": 2200.0,
     "numberOfSeats": 2,
     "isReserved": false,
-    "pricePerDay": "P700"
+    "pricePerDay": "P400"
   },
   {
     "id": "32",
@@ -1197,7 +1197,7 @@
     "mileage": 4500.0,
     "numberOfSeats": 2,
     "isReserved": false,
-    "pricePerDay": "P150"
+    "pricePerDay": "P50"
   },
   {
     "id": "61",
@@ -1297,7 +1297,7 @@
     "mileage": 6000.0,
     "numberOfSeats": 5,
     "isReserved": false,
-    "pricePerDay": "P200"
+    "pricePerDay": "P100"
   },
   {
     "id": "66",
@@ -1396,7 +1396,7 @@
     "mileage": 5000.0,
     "numberOfSeats": 4,
     "isReserved": false,
-    "pricePerDay": "P150"
+    "pricePerDay": "P50"
   },
   {
     "id": "71",
@@ -1555,7 +1555,7 @@
   "mileage": 6800.0,
   "numberOfSeats": 5,
   "isReserved": false,
-  "pricePerDay": "P220"
+  "pricePerDay": "P200"
 },
   {
     "id": "79",
@@ -1575,7 +1575,7 @@
     "mileage": 7200.0,
     "numberOfSeats": 4,
     "isReserved": false,
-    "pricePerDay": "P280"
+    "pricePerDay": "P250"
   },
   {
     "id": "80",
@@ -1655,7 +1655,7 @@
     "mileage": 7200.0,
     "numberOfSeats": 5,
     "isReserved": false,
-    "pricePerDay": "P260"
+    "pricePerDay": "P200"
   },
   {
     "id": "84",
@@ -1695,7 +1695,7 @@
     "mileage": 4500.0,
     "numberOfSeats": 2,
     "isReserved": false,
-    "pricePerDay": "P180"
+    "pricePerDay": "P150"
   },
   {
     "id": "86",
@@ -1735,7 +1735,7 @@
     "mileage": 6800.0,
     "numberOfSeats": 5,
     "isReserved": false,
-    "pricePerDay": "P240"
+    "pricePerDay": "P250"
   },
   {
     "id": "88",
@@ -1755,7 +1755,7 @@
     "mileage": 7000.0,
     "numberOfSeats": 5,
     "isReserved": false,
-    "pricePerDay": "P210"
+    "pricePerDay": "P200"
   },
   {
     "id": "89",
@@ -1795,7 +1795,7 @@
     "mileage": 6000.0,
     "numberOfSeats": 5,
     "isReserved": false,
-    "pricePerDay": "P180"
+    "pricePerDay": "P150"
   },
   {
     "id": "91",
@@ -1855,7 +1855,7 @@
     "mileage": 5500.0,
     "numberOfSeats": 5,
     "isReserved": false,
-    "pricePerDay": "P190"
+    "pricePerDay": "P200"
   },
   {
     "id": "94",
@@ -1895,7 +1895,7 @@
     "mileage": 7200.0,
     "numberOfSeats": 5,
     "isReserved": false,
-    "pricePerDay": "P270"
+    "pricePerDay": "P250"
   },
   {
     "id": "96",
@@ -1915,7 +1915,7 @@
     "mileage": 6800.0,
     "numberOfSeats": 4,
     "isReserved": false,
-    "pricePerDay": "P290"
+    "pricePerDay": "P200"
   },
   {
     "id": "97",
@@ -1935,7 +1935,7 @@
     "mileage": 3500.0,
     "numberOfSeats": 2,
     "isReserved": false,
-    "pricePerDay": "P170"
+    "pricePerDay": "P100"
   },
   {
     "id": "98",
@@ -1955,7 +1955,7 @@
     "mileage": 6800.0,
     "numberOfSeats": 5,
     "isReserved": false,
-    "pricePerDay": "P230"
+    "pricePerDay": "P200"
   },
   {
     "id": "99",
@@ -1975,7 +1975,7 @@
     "mileage": 6000.0,
     "numberOfSeats": 5,
     "isReserved": false,
-    "pricePerDay": "P190"
+    "pricePerDay": "P150"
   },
 
   {
@@ -1996,7 +1996,7 @@
     "mileage": 7800.0,
     "numberOfSeats": 5,
     "isReserved": false,
-    "pricePerDay": "P320"
+    "pricePerDay": "P300"
   }
 
 ]
