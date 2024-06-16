@@ -171,7 +171,7 @@ public class WorkWithJSON {
     @SneakyThrows
     public void addCustomer(String name, String surname, int age,
                             String phone, String email, String address, String id,
-                            String password, ArrayList<RentalHistory> rentalHistories, double discount)
+                            String password, ArrayList<RentalHistory> rentalHistories)
     {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("name", name);
@@ -183,7 +183,7 @@ public class WorkWithJSON {
         jsonObject.put("id", id);
         jsonObject.put("password", password);
         jsonObject.put("rentalHistories", rentalHistories);
-        jsonObject.put("discount", discount);
+        jsonObject.put("discount", 0);
 
         FileReader reader = new FileReader(customersDataJSON);
         int i;
@@ -259,6 +259,7 @@ public class WorkWithJSON {
             customer.setDiscount(customer.getDiscount() + 0.01);
         }
         list.add(rI);
+        customer.setRentalHistories(list);
 
         FileReader reader = new FileReader(customersDataJSON);
         int i;

@@ -41,13 +41,19 @@ public class Functionality {
        // rentalFunctions.returnVehicle("GywX5");
 
 
-        System.out.println(workWithJSON.findCustomerById("JohnSmith"));
+       /* System.out.println(workWithJSON.findCustomerById("JohnSmith"));
         CustomerDataFunctions cdf = new CustomerDataFunctions();
         cdf.changePassword("nnn", "JohnSmith");
-        System.out.println(workWithJSON.findCustomerById("JohnSmith"));
+        System.out.println(workWithJSON.findCustomerById("JohnSmith"));*/
 
 
         FilterForRenting filter = new FilterForRenting();
+
+
+        RentalFunctions rf = new RentalFunctions();
+        //rf.rentVehicle("5", "JamesTaylor", 2);
+        rf.returnVehicle("s8ahT");
+        rf.rentVehicle("7", "JamesTaylor",1);
     }
 
 

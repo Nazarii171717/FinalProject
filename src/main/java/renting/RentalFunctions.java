@@ -12,8 +12,6 @@ import java.util.ArrayList;
 
 public class RentalFunctions {
 
-    private final String vehiclesDataJSON = "src/main/resources/VehiclesData.json";
-    private final String customersDataJSON = "src/main/resources/CustomersData.json";
     private final String rentalInformationJSON = "src/main/resources/RentalInformation.json";
     private WorkWithJSON workWithJSON = new WorkWithJSON();
     // TODO RENT VEHICLE RIGHT NOW
@@ -44,6 +42,7 @@ public class RentalFunctions {
     public void reserveVehicleForADAte(String vehicleId, String customerId,
                                int duration, LocalDateTime reservationDate) {
         LocalDateTime rentalDate = reservationDate;
+        // we can change to .plusMinutes
         LocalDateTime returnDate = rentalDate.plusDays(duration);
 
         boolean isReserved = workWithJSON.findVehicleById(vehicleId).isReserved();
@@ -95,9 +94,9 @@ public class RentalFunctions {
         {
             if (!rI.getRentingStatus().equals(RentingStatus.FINISHED))
             {
-                LocalDateTime currentDate = LocalDateTime.now();//16june
-                LocalDateTime rentalDate = rI.getRentalDate();//6june
-                LocalDateTime returnDate = rI.getReturnDate();//23june
+                LocalDateTime currentDate = LocalDateTime.now();
+                LocalDateTime rentalDate = rI.getRentalDate();
+                LocalDateTime returnDate = rI.getReturnDate();
 
                 if (rI.getRentingStatus().equals(RentingStatus.IN_PROCESS))
                 {
@@ -120,8 +119,5 @@ public class RentalFunctions {
                 }
             }
         }
-
     }
-
-
 }
