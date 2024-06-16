@@ -248,7 +248,12 @@ public class WorkWithJSON {
     public void updateCustomerData(String customerId, RentalInformation rI)
     {
         Customer customer = findCustomerById(customerId);
-        ArrayList<RentalInformation> list = customer.getRentalHistories();
+        ArrayList<RentalInformation> list = new ArrayList<>();
+        if (customer.getRentalHistories() != null)
+        {
+            list = customer.getRentalHistories();
+        }
+        //ArrayList<RentalInformation> list = customer.getRentalHistories();
         if (!list.removeIf(rentalInformation -> rentalInformation.getId().equals(rI.getId())))
         {
             customer.setDiscount(customer.getDiscount() + 0.01);
