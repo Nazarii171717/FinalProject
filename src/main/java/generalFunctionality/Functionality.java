@@ -50,10 +50,10 @@ public class Functionality {
         FilterForRenting filter = new FilterForRenting();
 
 
-        RentalFunctions rf = new RentalFunctions();
+       /* RentalFunctions rf = new RentalFunctions();
         //rf.rentVehicle("5", "JamesTaylor", 2);
         rf.returnVehicle("s8ahT");
-        rf.rentVehicle("7", "JamesTaylor",1);
+        rf.rentVehicle("7", "JamesTaylor",1);*/
     }
 
 
