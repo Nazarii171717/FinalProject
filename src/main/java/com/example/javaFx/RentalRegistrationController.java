@@ -7,9 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import parsingCSV.WorkWithJSON;
 
@@ -18,7 +16,7 @@ import java.io.IOException;
 public class RentalRegistrationController {
 
     @FXML
-    private TextField addressField;
+    private TextArea addressField;
 
     @FXML
     private TextField ageField;
@@ -45,7 +43,7 @@ public class RentalRegistrationController {
     private TextField newLoginField;
 
     @FXML
-    private TextField newPasswordField;
+    private PasswordField newPasswordField;
 
     @FXML
     private TextField phoneNumberField;
@@ -76,6 +74,13 @@ public class RentalRegistrationController {
         else if (password.contains(" ")) {
             displayError(new InvalidPasswordFormatException().getMessage("Password cannot contain spaces"));
         }
+        if(!validateEmail(email)){
+            displayError("Invalid email");
+        }
+        else if (!validatePhoneNumber(phoneNumber)) {
+            displayError("Invalid phone number");
+        }
+
         else {
             WorkWithJSON workWithJSON = new WorkWithJSON();
             workWithJSON.addCustomer(name, surname,Integer.parseInt(age), phoneNumber, email, address, login, password, null);
@@ -130,5 +135,23 @@ public class RentalRegistrationController {
             throw new RuntimeException(e);
         }
     }
+    private boolean validatePhoneNumber(String phoneNumber) {
+        if (!phoneNumber.matches("[0-9]+")) {
+            return false;
+        } else if (phoneNumber.length() != 9) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private boolean validateEmail(String email) {
+        if (!email.matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 }
 

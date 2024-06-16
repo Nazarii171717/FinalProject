@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import parsingCSV.WorkWithJSON;
@@ -22,7 +23,7 @@ public class RentalIntroController {
     private TextField loginTextField;
 
     @FXML
-    private TextField passwdTextField;
+    private PasswordField passwdTextField;
 
     @FXML
     private Button signInButton;

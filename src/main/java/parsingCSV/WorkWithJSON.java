@@ -56,8 +56,10 @@ public class WorkWithJSON {
     {
         Path path = Path.of(vehiclesDataJSON);
 
-        GsonBuilder gsonBuilder = new GsonBuilder();
-        Gson gson = gsonBuilder.create();
+        //GsonBuilder gsonBuilder = new GsonBuilder();
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
+                .create();
 
         String jsonContent = Files.readString(path);
         JSONArray jsonArray = new JSONArray(jsonContent);
@@ -109,7 +111,7 @@ public class WorkWithJSON {
     {
         Path path = Path.of(rentalInformationJSON);
 
-        GsonBuilder gsonBuilder = new GsonBuilder();
+        //GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
                 .create();
@@ -232,7 +234,9 @@ public class WorkWithJSON {
 
         jsonArray.remove(indexOfVehicle);
 
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
+                .create();
         String vehicleAsJsonObject = gson.toJson(vehicle);
 
         JSONObject jsonVehicle = new JSONObject(vehicleAsJsonObject);

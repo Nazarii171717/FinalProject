@@ -2,6 +2,7 @@ package renting;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import generalFunctionality.LocalDateTimeAdapter;
 import lombok.SneakyThrows;
 import org.json.JSONArray;
 import parsingCSV.WorkWithJSON;
@@ -75,8 +76,9 @@ public class RentalFunctions {
     {
         Path path = Path.of(rentalInformationJSON);
 
-        GsonBuilder gsonBuilder = new GsonBuilder();
-        Gson gson = gsonBuilder.create();
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
+                .create();
 
         String jsonContent = Files.readString(path);
         JSONArray jsonArray = new JSONArray(jsonContent);

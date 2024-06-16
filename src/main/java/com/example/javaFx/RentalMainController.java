@@ -1,7 +1,7 @@
 package com.example.javaFx;
 
 import customer.data.Customer;
-import customer.data.RentalHistory;
+import customer.data.CustomerDataFunctions;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -9,23 +9,18 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TitledPane;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import parsingCSV.WorkWithJSON;
 import renting.FilterForRenting;
+import renting.RentalFunctions;
+import renting.RentalInformation;
 import vehicle.data.*;
-import renting.*;
 
-import java.time.LocalDate;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -37,6 +32,15 @@ public class RentalMainController {
 
     @FXML
     private Tab accountTab;
+
+    @FXML
+    private Label invoiceTitleLabel;
+
+    @FXML
+    private Label invoiceDescLabel;
+
+    @FXML
+    private Label invoiceTotalLabel;
 
     @FXML
     private CheckBox alfaRomeoCheckBox;
@@ -283,9 +287,6 @@ public class RentalMainController {
     private Label resultLabel;
 
     @FXML
-    private Label UsernameLabel1;
-
-    @FXML
     private ListView<RentalInformation> reservedListView;
 
     @FXML
@@ -302,9 +303,6 @@ public class RentalMainController {
 
     @FXML
     private CheckBox sedanCheckBox;
-
-    @FXML
-    private CheckBox silverCheckBox;
 
     @FXML
     private CheckBox subaruCheckBox;
@@ -381,6 +379,32 @@ public class RentalMainController {
     @FXML
     private CheckBox yellowCheckBox;
 
+    @FXML private Label yourAccountLabel;
+    @FXML private Label accountDescLabel;
+    @FXML private Label settingsLabel;
+    @FXML private Label passwdChangeLabel;
+    @FXML private Label emailChangeLabel;
+    @FXML private Label emailChangeLabel1;
+    @FXML private Label addresssChangeLabel;
+    @FXML private Label aboutLabel;
+    @FXML private Label softLabel;
+    @FXML private Label authLabel;
+    @FXML private Label authIntroLabel;
+    @FXML private TextField oldEmailField;
+    @FXML private TextField newEmailField;
+    @FXML private TextField oldPhoneNumber;
+    @FXML private TextField newPhoneNumber;
+    @FXML private TextArea newAddressArea;
+    @FXML private Button changePasswordButton;
+    @FXML private Button emailChangeButton;
+    @FXML private Button changeNumberButton;
+    @FXML private Button changeAddressButton;
+    @FXML private PasswordField currentPasswordField;
+    @FXML private PasswordField newPasswordField;
+    @FXML private SplitPane splitPane1;
+    @FXML private SplitPane splitPane2;
+    @FXML private SplitPane splitPane3;
+
     @FXML
     void ItemClicked(MouseEvent event) {
         Vehicle vehicle = resultsList.getSelectionModel().getSelectedItem();
@@ -447,7 +471,6 @@ public class RentalMainController {
         orangeCheckBox.setSelected(isSelected);
         purpleCheckBox.setSelected(isSelected);
         redCheckBox.setSelected(isSelected);
-        silverCheckBox.setSelected(isSelected);
         whiteCheckBox.setSelected(isSelected);
         yellowCheckBox.setSelected(isSelected);
     }
@@ -513,6 +536,7 @@ public class RentalMainController {
         filteredVehicles = applyPricePerDayFilters(filteredVehicles);
 
         displayResults(filteredVehicles);
+
     }
 
     private ArrayList<Vehicle> applyBrandFilters(ArrayList<Vehicle> vehicles) {
@@ -869,11 +893,6 @@ public class RentalMainController {
     }
 
     @FXML
-    void year2024Selected(ActionEvent event) {
-
-    }
-
-    @FXML
     void yearSelected(ActionEvent event) {
         boolean isSelected = yearCheckBox.isSelected();
         year2019CheckBox.setSelected(isSelected);
@@ -902,38 +921,10 @@ public class RentalMainController {
         WorkWithJSON workWithJSON = new WorkWithJSON();
         Vehicle selectedVehicle = resultsList.getSelectionModel().getSelectedItem();
         if (selectedVehicle == null) {
-            FXMLLoader errorLoader = new FXMLLoader(getClass().getResource("rental-error.fxml"));
-            try {
-                errorLoader.load();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            RentalErrorController errorController = errorLoader.getController();
-            errorController.setErrorDescLabel("Please select a vehicle");
-            Parent root = errorLoader.getRoot();
-            Stage stage = new Stage();
-            stage.setTitle("Error");
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.show();
-            return;
+            displayError("Please select a vehicle");
         }
         if (dateFromPicker.getValue() == null || dateToPicker.getValue() == null) {
-            FXMLLoader errorLoader = new FXMLLoader(getClass().getResource("rental-error.fxml"));
-            try {
-                errorLoader.load();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            RentalErrorController errorController = errorLoader.getController();
-            errorController.setErrorDescLabel("Please select dates");
-            Parent root = errorLoader.getRoot();
-            Stage stage = new Stage();
-            stage.setTitle("Error");
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.show();
-            return;
+            displayError("Please select a valid date");
         }
 
         LocalDateTime dateFrom = dateFromPicker.getValue().atStartOfDay();
@@ -941,39 +932,11 @@ public class RentalMainController {
 
         long duration = ChronoUnit.DAYS.between(dateFrom, dateTo);
         if (duration < 1) {
-            FXMLLoader errorLoader = new FXMLLoader(getClass().getResource("rental-error.fxml"));
-            try {
-                errorLoader.load();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            RentalErrorController errorController = errorLoader.getController();
-            errorController.setErrorDescLabel("Please select valid dates");
-            Parent root = errorLoader.getRoot();
-            Stage stage = new Stage();
-            stage.setTitle("Error");
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.show();
-            return;
+            displayError("Please select a valid date");
         }
 
         if(dateTo.isBefore(LocalDateTime.now())){
-            FXMLLoader errorLoader = new FXMLLoader(getClass().getResource("rental-error.fxml"));
-            try {
-                errorLoader.load();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            RentalErrorController errorController = errorLoader.getController();
-            errorController.setErrorDescLabel("Please select valid dates");
-            Parent root = errorLoader.getRoot();
-            Stage stage = new Stage();
-            stage.setTitle("Error");
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.show();
-            return;
+            displayError("Please select a valid date");
         }
 
         int durationInt = (int) duration;
@@ -981,60 +944,883 @@ public class RentalMainController {
         resultsList.refresh();
     }
 
-    public void dateFromSelected(ActionEvent actionEvent) {
-    }
-
-    public void dateToSelected(ActionEvent actionEvent) {
-    }
     private String description(Vehicle vehicle) {
-        String description =  "Type:" + vehicle.getVehicleTypes() + "\n" +"Color: " + vehicle.getColor() + "\n" +"Fuel: " + vehicle.getFuelType() + "\n"+ "Transmission"
-                + vehicle.getGearBox() + "\n"+"Year: " + vehicle.getYear();
-        return description;
+        return "Brand: " + BrandConverter(vehicle.getBrand()) + "\n" +
+                "Model: " + modelConverter(vehicle.getModel()) + "\n" +
+                "Type: " + vehicleTypeConverter(vehicle.getVehicleTypes()) + "\n" +
+                "Color: " + ColorConverter(vehicle.getColor()) + "\n" +
+                "Fuel: " + FuelTypeConverter(vehicle.getFuelType()) + "\n" +
+                "Transmission: " + GearBoxConverter(vehicle.getGearBox()) + "\n" +
+                "Year: " + YearConverter(vehicle.getYear()) + "\n" +
+                "Engine: " + vehicle.getEngine() + "\n" +
+                "Max Speed: " + vehicle.getMaxSpeed() + "\n" +
+                "Max Load: " + vehicle.getMaxLoad() + "\n" +
+                "Fuel Tank Capacity: " + vehicle.getFuelTankCapacity() + "\n" +
+                "Fuel Consumption: " + vehicle.getFuelConsumption() + "\n" +
+                "Mileage: " + vehicle.getMileage() + "\n" +
+                "Number of Seats: " + vehicle.getNumberOfSeats() + "\n";
     }
     private String title(Vehicle vehicle) {
-        String title = vehicle.getBrand() + " "+  vehicle.getModel();
+        String title = modelConverter(vehicle.getModel());
         return title;
     }
     public void initialize() {
-        Timeline fiveMinuteTimeline = new Timeline(new KeyFrame(Duration.minutes(5), event -> {
-            LocalDateTime now = LocalDateTime.now();
-        }));
-        fiveMinuteTimeline.setCycleCount(Timeline.INDEFINITE);
-        fiveMinuteTimeline.play();
+        KeyFrame keyFrame = new KeyFrame(Duration.minutes(1), event -> {
+            updateRentalHistories();
+        });
+
+        Timeline timeline = new Timeline(keyFrame);
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
+    }
+    @FXML
+    public void updateRentalHistories() {
+        WorkWithJSON workWithJSON = new WorkWithJSON();
+        displayCustomerInfo();
+        RentalFunctions rentalFunctions = new RentalFunctions();
+        rentalFunctions.checkTheStatusOfAllVehicles();
+        Customer customer = workWithJSON.findCustomerById(usernameLabel.getText());
+        ArrayList<RentalInformation> list = customer.getRentalHistories();
+        if (list != null) {
+            reservedListView.getItems().clear();
+            reservedListView.getItems().addAll(list);
+        }
     }
 
 
+
     public void loadButton(ActionEvent actionEvent) {
-        WorkWithJSON workWithJSON = new WorkWithJSON();
-        Customer customer= workWithJSON.findCustomerById(usernameLabel.getText());
-        ArrayList<RentalInformation> list= customer.getRentalHistories();
-        if (list != null) {
-            setReservedListView(list);
+        updateRentalHistories();
+    }
+
+    public void reservationSelected(MouseEvent event) {
+        RentalInformation selectedRental = reservedListView.getSelectionModel().getSelectedItem();
+        if (selectedRental != null) {
+            invoiceTitleLabel.setText("INVOICE");
+            invoiceDescLabel.setText(formatAsInvoice(selectedRental));
+            invoiceTotalLabel.setText("Total: " + calculateTotal(selectedRental) + "€");
         }
-        else {
+
+    }
+    private int calculateTotal(RentalInformation rentalInformation) {
+        WorkWithJSON workWithJSON = new WorkWithJSON();
+        int days = rentalInformation.getDuration();
+        PricePerDay pricePerDay = workWithJSON.findVehicleById(rentalInformation.getVehicleId()).getPricePerDay();
+        int pricePerDayInt = priceConverter(pricePerDay);
+        return days * pricePerDayInt;
+    }
+
+    private int priceConverter(PricePerDay pricePerDay) {
+        switch (pricePerDay) {
+            case P50:
+                return 50;
+            case P100:
+                return 100;
+            case P150:
+                return 150;
+            case P200:
+                return 200;
+            case P250:
+                return 250;
+            case P300:
+                return 300;
+            case P350:
+                return 350;
+            case P400:
+                return 400;
+            default:
+                return 0;
+        }
+    }
+    public String formatAsInvoice(RentalInformation rentalInformation) {
+        WorkWithJSON workWithJSON = new WorkWithJSON();
+        Customer customer = workWithJSON.findCustomerById(rentalInformation.getCustomerId());
+        Vehicle vehicle = workWithJSON.findVehicleById(rentalInformation.getVehicleId());
+
+        return "Rental Information:\n" +
+                "-------------------\n" +
+                "Vehicle ID: " + rentalInformation.getVehicleId() + "\n" +
+                "Vehicle Model: " + vehicle.getModel() + "\n" +
+                "Price Per Day: " + priceConverter(vehicle.getPricePerDay()) + "€"+ "\n" +
+                "Customer ID: " + rentalInformation.getCustomerId() + "\n" +
+                "Duration: " + rentalInformation.getDuration() + " days\n" +
+                "Rental Date: " + rentalInformation.getRentalDate().toLocalDate().toString() + "\n" +
+                "Return Date: " + rentalInformation.getReturnDate().toLocalDate().toString() + "\n" +
+                "Renting Status: " + rentalInformation.getRentingStatus().toString() + "\n" +
+                "-------------------\n" +
+                "Customer Information:\n" +
+                "-------------------\n" +
+                "Name: " + customer.getName() + "\n" +
+                "Surname: " + customer.getSurname() + "\n" +
+                "Phone: " + customer.getPhone() + "\n" +
+                "Email: " + customer.getEmail() + "\n" +
+                "Address: " + customer.getAddress() + "\n";
+    }
+
+    private String modelConverter(Model model) {
+        switch (model) {
+            case AUDI_A1:
+                return "Audi A1";
+            case AUDI_A3:
+                return "Audi A3";
+            case AUDI_A4:
+                return "Audi A4";
+            case AUDI_A5:
+                return "Audi A5";
+            case AUDI_A6:
+                return "Audi A6";
+            case AUDI_A7:
+                return "Audi A7";
+            case AUDI_A8:
+                return "Audi A8";
+            case AUDI_Q2:
+                return "Audi Q2";
+            case AUDI_Q3:
+                return "Audi Q3";
+            case AUDI_Q5:
+                return "Audi Q5";
+            case AUDI_Q7:
+                return "Audi Q7";
+            case AUDI_Q8:
+                return "Audi Q8";
+            case AUDI_R8:
+                return "Audi R8";
+            case AUDI_TT:
+                return "Audi TT";
+            case BMW_1_SERIES:
+                return "BMW 1 Series";
+            case BMW_2_SERIES:
+                return "BMW 2 Series";
+            case BMW_3_SERIES:
+                return "BMW 3 Series";
+            case BMW_4_SERIES:
+                return "BMW 4 Series";
+            case BMW_5_SERIES:
+                return "BMW 5 Series";
+            case BMW_6_SERIES:
+                return "BMW 6 Series";
+            case BMW_7_SERIES:
+                return "BMW 7 Series";
+            case BMW_8_SERIES:
+                return "BMW 8 Series";
+            case BMW_X1:
+                return "BMW X1";
+            case BMW_X2:
+                return "BMW X2";
+            case BMW_X3:
+                return "BMW X3";
+            case BMW_X4:
+                return "BMW X4";
+            case BMW_X5:
+                return "BMW X5";
+            case BMW_X6:
+                return "BMW X6";
+            case BMW_X7:
+                return "BMW X7";
+            case BMW_Z4:
+                return "BMW Z4";
+            case BMW_I3:
+                return "BMW i3";
+            case BMW_I8:
+                return "BMW i8";
+            case MERCEDES_BENZ_A_CLASS:
+                return "Mercedes-Benz A-Class";
+            case MERCEDES_BENZ_B_CLASS:
+                return "Mercedes-Benz B-Class";
+            case MERCEDES_BENZ_C_CLASS:
+                return "Mercedes-Benz C-Class";
+            case MERCEDES_BENZ_E_CLASS:
+                return "Mercedes-Benz E-Class";
+            case MERCEDES_BENZ_S_CLASS:
+                return "Mercedes-Benz S-Class";
+            case MERCEDES_BENZ_G_CLASS:
+                return "Mercedes-Benz G-Class";
+            case MERCEDES_BENZ_GL_CLASS:
+                return "Mercedes-Benz GL-Class";
+            case MERCEDES_BENZ_GLE_CLASS:
+                return "Mercedes-Benz GLE-Class";
+            case MERCEDES_BENZ_GLK_CLASS:
+                return "Mercedes-Benz GLK-Class";
+            case MERCEDES_BENZ_GLS_CLASS:
+                return "Mercedes-Benz GLS-Class";
+            case MERCEDES_BENZ_M_CLASS:
+                return "Mercedes-Benz M-Class";
+            case MERCEDES_BENZ_R_CLASS:
+                return "Mercedes-Benz R-Class";
+            case MERCEDES_BENZ_V_CLASS:
+                return "Mercedes-Benz V-Class";
+            case MERCEDES_BENZ_AMG_GT:
+                return "Mercedes-Benz AMG GT";
+            case VOLKSWAGEN_GOLF:
+                return "Volkswagen Golf";
+            case VOLKSWAGEN_PASSAT:
+                return "Volkswagen Passat";
+            case VOLKSWAGEN_POLO:
+                return "Volkswagen Polo";
+            case VOLKSWAGEN_TIGUAN:
+                return "Volkswagen Tiguan";
+            case VOLKSWAGEN_ARTEON:
+                return "Volkswagen Arteon";
+            case VOLKSWAGEN_T_ROC:
+                return "Volkswagen T-Roc";
+            case VOLKSWAGEN_TOURAN:
+                return "Volkswagen Touran";
+            case VOLKSWAGEN_UP:
+                return "Volkswagen Up";
+            case VOLKSWAGEN_BEETLE:
+                return "Volkswagen Beetle";
+            case VOLKSWAGEN_JETTA:
+                return "Volkswagen Jetta";
+            case VOLKSWAGEN_SCIROCCO:
+                return "Volkswagen Scirocco";
+            case VOLKSWAGEN_SHARAN:
+                return "Volkswagen Sharan";
+            case VOLKSWAGEN_TOUAREG:
+                return "Volkswagen Touareg";
+            case PORSCHE_911:
+                return "Porsche 911";
+            case PORSCHE_718:
+                return "Porsche 718";
+            case PORSCHE_PANAMERA:
+                return "Porsche Panamera";
+            case PORSCHE_CAYENNE:
+                return "Porsche Cayenne";
+            case PORSCHE_MACAN:
+                return "Porsche Macan";
+            case PORSCHE_TAYCAN:
+                return "Porsche Taycan";
+            case PORSCHE_CARRERA_GT:
+                return "Porsche Carrera GT";
+            case PORSCHE_918_SPYDER:
+                return "Porsche 918 Spyder";
+            case PORSCHE_BOXSTER:
+                return "Porsche Boxster";
+            case PORSCHE_CAYMAN:
+                return "Porsche Cayman";
+            case PORSCHE_CAYENNE_COUPE:
+                return "Porsche Cayenne Coupe";
+            case PORSCHE_MACAN_GTS:
+                return "Porsche Macan GTS";
+            case OPEL_CORSA:
+                return "Opel Corsa";
+            case OPEL_ASTRA:
+                return "Opel Astra";
+            case OPEL_INSIGNIA:
+                return "Opel Insignia";
+            case OPEL_CROSSLAND_X:
+                return "Opel Crossland X";
+            case OPEL_GRANDLAND_X:
+                return "Opel Grandland X";
+            case OPEL_MOKKA_X:
+                return "Opel Mokka X";
+            case OPEL_ZAFIRA:
+                return "Opel Zafira";
+            case OPEL_ADAM:
+                return "Opel Adam";
+            case OPEL_COMBO:
+                return "Opel Combo";
+            case OPEL_VIVARO:
+                return "Opel Vivaro";
+            case OPEL_MOVANO:
+                return "Opel Movano";
+            case FORD_FIESTA:
+                return "Ford Fiesta";
+            case FORD_FOCUS:
+                return "Ford Focus";
+            case FORD_MONDEO:
+                return "Ford Mondeo";
+            case FORD_KUGA:
+                return "Ford Kuga";
+            case FORD_PUMA:
+                return "Ford Puma";
+            case FORD_ECO_SPORT:
+                return "Ford EcoSport";
+            case FORD_S_MAX:
+                return "Ford S-Max";
+            case FORD_GALAXY:
+                return "Ford Galaxy";
+            case FORD_RANGER:
+                return "Ford Ranger";
+            case FORD_MUSTANG:
+                return "Ford Mustang";
+            case FORD_GT:
+                return "Ford GT";
+            case FORD_EDGE:
+                return "Ford Edge";
+            case CHEVROLET_SPARK:
+                return "Chevrolet Spark";
+            case CHEVROLET_SONIC:
+                return "Chevrolet Sonic";
+            case CHEVROLET_MALIBU:
+                return "Chevrolet Malibu";
+            case CHEVROLET_IMPALA:
+                return "Chevrolet Impala";
+            case CHEVROLET_CAMARO:
+                return "Chevrolet Camaro";
+            case CHEVROLET_CORVETTE:
+                return "Chevrolet Corvette";
+            case TOYOTA_YARIS:
+                return "Toyota Yaris";
+            case TOYOTA_COROLLA:
+                return "Toyota Corolla";
+            case TOYOTA_CAMRY:
+                return "Toyota Camry";
+            case TOYOTA_PRIUS:
+                return "Toyota Prius";
+            case TOYOTA_AVALON:
+                return "Toyota Avalon";
+            case TOYOTA_SUPRA:
+                return "Toyota Supra";
+            case HONDA_FIT:
+                return "Honda Fit";
+            case HONDA_CIVIC:
+                return "Honda Civic";
+            case HONDA_ACCORD:
+                return "Honda Accord";
+            case HONDA_INSIGHT:
+                return "Honda Insight";
+            case HONDA_CLARITY:
+                return "Honda Clarity";
+            case HONDA_S2000:
+                return "Honda S2000";
+            case NISSAN_VERSA:
+                return "Nissan Versa";
+            case NISSAN_SENTRA:
+                return "Nissan Sentra";
+            case NISSAN_ALTIMA:
+                return "Nissan Altima";
+            case NISSAN_MAXIMA:
+                return "Nissan Maxima";
+            case NISSAN_370Z:
+                return "Nissan 370Z";
+            case NISSAN_GT_R:
+                return "Nissan GT-R";
+            case HYUNDAI_ACCENT:
+                return "Hyundai Accent";
+            case HYUNDAI_ELANTRA:
+                return "Hyundai Elantra";
+            case HYUNDAI_SONATA:
+                return "Hyundai Sonata";
+            case HYUNDAI_AZERA:
+                return "Hyundai Azera";
+            case HYUNDAI_GENESIS:
+                return "Hyundai Genesis";
+            case HYUNDAI_EQUUS:
+                return "Hyundai Equus";
+            case KIA_RIO:
+                return "Kia Rio";
+            case KIA_FORTE:
+                return "Kia Forte";
+            case KIA_OPTIMA:
+                return "Kia Optima";
+            case KIA_STINGER:
+                return "Kia Stinger";
+            case KIA_K900:
+                return "Kia K900";
+            case KIA_SOUL:
+                return "Kia Soul";
+            case PEUGEOT_208:
+                return "Peugeot 208";
+            case PEUGEOT_308:
+                return "Peugeot 308";
+            case PEUGEOT_508:
+                return "Peugeot 508";
+            case PEUGEOT_2008:
+                return "Peugeot 2008";
+            case PEUGEOT_3008:
+                return "Peugeot 3008";
+            case PEUGEOT_5008:
+                return "Peugeot 5008";
+            case RENAULT_CLIO:
+                return "Renault Clio";
+            case RENAULT_MEGANE:
+                return "Renault Megane";
+            case RENAULT_LAGUNA:
+                return "Renault Laguna";
+            case RENAULT_SCENIC:
+                return "Renault Scenic";
+            case RENAULT_KADJAR:
+                return "Renault Kadjar";
+            case RENAULT_KOLEOS:
+                return "Renault Koleos";
+            case CITROEN_C1:
+                return "Citroen C1";
+            case CITROEN_C3:
+                return "Citroen C3";
+            case CITROEN_C4:
+                return "Citroen C4";
+            case CITROEN_C5:
+                return "Citroen C5";
+            case CITROEN_DS3:
+                return "Citroen DS3";
+            case CITROEN_DS4:
+                return "Citroen DS4";
+            case FIAT_500:
+                return "Fiat 500";
+            case FIAT_PANDA:
+                return "Fiat Panda";
+            case FIAT_PUNTO:
+                return "Fiat Punto";
+            case ALFA_ROMEO_GIULIA:
+                return "Alfa Romeo Giulia";
+            case ALFA_ROMEO_STELVIO:
+                return "Alfa Romeo Stelvio";
+            case ALFA_ROMEO_GIULIETTA:
+                return "Alfa Romeo Giulietta";
+            case ALFA_ROMEO_4C:
+                return "Alfa Romeo 4C";
+            case FERRARI_488:
+                return "Ferrari 488";
+            case FERRARI_F8:
+                return "Ferrari F8";
+            case FERRARI_ROMA:
+                return "Ferrari Roma";
+            case FERRARI_SF90:
+                return "Ferrari SF90";
+            case LAMBORGHINI_AVENTADOR:
+                return "Lamborghini Aventador";
+            case LAMBORGHINI_HURACAN:
+                return "Lamborghini Huracan";
+            case LAMBORGHINI_GALLARDO:
+                return "Lamborghini Gallardo";
+            case LAMBORGHINI_URUS:
+                return "Lamborghini Urus";
+            case MASERATI_GHIBLI:
+                return "Maserati Ghibli";
+            case MASERATI_QUATTROPORTE:
+                return "Maserati Quattroporte";
+            case MASERATI_GRANTURISMO:
+                return "Maserati GranTurismo";
+            case MASERATI_LEVANTE:
+                return "Maserati Levante";
+            case ASTON_MARTIN_VANTAGE:
+                return "Aston Martin Vantage";
+            case ASTON_MARTIN_DB11:
+                return "Aston Martin DB11";
+            case ASTON_MARTIN_DBX:
+                return "Aston Martin DBX";
+            case ASTON_MARTIN_RAPIDE:
+                return "Aston Martin Rapide";
+            case BENTLEY_CONTINENTAL:
+                return "Bentley Continental";
+            case BENTLEY_FLYING_SPUR:
+                return "Bentley Flying Spur";
+            case BENTLEY_BENTAYGA:
+                return "Bentley Bentayga";
+            case BENTLEY_MULSANNE:
+                return "Bentley Mulsanne";
+            case ROLLS_ROYCE_PHANTOM:
+                return "Rolls-Royce Phantom";
+            case ROLLS_ROYCE_GHOST:
+                return "Rolls-Royce Ghost";
+            case ROLLS_ROYCE_WRAITH:
+                return "Rolls-Royce Wraith";
+            case ROLLS_ROYCE_CULLINAN:
+                return "Rolls-Royce Cullinan";
+            case JAGUAR_XE:
+                return "Jaguar XE";
+            case JAGUAR_XF:
+                return "Jaguar XF";
+            case JAGUAR_XJ:
+                return "Jaguar XJ";
+            case JAGUAR_F_TYPE:
+                return "Jaguar F-Type";
+            case LAND_ROVER_DEFENDER:
+                return "Land Rover Defender";
+            case LAND_ROVER_DISCOVERY:
+                return "Land Rover Discovery";
+            case LAND_ROVER_FREELANDER:
+                return "Land Rover Freelander";
+            case LAND_ROVER_RANGE_ROVER:
+                return "Land Rover Range Rover";
+            case TESLA_MODEL_S:
+                return "Tesla Model S";
+            case TESLA_MODEL_3:
+                return "Tesla Model 3";
+            case TESLA_MODEL_X:
+                return "Tesla Model X";
+            case TESLA_MODEL_Y:
+                return "Tesla Model Y";
+            case VOLVO_S60:
+                return "Volvo S60";
+            case VOLVO_S90:
+                return "Volvo S90";
+            case VOLVO_V60:
+                return "Volvo V60";
+            case VOLVO_V90:
+                return "Volvo V90";
+            case SUBARU_IMPREZA:
+                return "Subaru Impreza";
+            case SUBARU_LEGACY:
+                return "Subaru Legacy";
+            case SUBARU_FORESTER:
+                return "Subaru Forester";
+            case SUBARU_OUTBACK:
+                return "Subaru Outback";
+            case MAZDA2:
+                return "Mazda2";
+            case MAZDA3:
+                return "Mazda3";
+            case MAZDA6:
+                return "Mazda6";
+            case MAZDA_CX_3:
+                return "Mazda CX-3";
+            case SUZUKI_SWIFT:
+                return "Suzuki Swift";
+            case SUZUKI_SX4:
+                return "Suzuki SX4";
+            case SUZUKI_VITARA:
+                return "Suzuki Vitara";
+            case SUZUKI_JIMNY:
+                return "Suzuki Jimny";
+            case DODGE_CHALLENGER:
+                return "Dodge Challenger";
+            case DODGE_CHARGER:
+                return "Dodge Charger";
+            case DODGE_DURANGO:
+                return "Dodge Durango";
+            case DODGE_GRAND_CARAVAN:
+                return "Dodge Grand Caravan";
+            case JEEP_WRANGLER:
+                return "Jeep Wrangler";
+            case JEEP_GRAND_CHEROKEE:
+                return "Jeep Grand Cherokee";
+            case JEEP_CHEROKEE:
+                return "Jeep Cherokee";
+            case JEEP_COMPASS:
+                return "Jeep Compass";
+            case CADILLAC_ATS:
+                return "Cadillac ATS";
+            case CADILLAC_CTS:
+                return "Cadillac CTS";
+            case CADILLAC_XTS:
+                return "Cadillac XTS";
+            case CADILLAC_ESCALADE:
+                return "Cadillac Escalade";
+            case HARLEY_DAVIDSON_SPORTSTER:
+                return "Harley-Davidson Sportster";
+            case HARLEY_DAVIDSON_SOFTAIL:
+                return "Harley-Davidson Softail";
+            case HARLEY_DAVIDSON_TOURING:
+                return "Harley-Davidson Touring";
+            case DUCATI_MONSTER:
+                return "Ducati Monster";
+            case DUCATI_MULTISTRADA:
+                return "Ducati Multistrada";
+            case DUCATI_PANIGALE:
+                return "Ducati Panigale";
+            case YAMAHA_YZF:
+                return "Yamaha YZF";
+            case YAMAHA_MT:
+                return "Yamaha MT";
+            case YAMAHA_XSR:
+                return "Yamaha XSR";
+            case KAWASAKI_NINJA:
+                return "Kawasaki Ninja";
+            case KAWASAKI_Z:
+                return "Kawasaki Z";
+            case KAWASAKI_VERSYS:
+                return "Kawasaki Versys";
+            case SUZUKI_GSX:
+                return "Suzuki GSX";
+            case SUZUKI_V_STROM:
+                return "Suzuki V-Strom";
+            case SUZUKI_SV:
+                return "Suzuki SV";
+            case WINNEBAGO_MINNIE:
+                return "Winnebago Minnie";
+            case WINNEBAGO_MICRO_MINNIE:
+                return "Winnebago Micro Minnie";
+            case WINNEBAGO_REVEL:
+                return "Winnebago Revel";
+            case CHRYSLER_PACIFICA:
+                return "Chrysler Pacifica";
+            case CHRYSLER_VOYAGER:
+                return "Chrysler Voyager";
+            case CHRYSLER_GRAND_VOYAGER:
+                return "Chrysler Grand Voyager";
+            default:
+                return model.name().replace('_', ' ').toLowerCase();
+        }
+    }
+    private String vehicleTypeConverter(VehicleTypes vehicleTypes) {
+        switch (vehicleTypes) {
+            case CAMPER:
+                return "Camper";
+            case CONVERTIBLE:
+                return "Convertible";
+            case COUPE:
+                return "Coupe";
+            case HATCHBACK:
+                return "Hatchback";
+            case MINIVAN:
+                return "Minivan";
+            case MOTORCYCLE:
+                return "Motorcycle";
+            case PICKUP:
+                return "Pickup";
+            case SEDAN:
+                return "Sedan";
+            case SUV:
+                return "SUV";
+            default:
+                return vehicleTypes.name().toLowerCase();
+        }
+    }
+    private String GearBoxConverter(GearBox gearBox) {
+        switch (gearBox) {
+            case AUTOMATIC:
+                return "Automatic";
+            case MANUAL:
+                return "Manual";
+            default:
+                return gearBox.name().toLowerCase();
+        }
+    }
+    private String FuelTypeConverter(FuelType fuelType) {
+        switch (fuelType) {
+            case PETROL:
+                return "Petrol";
+            case DIESEL:
+                return "Diesel";
+            case ELECTRIC:
+                return "Electric";
+            case HYBRID:
+                return "Hybrid";
+            default:
+                return fuelType.name().toLowerCase();
+        }
+    }
+    private String ColorConverter(Color color) {
+        switch (color) {
+            case BLACK:
+                return "Black";
+            case BLUE:
+                return "Blue";
+            case GRAY:
+                return "Gray";
+            case GREEN:
+                return "Green";
+            case ORANGE:
+                return "Orange";
+            case PURPLE:
+                return "Purple";
+            case RED:
+                return "Red";
+            case WHITE:
+                return "White";
+            case YELLOW:
+                return "Yellow";
+            default:
+                return color.name().toLowerCase();
+        }
+    }
+    private int YearConverter(Year year) {
+        switch (year) {
+            case Y2019:
+                return 2019;
+            case Y2020:
+                return 2020;
+            case Y2021:
+                return 2021;
+            case Y2022:
+                return 2022;
+            case Y2023:
+                return 2023;
+            case Y2024:
+                return 2024;
+            default:
+                return 0;
+        }
+    }
+    private String BrandConverter(Brand brand){
+        switch (brand){
+            case AUDI:
+                return "Audi";
+            case BMW:
+                return "BMW";
+            case MERCEDES_BENZ:
+                return "Mercedes-Benz";
+            case VOLKSWAGEN:
+                return "Volkswagen";
+            case PORSCHE:
+                return "Porsche";
+            case OPEL:
+                return "Opel";
+            case FORD:
+                return "Ford";
+            case CHEVROLET:
+                return "Chevrolet";
+            case TOYOTA:
+                return "Toyota";
+            case HONDA:
+                return "Honda";
+            case NISSAN:
+                return "Nissan";
+            case HYUNDAI:
+                return "Hyundai";
+            case KIA:
+                return "Kia";
+            case PEUGEOT:
+                return "Peugeot";
+            case RENAULT:
+                return "Renault";
+            case CITROEN:
+                return "Citroen";
+            case FIAT:
+                return "Fiat";
+            case ALFA_ROMEO:
+                return "Alfa Romeo";
+            case FERRARI:
+                return "Ferrari";
+            case LAMBORGHINI:
+                return "Lamborghini";
+            case MASERATI:
+                return "Maserati";
+            case ASTON_MARTIN:
+                return "Aston Martin";
+            case BENTLEY:
+                return "Bentley";
+            case ROLLS_ROYCE:
+                return "Rolls-Royce";
+            case JAGUAR:
+                return "Jaguar";
+            case LAND_ROVER:
+                return "Land Rover";
+            case TESLA:
+                return "Tesla";
+            case VOLVO:
+                return "Volvo";
+            case SUBARU:
+                return "Subaru";
+            case MAZDA:
+                return "Mazda";
+            case SUZUKI:
+                return "Suzuki";
+            case WINNEBAGO:
+                return "Winnebago";
+            case CHRYSLER:
+                return "Chrysler";
+            case DODGE:
+                return "Dodge";
+            case JEEP:
+                return "Jeep";
+            case CADILLAC:
+                return "Cadillac";
+            case HARLEY_DAVIDSON:
+                return "Harley-Davidson";
+            case DUCATI:
+                return "Ducati";
+            case YAMAHA:
+                return "Yamaha";
+            case KAWASAKI:
+                return "Kawasaki";
+            default:
+                return brand.name().toLowerCase();
+        }
+    }
+
+    public void changeEmailButtonPressed(ActionEvent actionEvent) {
+        Customer customer = new WorkWithJSON().findCustomerById(usernameLabel.getText());
+        CustomerDataFunctions customerDataFunctions = new CustomerDataFunctions();
+        String oldEmail = oldEmailField.getText();
+        String newEmail = newEmailField.getText();
+        if (newEmail.isEmpty()) {
+            displayError("Please enter a valid email");
+        }
+        if (!newEmail.contains("@") || !newEmail.contains(".")) {
+            displayError("Please enter a valid email");
+        }
+        if(oldEmail.equals(newEmail)){
+            displayError("Please enter a different email");
+        }
+        if(!oldEmail.equals(customer.getEmail())) {
+            displayError("Please enter a valid email");
+        }
+        customerDataFunctions.changeEmail(newEmail, customer.getId());
+    }
+
+    public void changeAddressButtonPressed(ActionEvent actionEvent) {
+        Customer customer = new WorkWithJSON().findCustomerById(usernameLabel.getText());
+        CustomerDataFunctions customerDataFunctions = new CustomerDataFunctions();
+        String newAddress = newAddressArea.getText();
+        if (newAddress.isEmpty()) {
+            displayError("Please enter a valid address");
+        }
+        customerDataFunctions.changeAddress(newAddress, customer.getId());
+    }
+
+    public void changeNumberButtonPressed(ActionEvent actionEvent) {
+        Customer customer = new WorkWithJSON().findCustomerById(usernameLabel.getText());
+        CustomerDataFunctions customerDataFunctions = new CustomerDataFunctions();
+        String oldNumber = oldPhoneNumber.getText();
+        String newNumber = newPhoneNumber.getText();
+        if (newNumber.isEmpty()) {
+            displayError("Please enter a valid phone number");
+        }
+        if (newNumber.length() != 10) {
+            displayError("Please enter a valid phone number");
+        }
+        if(newNumber.contains("[a-zA-Z]+")){
+            displayError("Please enter a valid phone number");
+        }
+        if(oldNumber.equals(newNumber)){
+            displayError("Please enter a different phone number");
+        }
+        if(!oldNumber.equals(customer.getPhone())) {
+            displayError("Please enter a valid phone number");
+        }
+        customerDataFunctions.changeMobilePhoneNumber(newNumber, customer.getId());
+    }
+    public void changePasswordButtonPressed(ActionEvent actionEvent) {
+        Customer customer = new WorkWithJSON().findCustomerById(usernameLabel.getText());
+        CustomerDataFunctions customerDataFunctions = new CustomerDataFunctions();
+        String currentPassword = currentPasswordField.getText();
+        String newPassword = newPasswordField.getText();
+        if (newPassword.isEmpty()) {
+            displayError("Please enter a valid password");
+        }
+        if(currentPassword.equals(newPassword)){
+            displayError("Please enter a different password");
+        }
+        if(!currentPassword.equals(customer.getPassword())) {
+            displayError("Incorrect password");
+        }
+        if(newPassword.contains(" ")){
+            displayError("Password cannot contain space");
+        }
+        customerDataFunctions.changePassword(newPassword, customer.getId());
+    }
+
+    private void displayError(String errorMessage) {
+        try {
             FXMLLoader errorLoader = new FXMLLoader(getClass().getResource("rental-error.fxml"));
-            try {
-                errorLoader.load();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            RentalErrorController errorController = errorLoader.getController();
-            errorController.setErrorDescLabel("No reservations found");
-            Parent root = errorLoader.getRoot();
+            Parent root = errorLoader.load();
+
+            RentalErrorController controller = errorLoader.getController();
+            controller.setErrorDescLabel(errorMessage);
+
             Stage stage = new Stage();
             stage.setTitle("Error");
             stage.setScene(new Scene(root));
             stage.setResizable(false);
             stage.show();
 
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-
     }
+    public void displayCustomerInfo() {
+        WorkWithJSON workWithJSON = new WorkWithJSON();
+        Customer customer = workWithJSON.findCustomerById(usernameLabel.getText());
 
-    public void reservationSelected(ListView.EditEvent<RentalInformation> rentalHistoryEditEvent) {
-    }
-    public void setReservedListView(ArrayList<RentalInformation> rentalHistories) {
-        reservedListView.getItems().clear();
-        reservedListView.getItems().addAll(rentalHistories);
+        String customerInfo = "Name: " + customer.getName() + "\n" +
+                "Surname: " + customer.getSurname() + "\n" +
+                "Age: " + customer.getAge() + "\n" +
+                "Phone: " + customer.getPhone() + "\n" +
+                "Email: " + customer.getEmail() + "\n" +
+                "Address: " + customer.getAddress() + "\n";
+
+        accountDescLabel.setText(customerInfo);
     }
 }

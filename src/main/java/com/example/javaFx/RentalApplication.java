@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import lombok.SneakyThrows;
 
+
 import java.io.IOException;
 
 public class RentalApplication extends Application {

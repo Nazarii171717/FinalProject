@@ -5,28 +5,31 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaFx.RentalMainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="980.0"  xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaFx.RentalMainController">
     <children>
-      <TabPane layoutX="-1.0" layoutY="31.0" prefHeight="587.0" prefWidth="980.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="-1.0" layoutY="53.0" prefHeight="597.0" prefWidth="980.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab fx:id="rentTab" text="Rent a car">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="549.0" prefWidth="980.0">
                      <children>
-                        <SplitPane dividerPositions="0.29797979797979796" layoutX="2.0" layoutY="-3.0" prefHeight="555.0" prefWidth="978.0">
+                        <SplitPane fx:id="splitPane1" dividerPositions="0.29797979797979796" layoutX="2.0" layoutY="-3.0" prefHeight="536.0" prefWidth="978.0">
                           <items>
-                            <AnchorPane fx:id="filterPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="292.0">
+                            <AnchorPane fx:id="filterPane" minHeight="0.0" minWidth="0.0" prefHeight="493.0" prefWidth="287.0">
                                  <children>
-                                      <TitledPane fx:id="filters" animated="false" layoutX="3.0" layoutY="90.0" prefHeight="373.0" prefWidth="279.0" text="Filters">
+                                      <TitledPane fx:id="filters" animated="false" layoutX="3.0" layoutY="42.0" prefHeight="424.0" prefWidth="284.0" style="-fx-background-color: 0;" text="Filters">
                                           <graphic>
                                               <CheckBox fx:id="filtersCheckBox" onAction="#filtersSelected" />
                                           </graphic>
@@ -125,7 +128,6 @@
                                                                               <CheckBox fx:id="blackCheckBox" text="Black" />
                                                                               <CheckBox fx:id="whiteCheckBox" text="White" />
                                                                               <CheckBox fx:id="grayCheckBox" text="Gray" />
-                                                                              <CheckBox fx:id="silverCheckBox" text="Silver" />
                                                                               <CheckBox fx:id="redCheckBox" text="Red" />
                                                                               <CheckBox fx:id="blueCheckBox" text="Blue" />
                                                                               <CheckBox fx:id="greenCheckBox" text="Green" />
@@ -195,7 +197,7 @@
                                                               </ScrollPane>
                                                           </content>
                                                       </TitledPane>
-                                                      <TitledPane fx:id="pricePerDay" animated="false" expanded="false" text="Price per day">
+                                                      <TitledPane fx:id="pricePerDay" animated="false" expanded="false" prefHeight="90.0" prefWidth="220.0" text="Price per day">
                                                           <graphic>
                                                               <CheckBox fx:id="pricePerDayCheckBox" onAction="#pricePerDaySelected" />
                                                           </graphic>
@@ -222,13 +224,8 @@
                                               </VBox>
                                           </content>
                                       </TitledPane>
-                                    <Button fx:id="searchButton" layoutX="167.0" layoutY="479.0" mnemonicParsing="false" onAction="#searchButtonClicked" prefHeight="52.0" prefWidth="101.0" text="Search" />
-                                    <Label fx:id="usernameLabel" alignment="CENTER" layoutX="23.0" layoutY="13.0" prefHeight="30.0" prefWidth="242.0" text="USERNAME">
-                                       <font>
-                                          <Font name="System Bold" size="20.0" />
-                                       </font>
-                                    </Label>
-                                    <Label fx:id="carSearchInfoLabel" layoutX="9.0" layoutY="59.0" prefHeight="17.0" prefWidth="196.0" text="Search for your car">
+                                    <Button fx:id="searchButton" layoutX="184.0" layoutY="476.0" mnemonicParsing="false" onAction="#searchButtonClicked" prefHeight="39.0" prefWidth="88.0" text="Search" />
+                                    <Label fx:id="carSearchInfoLabel" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="196.0" text="Search for your car">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -239,24 +236,24 @@
                                  <children>
                                     <SplitPane layoutX="-3.0" layoutY="2.0" prefHeight="553.0" prefWidth="685.0">
                                       <items>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="490.0" prefWidth="683.0">
                                              <children>
                                                 <ListView fx:id="resultsList" layoutY="46.0" onMouseClicked="#ItemClicked" prefHeight="504.0" prefWidth="449.0" />
-                                                <Label fx:id="resultLabel" layoutX="7.0" layoutY="12.0" prefHeight="29.0" prefWidth="94.0" text="Results:">
+                                                <Label fx:id="resultLabel" layoutX="13.0" layoutY="12.0" prefHeight="29.0" prefWidth="88.0" text="Results:">
                                                    <font>
-                                                      <Font name="System Bold" size="20.0" />
+                                                      <Font name="Trebuchet MS Bold" size="19.0" />
                                                    </font>
                                                 </Label>
-                                                <Button fx:id="rentButton" layoutX="626.0" layoutY="489.0" mnemonicParsing="false" onAction="#rentButtonClicked" text="Rent" />
+                                                <Button fx:id="rentButton" layoutX="625.0" layoutY="472.0" mnemonicParsing="false" onAction="#rentButtonClicked" text="Rent" />
                                                 <Label fx:id="brandModelLabel" alignment="TOP_LEFT" layoutX="471.0" layoutY="29.0" prefHeight="33.0" prefWidth="187.0">
                                                    <font>
                                                       <Font name="System Bold" size="13.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="descLabel" alignment="TOP_LEFT" layoutX="477.0" layoutY="98.0" prefHeight="282.0" prefWidth="187.0" />
-                                                <Label fx:id="priceLabel" layoutX="469.0" layoutY="430.0" prefHeight="21.0" prefWidth="198.0" textFill="#a40404" />
-                                                <DatePicker fx:id="dateFromPicker" layoutX="469.0" layoutY="475.0" onAction="#dateFromSelected" prefHeight="26.0" prefWidth="146.0" promptText="From" />
-                                                <DatePicker fx:id="dateToPicker" layoutX="469.0" layoutY="511.0" onAction="#dateToSelected" prefHeight="26.0" prefWidth="146.0" promptText="To" />
+                                                <Label fx:id="descLabel" alignment="TOP_LEFT" layoutX="477.0" layoutY="88.0" prefHeight="306.0" prefWidth="187.0" />
+                                                <Label fx:id="priceLabel" layoutX="466.0" layoutY="422.0" prefHeight="21.0" prefWidth="198.0" textFill="#a40404" />
+                                                <DatePicker fx:id="dateFromPicker" layoutX="468.0" layoutY="458.0" prefHeight="26.0" prefWidth="146.0" promptText="From" />
+                                                <DatePicker fx:id="dateToPicker" layoutX="468.0" layoutY="494.0" prefHeight="26.0" prefWidth="146.0" promptText="To" />
                                              </children>
                                           </AnchorPane>
                                       </items>
@@ -273,21 +270,36 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <SplitPane dividerPositions="0.31952965235173825" layoutX="1.0" prefHeight="555.0" prefWidth="980.0">
+                        <SplitPane fx:id="splitPane2" dividerPositions="0.4836901121304791" layoutX="1.0">
                           <items>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="166.0">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="553.0" prefWidth="515.0">
                                  <children>
-                                    <Label fx:id="usernameLabel1" alignment="CENTER" layoutX="34.0" layoutY="14.0" prefHeight="30.0" prefWidth="242.0" text="USERNAME">
+                                    <Button fx:id="loadButton" layoutX="387.0" layoutY="10.0" mnemonicParsing="false" onAction="#loadButton" prefHeight="30.0" prefWidth="76.0" text="Load" />
+                                    <ListView fx:id="reservedListView" layoutY="56.0" onMouseClicked="#reservationSelected" prefHeight="476.0" prefWidth="474.0" />
+                                    <Label fx:id="rentalHistLabel" layoutX="34.0" layoutY="14.0" text="Your Rental History">
                                        <font>
-                                          <Font name="System Bold" size="20.0" />
+                                          <Font name="Trebuchet MS Bold" size="22.0" />
                                        </font>
                                     </Label>
-                                    <Button fx:id="loadButton" layoutX="183.0" layoutY="464.0" mnemonicParsing="false" onAction="#loadButton" prefHeight="54.0" prefWidth="93.0" text="Load" />
                                  </children>
                               </AnchorPane>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="553.0" prefWidth="459.0">
                                  <children>
-                                    <ListView fx:id="reservedListView" layoutY="48.0" onEditStart="#reservationSelected" prefHeight="505.0" prefWidth="440.0" />
+                                    <Label fx:id="invoiceTitleLabel" alignment="CENTER" layoutX="10.0" layoutY="23.0" prefHeight="34.0" prefWidth="484.0" text="INVOICE">
+                                       <font>
+                                          <Font name="Trebuchet MS Bold" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="invoiceDescLabel" alignment="TOP_LEFT" layoutX="20.0" layoutY="77.0" prefHeight="340.0" prefWidth="459.0">
+                                       <font>
+                                          <Font name="Trebuchet MS" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="invoiceTotalLabel" layoutX="39.0" layoutY="445.0" prefHeight="25.0" prefWidth="423.0">
+                                       <font>
+                                          <Font name="Trebuchet MS Bold" size="21.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                               </AnchorPane>
                           </items>
@@ -297,10 +309,87 @@
           </Tab>
             <Tab fx:id="accountTab" text="Account">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane fx:id="splitPane3" dividerPositions="0.3164621676891616" layoutX="1.0" layoutY="-1.0" prefHeight="536.0" prefWidth="980.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="yourAccountLabel" layoutX="65.0" layoutY="14.0" text="Your Account">
+                                       <font>
+                                          <Font name="Trebuchet MS Bold" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="accountDescLabel" alignment="TOP_LEFT" layoutX="26.0" layoutY="80.0" prefHeight="365.0" prefWidth="258.0" wrapText="true" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="settingsLabel" layoutX="30.0" layoutY="14.0" text="Settings">
+                                       <font>
+                                          <Font name="Trebuchet MS Bold" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="passwdChangeLabel" layoutX="30.0" layoutY="74.0" text="Change your password:">
+                                       <font>
+                                          <Font name="Trebuchet MS" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <PasswordField fx:id="currentPasswordField" layoutX="30.0" layoutY="108.0" prefHeight="26.0" prefWidth="183.0" promptText="Current Password" />
+                                    <PasswordField fx:id="newPasswordField" layoutX="30.0" layoutY="147.0" prefHeight="26.0" prefWidth="183.0" promptText="New Password" />
+                                    <Button fx:id="changePasswordButton" layoutX="31.0" layoutY="184.0" mnemonicParsing="false" onAction="#changePasswordButtonPressed" prefHeight="26.0" prefWidth="182.0" text="Change password" />
+                                    <TextField fx:id="oldEmailField" layoutX="32.0" layoutY="267.0" prefHeight="26.0" prefWidth="179.0" promptText="Current E-Mail" />
+                                    <TextField fx:id="newEmailField" layoutX="32.0" layoutY="300.0" prefHeight="26.0" prefWidth="179.0" promptText="New E-Mail" />
+                                    <Label fx:id="emailChangeLabel" layoutX="34.0" layoutY="240.0" text="Change your e-mail:">
+                                       <font>
+                                          <Font name="Trebuchet MS" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="emailChangeButton" layoutX="34.0" layoutY="336.0" mnemonicParsing="false" onAction="#changeEmailButtonPressed" prefHeight="26.0" prefWidth="175.0" text="Change e-mail" />
+                                    <TextField fx:id="oldPhoneNumber" layoutX="33.0" layoutY="412.0" prefHeight="26.0" prefWidth="179.0" promptText="Current Phone Number" />
+                                    <TextField fx:id="neePhoneNumber" layoutX="33.0" layoutY="445.0" prefHeight="26.0" prefWidth="179.0" promptText="New Phone Number" />
+                                    <Label fx:id="emailChangeLabel1" layoutX="35.0" layoutY="385.0" text="Change your phone number:">
+                                       <font>
+                                          <Font name="Trebuchet MS" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="changeNumberButton" layoutX="35.0" layoutY="481.0" mnemonicParsing="false" onAction="#changeNumberButtonPressed" prefHeight="26.0" prefWidth="175.0" text="Change e-mail" />
+                                    <Label fx:id="addresssChangeLabel" layoutX="273.0" layoutY="31.0" prefHeight="20.0" prefWidth="290.0" text="Change your billing address:">
+                                       <font>
+                                          <Font name="Trebuchet MS" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="newAddressArea" layoutX="273.0" layoutY="62.0" prefHeight="72.0" prefWidth="257.0" promptText="New Address" />
+                                    <Button fx:id="changeAddressButton" layoutX="423.0" layoutY="147.0" mnemonicParsing="false" onAction="#changeAddressButtonPressed" text="Change address" />
+                                    <Label fx:id="aboutLabel" alignment="CENTER" layoutX="303.0" layoutY="261.0" prefHeight="32.0" prefWidth="286.0" text="About Software">
+                                       <font>
+                                          <Font name="Trebuchet MS Bold" size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="softLabel" alignment="CENTER" layoutX="310.0" layoutY="294.0" prefHeight="30.0" prefWidth="273.0" text="Vehicle Rental Software 1.0&#10;&#10;">
+                                       <font>
+                                          <Font name="Trebuchet MS" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="authLabel" alignment="TOP_LEFT" layoutX="332.0" layoutY="351.0" prefHeight="136.0" prefWidth="359.0" text="- Jakub Gruszka&#10;- Julia Świsterska&#10;- Lateef Hanus&#10;- Nazarii Zavhorodnii&#10;" />
+                                    <Label fx:id="authIntroLabel" layoutX="354.0" layoutY="329.0" prefHeight="17.0" prefWidth="149.0" text="Authors:">
+                                       <font>
+                                          <Font name="Trebuchet MS" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
               </content>
             </Tab>
         </tabs>
       </TabPane>
+      <Label fx:id="usernameLabel" alignment="TOP_LEFT" layoutX="22.0" layoutY="14.0" prefHeight="30.0" prefWidth="249.0" text="USERNAME">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
