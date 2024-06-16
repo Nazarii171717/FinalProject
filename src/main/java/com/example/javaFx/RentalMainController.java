@@ -69,6 +69,10 @@ public class RentalMainController {
     private TitledPane brands;
 
     @FXML
+    private Button loadButton;
+
+
+    @FXML
     private CheckBox brandsCheckBox;
 
     @FXML
@@ -277,6 +281,12 @@ public class RentalMainController {
 
     @FXML
     private Label resultLabel;
+
+    @FXML
+    private Label UsernameLabel1;
+
+    @FXML
+    private ListView<RentalInformation> reservedListView;
 
     @FXML
     private AnchorPane resultPane;
@@ -968,10 +978,6 @@ public class RentalMainController {
 
         int durationInt = (int) duration;
         rentalFunctions.rentVehicle(selectedVehicle.getId(), usernameLabel.getText(), durationInt);
-        Customer customer = workWithJSON.findCustomerById(usernameLabel.getText());
-        RentalInformation  rentalInformation = new RentalInformation(workWithJSON.generateUniqueId(), selectedVehicle.getId(),
-                usernameLabel.getText(), durationInt, dateFrom, dateTo, RentingStatus.IN_PROCESS);
-        workWithJSON.updateCustomerData(usernameLabel.getText(), rentalInformation);
         resultsList.refresh();
     }
 
@@ -995,5 +1001,40 @@ public class RentalMainController {
         }));
         fiveMinuteTimeline.setCycleCount(Timeline.INDEFINITE);
         fiveMinuteTimeline.play();
+    }
+
+
+    public void loadButton(ActionEvent actionEvent) {
+        WorkWithJSON workWithJSON = new WorkWithJSON();
+        Customer customer= workWithJSON.findCustomerById(usernameLabel.getText());
+        ArrayList<RentalInformation> list= customer.getRentalHistories();
+        if (list != null) {
+            setReservedListView(list);
+        }
+        else {
+            FXMLLoader errorLoader = new FXMLLoader(getClass().getResource("rental-error.fxml"));
+            try {
+                errorLoader.load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            RentalErrorController errorController = errorLoader.getController();
+            errorController.setErrorDescLabel("No reservations found");
+            Parent root = errorLoader.getRoot();
+            Stage stage = new Stage();
+            stage.setTitle("Error");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.show();
+
+        }
+
+    }
+
+    public void reservationSelected(ListView.EditEvent<RentalInformation> rentalHistoryEditEvent) {
+    }
+    public void setReservedListView(ArrayList<RentalInformation> rentalHistories) {
+        reservedListView.getItems().clear();
+        reservedListView.getItems().addAll(rentalHistories);
     }
 }

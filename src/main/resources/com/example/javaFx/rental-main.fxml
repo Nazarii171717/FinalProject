@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaFx.RentalMainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaFx.RentalMainController">
     <children>
       <TabPane layoutX="-1.0" layoutY="31.0" prefHeight="587.0" prefWidth="980.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -45,34 +45,34 @@
                                                                               <CheckBox fx:id="audiCheckBox" text="Audi" />
                                                                               <CheckBox fx:id="bmwCheckBox" text="BMW" />
                                                                               <CheckBox fx:id="mercedesCheckBox" text="Mercedes Benz" />
-                                                                              <CheckBox fx:id="volkswagenCheckBox"  text="Volkswagen" />
+                                                                              <CheckBox fx:id="volkswagenCheckBox" text="Volkswagen" />
                                                                               <CheckBox fx:id="porscheCheckBox" text="Porsche" />
                                                                               <CheckBox fx:id="opelCheckBox" text="Opel" />
-                                                                              <CheckBox fx:id="fordCheckBox"  text="Ford" />
+                                                                              <CheckBox fx:id="fordCheckBox" text="Ford" />
                                                                               <CheckBox fx:id="chevroletCheckBox" text="Chevrolet" />
-                                                                              <CheckBox fx:id="toyotaCheckBox"  text="Toyota" />
+                                                                              <CheckBox fx:id="toyotaCheckBox" text="Toyota" />
                                                                               <CheckBox fx:id="hondaCheckBox" text="Honda" />
                                                                               <CheckBox fx:id="nissanCheckBox" text="Nissan" />
                                                                               <CheckBox fx:id="hyundaiCheckBox" text="Hyundai" />
-                                                                              <CheckBox fx:id="kiaCheckBox"  text="Kia" />
-                                                                              <CheckBox fx:id="peugeotCheckBox"  text="Peugeot" />
+                                                                              <CheckBox fx:id="kiaCheckBox" text="Kia" />
+                                                                              <CheckBox fx:id="peugeotCheckBox" text="Peugeot" />
                                                                               <CheckBox fx:id="renaultCheckBox" text="Renault" />
-                                                                              <CheckBox fx:id="citroenCheckBox"  text="Citroen" />
-                                                                              <CheckBox fx:id="fiatCheckBox"  text="Fiat" />
+                                                                              <CheckBox fx:id="citroenCheckBox" text="Citroen" />
+                                                                              <CheckBox fx:id="fiatCheckBox" text="Fiat" />
                                                                               <CheckBox fx:id="alfaRomeoCheckBox" text="Alfa Romeo" />
-                                                                              <CheckBox fx:id="ferrariCheckBox"  text="Ferrari" />
+                                                                              <CheckBox fx:id="ferrariCheckBox" text="Ferrari" />
                                                                               <CheckBox fx:id="lamborghiniCheckBox" text="Lamborghini" />
-                                                                              <CheckBox fx:id="maseratiCheckBox"  text="Maserati" />
+                                                                              <CheckBox fx:id="maseratiCheckBox" text="Maserati" />
                                                                               <CheckBox fx:id="astonMartinCheckBox" text="Aston Martin" />
-                                                                              <CheckBox fx:id="bentleyCheckBox"  text="Bentley" />
+                                                                              <CheckBox fx:id="bentleyCheckBox" text="Bentley" />
                                                                               <CheckBox fx:id="rollsRoyceCheckBox" text="Rolls Royce" />
                                                                               <CheckBox fx:id="jaguarCheckBox" text="Jaguar" />
-                                                                              <CheckBox fx:id="landRoverCheckBox"  text="Land Rover" />
-                                                                              <CheckBox fx:id="teslaCheckBox"  text="Tesla" />
+                                                                              <CheckBox fx:id="landRoverCheckBox" text="Land Rover" />
+                                                                              <CheckBox fx:id="teslaCheckBox" text="Tesla" />
                                                                               <CheckBox fx:id="volvoCheckBox" text="Volvo" />
-                                                                              <CheckBox fx:id="subaruCheckBox"  text="Subaru" />
-                                                                              <CheckBox fx:id="mazdaCheckBox"  text="Mazda" />
-                                                                              <CheckBox fx:id="suzukiCheckBox"  text="Suzuki" />
+                                                                              <CheckBox fx:id="subaruCheckBox" text="Subaru" />
+                                                                              <CheckBox fx:id="mazdaCheckBox" text="Mazda" />
+                                                                              <CheckBox fx:id="suzukiCheckBox" text="Suzuki" />
                                                                               <CheckBox fx:id="dodgeCheckBox" text="Dodge" />
                                                                              <CheckBox fx:id="jeepCheckBox" text="Jeep" />
                                                                               <CheckBox fx:id="cadillacCheckBox" text="Cadillac" />
@@ -82,7 +82,7 @@
                                                                               <CheckBox fx:id="kawasakiCheckBox" text="Kawasaki" />
                                                                               <CheckBox fx:id="suzukiMotorcyclesCheckBox" text="Suzuki Motorcycles" />
                                                                               <CheckBox fx:id="winnebagoCheckBox" text="Winnebago" />
-                                                                              <CheckBox fx:id="chryslerCheckBox"  text="Chrysler" />
+                                                                              <CheckBox fx:id="chryslerCheckBox" text="Chrysler" />
                                                                           </children>
                                                                       </VBox>
                                                                   </content>
@@ -101,12 +101,12 @@
                                                                               <CheckBox fx:id="motorcycleCheckBox" text="Motorcycle" />
                                                                               <CheckBox fx:id="camperCheckBox" text="Camper" />
                                                                               <CheckBox fx:id="suvCheckBox" text="SUV" />
-                                                                              <CheckBox fx:id="hatchbackCheckBox"  text="Hatchback" />
+                                                                              <CheckBox fx:id="hatchbackCheckBox" text="Hatchback" />
                                                                               <CheckBox fx:id="sedanCheckBox" text="Sedan" />
                                                                               <CheckBox fx:id="coupeCheckBox" text="Coupe" />
                                                                               <CheckBox fx:id="minivanCheckBox" text="Minivan" />
-                                                                              <CheckBox fx:id="pickupCheckBox"  text="Pickup" />
-                                                                              <CheckBox fx:id="convertibleCheckBox"  text="Convertible" />
+                                                                              <CheckBox fx:id="pickupCheckBox" text="Pickup" />
+                                                                              <CheckBox fx:id="convertibleCheckBox" text="Convertible" />
                                                                           </children>
                                                                       </VBox>
                                                                   </content>
@@ -122,16 +122,16 @@
                                                                   <content>
                                                                       <VBox prefWidth="173.0">
                                                                           <children>
-                                                                              <CheckBox fx:id="blackCheckBox"  text="Black" />
+                                                                              <CheckBox fx:id="blackCheckBox" text="Black" />
                                                                               <CheckBox fx:id="whiteCheckBox" text="White" />
-                                                                              <CheckBox fx:id="grayCheckBox"  text="Gray" />
-                                                                              <CheckBox fx:id="silverCheckBox"  text="Silver" />
-                                                                              <CheckBox fx:id="redCheckBox"  text="Red" />
+                                                                              <CheckBox fx:id="grayCheckBox" text="Gray" />
+                                                                              <CheckBox fx:id="silverCheckBox" text="Silver" />
+                                                                              <CheckBox fx:id="redCheckBox" text="Red" />
                                                                               <CheckBox fx:id="blueCheckBox" text="Blue" />
                                                                               <CheckBox fx:id="greenCheckBox" text="Green" />
-                                                                              <CheckBox fx:id="yellowCheckBox"  text="Yellow" />
+                                                                              <CheckBox fx:id="yellowCheckBox" text="Yellow" />
                                                                               <CheckBox fx:id="orangeCheckBox" text="Orange" />
-                                                                              <CheckBox fx:id="purpleCheckBox"  text="Purple" />
+                                                                              <CheckBox fx:id="purpleCheckBox" text="Purple" />
                                                                           </children>
                                                                       </VBox>
                                                                   </content>
@@ -147,10 +147,10 @@
                                                                   <content>
                                                                       <VBox prefWidth="173.0">
                                                                           <children>
-                                                                              <CheckBox fx:id="dieselCheckBox"  text="Diesel" />
-                                                                              <CheckBox fx:id="petrolCheckBox"  text="Petrol" />
-                                                                              <CheckBox fx:id="electricCheckBox"  text="Electric" />
-                                                                              <CheckBox fx:id="hybridCheckBox"  text="Hybrid" />
+                                                                              <CheckBox fx:id="dieselCheckBox" text="Diesel" />
+                                                                              <CheckBox fx:id="petrolCheckBox" text="Petrol" />
+                                                                              <CheckBox fx:id="electricCheckBox" text="Electric" />
+                                                                              <CheckBox fx:id="hybridCheckBox" text="Hybrid" />
                                                                           </children>
                                                                       </VBox>
                                                                   </content>
@@ -166,7 +166,7 @@
                                                                   <content>
                                                                       <VBox prefWidth="173.0">
                                                                           <children>
-                                                                              <CheckBox fx:id="manualCheckBox"  text="Manual" />
+                                                                              <CheckBox fx:id="manualCheckBox" text="Manual" />
                                                                               <CheckBox fx:id="automaticCheckBox" text="Automatic" />
                                                                           </children>
                                                                       </VBox>
@@ -183,10 +183,10 @@
                                                                   <content>
                                                                       <VBox prefWidth="173.0">
                                                                           <children>
-                                                                              <CheckBox fx:id="year2019CheckBox"  text="2019" />
-                                                                              <CheckBox fx:id="year2020CheckBox"  text="2020" />
+                                                                              <CheckBox fx:id="year2019CheckBox" text="2019" />
+                                                                              <CheckBox fx:id="year2020CheckBox" text="2020" />
                                                                               <CheckBox fx:id="year2021CheckBox" text="2021" />
-                                                                              <CheckBox fx:id="year2022CheckBox"  text="2022" />
+                                                                              <CheckBox fx:id="year2022CheckBox" text="2022" />
                                                                               <CheckBox fx:id="year2023CheckBox" text="2023" />
                                                                               <CheckBox fx:id="year2024CheckBox" text="2024" />
                                                                           </children>
@@ -271,7 +271,28 @@
           </Tab>
           <Tab fx:id="historyTab" text="History">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.31952965235173825" layoutX="1.0" prefHeight="555.0" prefWidth="980.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="166.0">
+                                 <children>
+                                    <Label fx:id="usernameLabel1" alignment="CENTER" layoutX="34.0" layoutY="14.0" prefHeight="30.0" prefWidth="242.0" text="USERNAME">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="loadButton" layoutX="183.0" layoutY="464.0" mnemonicParsing="false" onAction="#loadButton" prefHeight="54.0" prefWidth="93.0" text="Load" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ListView fx:id="reservedListView" layoutY="48.0" onEditStart="#reservationSelected" prefHeight="505.0" prefWidth="440.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
             </content>
           </Tab>
             <Tab fx:id="accountTab" text="Account">
