@@ -13,6 +13,7 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import javafx.util.Duration;
 import parsingCSV.WorkWithJSON;
 import renting.FilterForRenting;
@@ -908,6 +909,24 @@ public class RentalMainController {
     private void displayResults(ArrayList<Vehicle> vehicles) {
         resultsList.getItems().clear();
         resultsList.getItems().addAll(vehicles);
+        resultsList.setCellFactory(new Callback<ListView<Vehicle>, ListCell<Vehicle>>() {
+            @Override
+            public ListCell<Vehicle> call(ListView<Vehicle> param) {
+                return new ListCell<Vehicle>() {
+                    @Override
+                    protected void updateItem(Vehicle item, boolean empty) {
+                        super.updateItem(item, empty);
+
+                        if (empty || item == null) {
+                            setText(null);
+                        } else {
+                            // Customize the text here
+                            setText("Brand: " + item.getBrand() + ", Model: " + item.getModel() + ", Year: " + item.getYear());
+                        }
+                    }
+                };
+            }
+        });
     }
 
     private void displayVehicleDetails(Vehicle vehicle) {
@@ -984,6 +1003,24 @@ public class RentalMainController {
         if (list != null) {
             reservedListView.getItems().clear();
             reservedListView.getItems().addAll(list);
+            reservedListView.setCellFactory(new Callback<ListView<RentalInformation>, ListCell<RentalInformation>>() {
+                @Override
+                public ListCell<RentalInformation> call(ListView<RentalInformation> param) {
+                    return new ListCell<RentalInformation>() {
+                        @Override
+                        protected void updateItem(RentalInformation item, boolean empty) {
+                            super.updateItem(item, empty);
+
+                            if (empty || item == null) {
+                                setText(null);
+                            } else {
+                                // Customize the text here
+                                setText("Vehicle ID: " + item.getVehicleId() + ", Customer ID: " + item.getCustomerId() + ", Duration: " + item.getDuration());
+                            }
+                        }
+                    };
+                }
+            });
         }
     }
 
