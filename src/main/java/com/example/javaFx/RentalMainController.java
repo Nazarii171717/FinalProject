@@ -1,7 +1,14 @@
 package com.example.javaFx;
 
+import customer.data.Customer;
+import customer.data.RentalHistory;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.DatePicker;
@@ -11,9 +18,16 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TitledPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+import parsingCSV.WorkWithJSON;
 import renting.FilterForRenting;
 import vehicle.data.*;
+import renting.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
 public class RentalMainController {
@@ -868,12 +882,97 @@ public class RentalMainController {
     }
 
     private void displayVehicleDetails(Vehicle vehicle) {
-        brandModelLabel.setText(vehicle.getBrand() + " " + vehicle.getModel());
+        brandModelLabel.setText(title(vehicle));
         descLabel.setText(description(vehicle));
         priceLabel.setText("Price per day: " + vehicle.getPricePerDay());
     }
 
     public void rentButtonClicked(ActionEvent actionEvent) {
+        RentalFunctions rentalFunctions = new RentalFunctions();
+        WorkWithJSON workWithJSON = new WorkWithJSON();
+        Vehicle selectedVehicle = resultsList.getSelectionModel().getSelectedItem();
+        if (selectedVehicle == null) {
+            FXMLLoader errorLoader = new FXMLLoader(getClass().getResource("rental-error.fxml"));
+            try {
+                errorLoader.load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            RentalErrorController errorController = errorLoader.getController();
+            errorController.setErrorDescLabel("Please select a vehicle");
+            Parent root = errorLoader.getRoot();
+            Stage stage = new Stage();
+            stage.setTitle("Error");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.show();
+            return;
+        }
+        if (dateFromPicker.getValue() == null || dateToPicker.getValue() == null) {
+            FXMLLoader errorLoader = new FXMLLoader(getClass().getResource("rental-error.fxml"));
+            try {
+                errorLoader.load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            RentalErrorController errorController = errorLoader.getController();
+            errorController.setErrorDescLabel("Please select dates");
+            Parent root = errorLoader.getRoot();
+            Stage stage = new Stage();
+            stage.setTitle("Error");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.show();
+            return;
+        }
+
+        LocalDateTime dateFrom = dateFromPicker.getValue().atStartOfDay();
+        LocalDateTime dateTo = dateToPicker.getValue().atStartOfDay();
+
+        long duration = ChronoUnit.DAYS.between(dateFrom, dateTo);
+        if (duration < 1) {
+            FXMLLoader errorLoader = new FXMLLoader(getClass().getResource("rental-error.fxml"));
+            try {
+                errorLoader.load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            RentalErrorController errorController = errorLoader.getController();
+            errorController.setErrorDescLabel("Please select valid dates");
+            Parent root = errorLoader.getRoot();
+            Stage stage = new Stage();
+            stage.setTitle("Error");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.show();
+            return;
+        }
+
+        if(dateTo.isBefore(LocalDateTime.now())){
+            FXMLLoader errorLoader = new FXMLLoader(getClass().getResource("rental-error.fxml"));
+            try {
+                errorLoader.load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            RentalErrorController errorController = errorLoader.getController();
+            errorController.setErrorDescLabel("Please select valid dates");
+            Parent root = errorLoader.getRoot();
+            Stage stage = new Stage();
+            stage.setTitle("Error");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.show();
+            return;
+        }
+
+        int durationInt = (int) duration;
+        rentalFunctions.rentVehicle(selectedVehicle.getId(), usernameLabel.getText(), durationInt);
+        Customer customer = workWithJSON.findCustomerById(usernameLabel.getText());
+        RentalInformation  rentalInformation = new RentalInformation(workWithJSON.generateUniqueId(), selectedVehicle.getId(),
+                usernameLabel.getText(), durationInt, dateFrom, dateTo, RentingStatus.IN_PROCESS);
+        workWithJSON.updateCustomerData(usernameLabel.getText(), rentalInformation);
+        resultsList.refresh();
     }
 
     public void dateFromSelected(ActionEvent actionEvent) {
@@ -882,7 +981,19 @@ public class RentalMainController {
     public void dateToSelected(ActionEvent actionEvent) {
     }
     private String description(Vehicle vehicle) {
-        String description = "Brand: " + vehicle.getBrand() + "\n" + "Model: "+ vehicle.getModel() + "\n"+"Year: " + vehicle.getYear() + "\n" +"Color: " + vehicle.getColor() + " " + vehicle.getFuelType() + " " + vehicle.getGearBox() + " " + vehicle.getVehicleTypes() + " " + vehicle.getPricePerDay();
+        String description =  "Type:" + vehicle.getVehicleTypes() + "\n" +"Color: " + vehicle.getColor() + "\n" +"Fuel: " + vehicle.getFuelType() + "\n"+ "Transmission"
+                + vehicle.getGearBox() + "\n"+"Year: " + vehicle.getYear();
         return description;
+    }
+    private String title(Vehicle vehicle) {
+        String title = vehicle.getBrand() + " "+  vehicle.getModel();
+        return title;
+    }
+    public void initialize() {
+        Timeline fiveMinuteTimeline = new Timeline(new KeyFrame(Duration.minutes(5), event -> {
+            LocalDateTime now = LocalDateTime.now();
+        }));
+        fiveMinuteTimeline.setCycleCount(Timeline.INDEFINITE);
+        fiveMinuteTimeline.play();
     }
 }
