@@ -28,7 +28,7 @@ public class RentalFunctions {
         else {
             System.out.println("You reserved vehicle");
         LocalDateTime rentalDate = LocalDateTime.now();
-        LocalDateTime returnDate = rentalDate.plusDays(duration);
+        LocalDateTime returnDate = rentalDate.plusMinutes(duration);
 
         workWithJSON.updateVehicleData(vehicleId, true);
         String id = workWithJSON.addRentalInformationRecord(vehicleId, customerId, duration,
